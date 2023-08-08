@@ -1,0 +1,22 @@
+{aggregate=pm.pipeline_rt, pipeline=[
+		{$match={org_snode_id=6007d809b5fd9b7138eb85d0, create_time={$gte={$date=2023-07-28T00: 00: 12.593Z
+					}, $lte={$date=2023-07-28T00: 02: 22.593Z
+					}
+				}
+			}
+		},
+		{$group={_id=1, n={$sum=1
+				}
+			}
+		}
+	], cursor={}, lsid={id={$uuid=276a0e81-4f8e-4a35-8c91-c76e68728de6
+		}
+	}, $clusterTime={clusterTime={$timestamp={t=1690502629, i=194
+			}
+		}, signature={hash={$binary={base64=p3d2NhYV4num4x2+nWDVOJ3FYvE=, subType=0
+				}
+			}, keyId=7209174787556377042
+		}
+	}, $db=slserver, $readPreference={mode=secondaryPreferred, maxStalenessSeconds=300
+	}
+}

@@ -16,13 +16,19 @@ public class QueryMetadata implements Comparable <QueryMetadata> {
 		this.exampleEntry = entry;
 		this.sum = Integer.valueOf(1);
 		this.duration = entry.getDuration();
-		this.highDuration = duration;
-		this.lowDuration = duration;
+		this.highDuration = entry.getDuration();
+		this.lowDuration = entry.getDuration();
 	}
 	
 	public void addOne(LogEntry entry)
 	{
 		this.setSum(this.getSum() + 1);
+		
+		if(entry.getDuration() > this.highDuration)
+			this.highDuration = entry.getDuration();
+		if(entry.getDuration() < this.lowDuration)
+			this.lowDuration = entry.getDuration();
+		
 		this.setDuration(this.getDuration() + entry.getDuration());
 	}
 
@@ -60,10 +66,6 @@ public class QueryMetadata implements Comparable <QueryMetadata> {
 	
 	public void setDuration(Integer duration) {
 		this.duration = duration;
-		if(duration > this.highDuration)
-			this.highDuration = duration;
-		if(duration < this.lowDuration)
-			this.lowDuration = duration;
 	}
 	
 	public void setExampleEntry(LogEntry exampleEntry) {

@@ -96,17 +96,17 @@ public class HtmlRenderer {
 				planSummary = "";
 			}
 			
-			sb.append("[\"" + key + "\",\"" + 
-					qm.getSum() + "\",\"" + 
-					qm.calculateAverage() + "\",\"" + 
-					qm.getHighDuration() + "\",\"" + 
-					qm.getLowDuration() + "\",\"" + 
-					cmd + "\",\"" + 
-					planSummary + "\"]");
+			sb.append("{ \"queryHash\": \"" + key + 
+					"\", \"count\": \""+ qm.getSum() + 
+					"\", \"averageDuration\": \"" + qm.calculateAverage() + 
+					"\", \"highDuration\": \"" + qm.getHighDuration() + 
+					"\", \"lowDuration\": \"" + qm.getLowDuration() + 
+					"\", \"query\": \"" + cmd + 
+					"\", \"planSummary\": \"" + planSummary + "\"}");
 
 			counter++;
 		}
-		sb.append("] });");
+		sb.append("], ");
 
 		is = getFileFromResourceAsStream(endHtmlFile);
 		sb.append(getContents(is));

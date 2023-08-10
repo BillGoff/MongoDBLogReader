@@ -95,7 +95,7 @@ public class LogFileReader {
 				while ((line = br.readLine()) != null) {
 					logEntry = mapper.readValue(line, LogEntry.class);
 					queryHash = logEntry.getQueryHash();
-					if (queryHash != null) {
+					if (queryHash != null) {							
 						if (uniqueQueries.containsKey(queryHash)) {
 							qm = uniqueQueries.get(queryHash);
 							qm.addOne(logEntry);

@@ -4,10 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.cli.CommandLine;
@@ -44,8 +41,7 @@ public class LogFileReader {
 	 *                                   map.
 	 */
 	public static Map<String, QueryMetadata> parseLogFile(CommandLine cli, String option)
-			throws MongoDbLogReaderException 
-	{
+			throws MongoDbLogReaderException {
 		Map<String, QueryMetadata> uniqueQueries = null;
 		if (cli.hasOption(option)) {
 			String fileName = cli.getOptionValue(option);
@@ -80,8 +76,7 @@ public class LogFileReader {
 	 * @throws MongoDbLogReaderException if we are unable to parse the file into the
 	 *                                   map.
 	 */
-	private static Map<String, QueryMetadata> parseLogFile(File logFile) throws MongoDbLogReaderException 
-	{
+	private static Map<String, QueryMetadata> parseLogFile(File logFile) throws MongoDbLogReaderException {
 		Map<String, QueryMetadata> uniqueQueries = new HashMap<String, QueryMetadata>();
 
 		try {
@@ -95,7 +90,7 @@ public class LogFileReader {
 				while ((line = br.readLine()) != null) {
 					logEntry = mapper.readValue(line, LogEntry.class);
 					queryHash = logEntry.getQueryHash();
-					if (queryHash != null) {							
+					if (queryHash != null) {
 						if (uniqueQueries.containsKey(queryHash)) {
 							qm = uniqueQueries.get(queryHash);
 							qm.addOne(logEntry);

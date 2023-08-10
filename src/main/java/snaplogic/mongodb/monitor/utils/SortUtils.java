@@ -2,12 +2,7 @@ package snaplogic.mongodb.monitor.utils;
 
 import java.util.Comparator;
 import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.LinkedList;
-
 import java.util.Map;
-import java.util.Map.Entry;
-
 import java.util.stream.Collectors;
 
 import snaplogic.mongodb.monitor.dto.QueryMetadata;
@@ -19,11 +14,11 @@ import snaplogic.mongodb.monitor.dto.QueryMetadata;
  */
 public class SortUtils {
 
-	private static final Comparator<QueryMetadata> bySum = (QueryMetadata obj1, QueryMetadata obj2) -> obj1.getSum()
-			.compareTo(obj2.getSum());
-
 	private static final Comparator<QueryMetadata> byDurAver = (QueryMetadata obj1, QueryMetadata obj2) -> obj1
 			.calculateAverage().compareTo(obj2.calculateAverage());
+
+	private static final Comparator<QueryMetadata> bySum = (QueryMetadata obj1, QueryMetadata obj2) -> obj1.getSum()
+			.compareTo(obj2.getSum());
 
 	/**
 	 * This method is used to sort the map passed in.

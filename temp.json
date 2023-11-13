@@ -1,0 +1,1521 @@
+{
+	"queryHash": "19233749",
+	"count": "1",
+	"averageDuration": "100",
+	"highDuration": "100",
+	"lowDuration": "100",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a1a0dc009a89829ce6ec1={$exists=true}}, new=true, update={$set={lease_time.654a1a0dc009a89829ce6ec1={$date=2023-11-07T11:07:52.085Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=91ed6dc4-7894-4832-9f83-12b174d20d8c}}, txnNumber=206, $clusterTime={clusterTime={$timestamp={t=1699355272, i=2}}, signature={hash={$binary={base64=Fs1PD5ocIt5x/9nZADVmpRSm+Wc=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "5E1B6E58",
+	"count": "1",
+	"averageDuration": "103",
+	"highDuration": "103",
+	"lowDuration": "103",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a0f341ac8c42954a456a4={$exists=true}}, new=true, update={$set={lease_time.654a0f341ac8c42954a456a4={$date=2023-11-07T10:20:02.765Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=f9018e06-78d9-44bc-b211-a2c838e53289}}, txnNumber=234, $clusterTime={clusterTime={$timestamp={t=1699352402, i=55}}, signature={hash={$binary={base64=AixhFr+ABhDwvbRlX5scBXc/GLs=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "247D3FD5",
+	"count": "1",
+	"averageDuration": "109",
+	"highDuration": "109",
+	"lowDuration": "109",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.6549cf7a07203c34c89581c9={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549cf7a07203c34c89581c9={$date=2023-11-07T05:47:44.703Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=215c8a23-38ed-4c3b-ae1c-39b701b60a93}}, txnNumber=8, $clusterTime={clusterTime={$timestamp={t=1699336064, i=53}}, signature={hash={$binary={base64=H8EBJIAD/a+L8yFYsQmNTPxDtkI=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "E2B8DA73",
+	"count": "1",
+	"averageDuration": "112",
+	"highDuration": "112",
+	"lowDuration": "112",
+	"query": "{aggregate=snap_packs, pipeline=[{$match={class_id=salesforce, bin_path=/Automation1/fsx/__snapbinary__/salesforce-snap-1-680.zip}}, {$group={_id=1, n={$sum=1}}}], cursor={}, lsid={id={$uuid=21f91cde-537e-4497-a1af-121ec6f9cd55}}, $clusterTime={clusterTime={$timestamp={t=1699334554, i=3}}, signature={hash={$binary={base64=dHddolLI5HTdOZrYO4aF4j5vsAM=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { class_id: -1 }"
+},
+{
+	"queryHash": "1E376E4F",
+	"count": "1",
+	"averageDuration": "113",
+	"highDuration": "113",
+	"lowDuration": "113",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a0be48dbc6549426a1baa={$exists=true}}, new=true, update={$set={lease_time.654a0be48dbc6549426a1baa={$date=2023-11-07T10:07:01.649Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=7e8f3f2f-33c4-488d-ada7-625b982caa4a}}, txnNumber=2, $clusterTime={clusterTime={$timestamp={t=1699351621, i=36}}, signature={hash={$binary={base64=G/hqRn2c6ncFV9RQd8hwTAaTG2c=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "772E78BC",
+	"count": "2",
+	"averageDuration": "114",
+	"highDuration": "127",
+	"lowDuration": "101",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a064207202fe36b028cbd={$exists=true}}, new=true, update={$set={lease_time.654a064207202fe36b028cbd={$date=2023-11-07T09:42:18.901Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=73a3ccc1-5e10-471b-9396-342549c6701f}}, txnNumber=116, $clusterTime={clusterTime={$timestamp={t=1699350138, i=25}}, signature={hash={$binary={base64=yDj+WTSH+1n7fMC3R3nk4xpxEWk=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "61C8E4CF",
+	"count": "25",
+	"averageDuration": "117",
+	"highDuration": "185",
+	"lowDuration": "100",
+	"query": "{find=fs_metadata, filter={file_path={$regularExpression={pattern=Soumya_QA/fsx/__suggest__/.*, options=iu}}, create_time={$lt={$date=2023-10-17T23:59:45.528Z}}}, projection={file_id=1}, lsid={id={$uuid=cdf6a33c-3ddc-4776-8b58-4bf42513dd6a}}, $clusterTime={clusterTime={$timestamp={t=1699401601, i=38}}, signature={hash={$binary={base64=33AMEL+eXol+3YYiOptszPWsLEw=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { create_time: 1 }"
+},
+{
+	"queryHash": "B65B2614",
+	"count": "1",
+	"averageDuration": "118",
+	"highDuration": "118",
+	"lowDuration": "118",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a136d0aa39cf5e7587fdc={$exists=true}}, new=true, update={$set={lease_time.654a136d0aa39cf5e7587fdc={$date=2023-11-07T10:38:50.513Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=65acdd92-8fb7-4677-b4d3-e3baf63f0835}}, txnNumber=403, $clusterTime={clusterTime={$timestamp={t=1699353530, i=4}}, signature={hash={$binary={base64=Nsm1er85IsO3j54A0OPtV10470k=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "1C03580C",
+	"count": "1",
+	"averageDuration": "126",
+	"highDuration": "126",
+	"lowDuration": "126",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654b031b46c7d0d94deb08da={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654b031b46c7d0d94deb08da={$date=2023-11-08T03:40:16.361Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=759b442e-3ee9-4836-a5db-9063145df7f9}}, txnNumber=155, $clusterTime={clusterTime={$timestamp={t=1699414816, i=9}}, signature={hash={$binary={base64=hgsTdQGoBKm5d4P76b2urs94lNw=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "73DBFB4B",
+	"count": "1",
+	"averageDuration": "128",
+	"highDuration": "128",
+	"lowDuration": "128",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549cbb2de42aded4f52594c={$exists=true}}, new=true, update={$set={lease_time.6549cbb2de42aded4f52594c={$date=2023-11-07T05:32:59.883Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=6ed0204a-67a0-48df-bb90-74a306a5c703}}, txnNumber=96, $clusterTime={clusterTime={$timestamp={t=1699335179, i=40}}, signature={hash={$binary={base64=zofV1CgGu7RZoNqfzKhvhoaB2bA=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "F8B54B39",
+	"count": "1",
+	"averageDuration": "133",
+	"highDuration": "133",
+	"lowDuration": "133",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a090fa158f774f4360449={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a090fa158f774f4360449={$date=2023-11-07T09:53:26.109Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=082ac60d-a191-4425-98b7-63dc4f601eb2}}, txnNumber=113, $clusterTime={clusterTime={$timestamp={t=1699350806, i=1}}, signature={hash={$binary={base64=u8986hBINPLND8Cvqoh8h63cldk=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "AEFCBFD0",
+	"count": "1",
+	"averageDuration": "134",
+	"highDuration": "134",
+	"lowDuration": "134",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a78692d80c9a63c35fa9f={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a78692d80c9a63c35fa9f={$date=2023-11-07T17:48:35.674Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=b049e039-9681-45d3-bcd2-cf1d8f8566fa}}, txnNumber=83, $clusterTime={clusterTime={$timestamp={t=1699379315, i=29}}, signature={hash={$binary={base64=orf23M/QFgNa/FvKqOWdevgjXn4=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "B2A72577",
+	"count": "1",
+	"averageDuration": "134",
+	"highDuration": "134",
+	"lowDuration": "134",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a7bc96c707be615c955d0={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a7bc96c707be615c955d0={$date=2023-11-07T18:02:56.224Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=e4a5f286-add4-41d3-8ba5-c9297e460f86}}, txnNumber=160, $clusterTime={clusterTime={$timestamp={t=1699380176, i=9}}, signature={hash={$binary={base64=X+ttCMVsEiAX3nyvi7laBNkJqjg=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "D49E7A05",
+	"count": "3",
+	"averageDuration": "134",
+	"highDuration": "154",
+	"lowDuration": "115",
+	"query": "{find=users, filter={username={$in=[avarghese@snaplogic.com, avarghese+admin1@snaplogic.com, autoregplatform+admin2@gmail.com, autoregplatform+admin3@gmail.com, autoregplatform+admin4@gmail.com, autoregplatform+admin5@gmail.com, autoregplatform+admin6@gmail.com, autoregplatform+admin7@gmail.com, autoregplatform+admin8@gmail.com, autoregplatform+admin9@gmail.com, autoregplatform+admin20@gmail.com, autoregplatform+admin21@gmail.com, autoregplatform+admin22@gmail.com, autoregplatform+admin23@gmail.com, autoregplatform+admin24@gmail.com, autoregplatform+admin25@gmail.com, autoregplatform+admin26@gmail.com, autoregplatform+admin27@gmail.com, autoregplatform+admin28@gmail.com, autoregplatform+admin29@gmail.com, autoregplatform+admin30@gmail.com, autoregplatform+admin31@gmail.com, autoregplatform+admin32@gmail.com, autoregplatform+admin33@gmail.com, autoregplatform+admin34@gmail.com, autoregplatform+admin35@gmail.com, autoregplatform+admin36@gmail.com, autoregplatform+admin37@gmail.com, autoregplatform+admin38@gmail.com, autoregplatform+admin39@gmail.com, autoregplatform+admin40@gmail.com, autoregplatform+admin41@gmail.com, autoregplatform+admin42@gmail.com, autoregplatform+admin43@gmail.com, autoregplatform+admin44@gmail.com, autoregplatform+admin45@gmail.com, autoregplatform+admin46@gmail.com, autoregplatform+admin47@gmail.com, autoregplatform+admin48@gmail.com, autoregplatform+admin49@gmail.com, autoregplatform+admin50@gmail.com, autoregplatform+admin51@gmail.com, autoregplatform+admin52@gmail.com, autoregplatform+admin53@gmail.com, autoregplatform+admin54@gmail.com, autoregplatform+admin55@gmail.com, autoregplatform+admin56@gmail.com, autoregplatform+admin57@gmail.com, autoregplatform+admin58@gmail.com, autoregplatform+admin59@gmail.com, autoregplatform+admin60@gmail.com, autoregplatform+admin61@gmail.com, autoregplatform+admin62@gmail.com, autoregplatform+admin63@gmail.com, autoregplatform+admin64@gmail.com, autoregplatform+admin65@gmail.com, autoregplatform+admin66@gmail.com, autoregplatform+admin67@gmail.com, autoregplatform+admin68@gmail.com, autoregplatform+admin69@gmail.com, autoregplatform+admin70@gmail.com, autoregplatform+admin71@gmail.com, autoregplatform+admin72@gmail.com, autoregplatform+admin73@gmail.com, autoregplatform+admin74@gmail.com, autoregplatform+admin75@gmail.com, autoregplatform+admin76@gmail.com, autoregplatform+admin77@gmail.com, autoregplatform+admin78@gmail.com, autoregplatform+admin79@gmail.com, autoregplatform+admin80@gmail.com, autoregplatform+admin81@gmail.com, autoregplatform+admin82@gmail.com, autoregplatform+admin83@gmail.com, autoregplatform+basic6@gmail.com, autoregplatform+basic7@gmail.com, autoregplatform+basic8@gmail.com, autoregplatform+basic9@gmail.com, autoregplatform+basic23@gmail.com, autoregplatform+basic25@gmail.com, autoregplatform+basic27@gmail.com, autoregplatform+basic28@gmail.com, autoregplatform+basic29@gmail.com, autoregplatform+basic30@gmail.com, autoregplatform+basic33@gmail.com, autoregplatform+basic36@gmail.com, autoregplatform+basic40@gmail.com, autoregplatform+basic41@gmail.com, autoregplatform+basic42@gmail.com, autoregplatform+basic43@gmail.com, autoregplatform+basic45@gmail.com, autoregplatform+basic46@gmail.com, autoregplatform+basic47@gmail.com, autoregplatform+basic48@gmail.com, autoregplatform+basic50@gmail.com, autoregplatform+basic51@gmail.com, autoregplatform+basic52@gmail.com, autoregplatform+basic53@gmail.com, autoregplatform+basic54@gmail.com, autoregplatform+basic55@gmail.com, autoregplatform+basic56@gmail.com, autoregplatform+basic57@gmail.com, autoregplatform+basic58@gmail.com, autoregplatform+basic59@gmail.com, autoregplatform+basic60@gmail.com, autoregplatform+basic61@gmail.com, autoregplatform+basic62@gmail.com, autoregplatform+basic63@gmail.com, autoregplatform+basic64@gmail.com, autoregplatform+basic65@gmail.com, autoregplatform+basic66@gmail.com, autoregplatform+basic67@gmail.com, autoregplatform+basic68@gmail.com, autoregplatform+basic69@gmail.com, autoregplatform+basic70@gmail.com, autoregplatform+basic71@gmail.com, autoregplatform+basic72@gmail.com, autoregplatform+basic73@gmail.com, autoregplatform+basic74@gmail.com, autoregplatform+basic75@gmail.com, autoregplatform+basic76@gmail.com, autoregplatform+basic77@gmail.com, autoregplatform+basic78@gmail.com, autoregplatform+basic79@gmail.com, autoregplatform+basic80@gmail.com, autoregplatform+basic81@gmail.com, autoregplatform+basic82@gmail.com, autoregplatform+admin84@gmail.com, autoregplatform+admin85@gmail.com, autoregplatform+admin86@gmail.com, autoregplatform+admin87@gmail.com, autoregplatform+admin88@gmail.com, autoregplatform+admin89@gmail.com, autoregplatform+basic84@gmail.com, autoregplatform+basic86@gmail.com, autoregplatform+basic87@gmail.com, autoregplatform+basic88@gmail.com, autoregplatform+basic89@gmail.com, autoregplatform+basic90@gmail.com, autoregplatform+basic91@gmail.com, autoregplatform+basic92@gmail.com, autoregplatform+basic93@gmail.com, autoregplatform+basic95@gmail.com, autoregplatform+basic96@gmail.com, autoregplatform+basic97@gmail.com, autoregplatform+basic98@gmail.com, autoregplatform+basic99@gmail.com, autoregplatform+admin90@gmail.com, autoregplatform+admin91@gmail.com, autoregplatform+admin92@gmail.com, autoregplatform+admin93@gmail.com, autoregplatform+admin94@gmail.com, autoregplatform+admin95@gmail.com, autoregplatform+admin96@gmail.com, autoregplatform+admin97@gmail.com, autoregplatform+admin98@gmail.com, autoregplatform+admin99@gmail.com, sbuddi@snaplogic.com, hshaik@snaplogic.com, kchaitanya@snaplogic.com, agali@snaplogic.com, agali+admin@snaplogic.com, asingh+admin@snaplogic.com, agali+basic@snaplogic.com, avarghese+testlogin@snaplogic.com, autoregplatform+usertest@gmail.com, vvdutha@snaplogic.com, autoregplatform+07012019@gmail.com, schevireddy@snaplogic.com, asingh+basic@snaplogic.com, autoregplatform+serviceafds2312@gmail.com, skdarshanam+canary@snaplogic.com, smittapalli@snaplogic.com, autoregplatform+admin10@gmail.com, autoregplatform+basic1@gmail.com, autoregplatform+basic13@gmail.com, autoregplatform+admin1@gmail.com, autoregplatform+admin11@gmail.com, autoregplatform+admin12@gmail.com, autoregplatform+admin13@gmail.com, autoregplatform+admin14@gmail.com, autoregplatform+admin15@gmail.com, autoregplatform+admin16@gmail.com, autoregplatform+admin17@gmail.com, autoregplatform+admin18@gmail.com, autoregplatform+admin19@gmail.com, autoregplatform+basic14@gmail.com, autoregplatform+basic18@gmail.com, autoregplatform+basic19@gmail.com, autoregplatform+admin100@gmail.com, autoregplatform+basic100@gmail.com, wrao@snaplogic.com, autoregplatform+provisionuser@gmail.com, autoregplatform+provisioner@snaplogic.com, hshaik+userguide@snaplogic.com, hshaik+userguide1@snaplogic.com, hshaik+userguide3@snaplogic.com, hshaik+userguide4@snaplogic.com, autoregplatform+provisioner@gmail.com, jpatel@snaplogic.com, sgonaki+serviceaccount@snaplogic.com, akidave@snaplogic.com, sgoodwin@snaplogic.com, sbuddi+basic1@snaplogic.com, sreddi@snaplogic.com, tlikarish@snaplogic.com, pbabu@snaplogic.com, jbrinckwirth@snaplogic.com, skalyanaraman@snaplogic.com, sriram@snaplogic.com, vkbeemanapalli@snaplogic.com, rdhumal+regression@snaplogic.com, choward@snaplogic.com, autoregplatform+sso@gmail.com, pdimitre@snaplogic.com, rdhumal+regressiontest@snaplogic.com, rdhumal+regressionadminuser@snaplogic.com, rdhumal+orgadmin@snaplogic.com, lng@snaplogic.com, agali+bu111019@snaplogic.com, agali+bu141019@snaplogic.com, agali+au141019@snaplogic.com, rdhumal+basic@snaplogic.com, autoregplatform+manual1@gmail.com, autoregplatform+manual2@gmail.com, autoregplatform+manual3@gmail.com, autoregplatform+manual4@gmail.com, autoregplatform+manual5@gmail.com, autoregplatform+manual6@gmail.com, autoregplatform+manual7@gmail.com, autoregplatform+manual8@gmail.com, autoregplatform+manual9@gmail.com, autoregplatform+manual10@gmail.com, autoregplatform+manual11@gmail.com, autoregplatform+manual12@gmail.com, autoregplatform+manual13@gmail.com, autoregplatform+manual14@gmail.com, autoregplatform+manual15@gmail.com, autoregplatform+manual16@gmail.com, autoregplatform+manual17@gmail.com, autoregplatform+manual18@gmail.com, autoregplatform+manual19@gmail.com, autoregplatform+manual20@gmail.com, autoregplatform+manual21@gmail.com, autoregplatform+manual22@gmail.com, autoregplatform+manual23@gmail.com, autoregplatform+manual24@gmail.com, autoregplatform+manual25@gmail.com, autoregplatform+manual26@gmail.com, autoregplatform+manual27@gmail.com, autoregplatform+manual28@gmail.com, autoregplatform+manual29@gmail.com, autoregplatform+manual30@gmail.com, autoregplatform+manual31@gmail.com, autoregplatform+manual32@gmail.com, autoregplatform+manual33@gmail.com, autoregplatform+manual34@gmail.com, autoregplatform+manual35@gmail.com, autoregplatform+manual36@gmail.com, autoregplatform+manual37@gmail.com, autoregplatform+manual38@gmail.com, autoregplatform+manual39@gmail.com, schevireddy+1@snaplogic.com, rdhumal+419regresion@snaplogic.com, rdhumal+permission@snaplogic.com, serv1573549746234@gmail.com, basic1573553302355@gmail.com, serv1573553408266@gmail.com, serv1573553512499@gmail.com, autoreg+basic1@snaplogic.com, autoreg+basic2@snaplogic.com, autoreg+basic3@snaplogic.com, autoreg+basic4@snaplogic.com, autoreg+basic5@snaplogic.com, autoreg+basic6@snaplogic.com, autoreg+basic7@snaplogic.com, autoreg+basic8@snaplogic.com, autoreg+basic9@snaplogic.com, autoreg+basic10@snaplogic.com, autoreg+basic12@snaplogic.com, autoreg+basic13@snaplogic.com, autoreg+basic14@snaplogic.com, autoreg+basic15@snaplogic.com, autoreg+basic17@snaplogic.com, autoreg+basic18@snaplogic.com, autoreg+basic19@snaplogic.com, autoreg+basic20@snaplogic.com, autoreg+basic21@snaplogic.com, autoreg+basic22@snaplogic.com, autoreg+basic23@snaplogic.com, autoreg+basic24@snaplogic.com, autoreg+basic25@snaplogic.com, autoreg+basic26@snaplogic.com, autoreg+basic27@snaplogic.com]}}}",
+	"planSummary": "IXSCAN { username: 1 }"
+},
+{
+	"queryHash": "966D6252",
+	"count": "3",
+	"averageDuration": "135",
+	"highDuration": "162",
+	"lowDuration": "116",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a5b9f261f436fb9b4b655={$exists=true}}, new=true, update={$set={lease_time.654a5b9f261f436fb9b4b655={$date=2023-11-07T15:45:39.794Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=14f2d3c3-c2e9-494e-8d82-2e5cc8beae70}}, txnNumber=520, $clusterTime={clusterTime={$timestamp={t=1699371939, i=25}}, signature={hash={$binary={base64=pOA9qCk/RqYTa/I9egk4lngmFTk=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "895F23AE",
+	"count": "1",
+	"averageDuration": "135",
+	"highDuration": "135",
+	"lowDuration": "135",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a82cc949dc1a324762a01={$exists=true}}, new=true, update={$set={lease_time.654a82cc949dc1a324762a01={$date=2023-11-07T18:35:01.886Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=0f5ff73e-6c35-4dff-9ea1-1535581f8690}}, txnNumber=310, $clusterTime={clusterTime={$timestamp={t=1699382101, i=66}}, signature={hash={$binary={base64=GYJ+LGpneWAEW3TP1lc1i/Bplgc=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "CBBAF310",
+	"count": "7",
+	"averageDuration": "136",
+	"highDuration": "196",
+	"lowDuration": "109",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549d3be0d30dd19d9c9d5ab={$exists=true}}, new=true, update={$set={lease_time.6549d3be0d30dd19d9c9d5ab={$date=2023-11-07T06:05:55.976Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=d988619b-c991-4e4e-ab6b-502002674b67}}, txnNumber=18, $clusterTime={clusterTime={$timestamp={t=1699337155, i=64}}, signature={hash={$binary={base64=ZWaJNSPStmceWJkzT8UbXztjfFI=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "04A44115",
+	"count": "4",
+	"averageDuration": "139",
+	"highDuration": "243",
+	"lowDuration": "100",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549d80309fdbe1c0e569a31={$exists=true}}, new=true, update={$set={lease_time.6549d80309fdbe1c0e569a31={$date=2023-11-07T06:24:08.171Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=0eb42d48-0b46-48ad-ab55-aeadb89469c3}}, txnNumber=174, $clusterTime={clusterTime={$timestamp={t=1699338248, i=4}}, signature={hash={$binary={base64=KHQMF9ogLjWtnkUIm6HeeRxmkfQ=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "4D5BD95E",
+	"count": "1",
+	"averageDuration": "139",
+	"highDuration": "139",
+	"lowDuration": "139",
+	"query": "{q={files_id={$oid=654a109e872c310cd577358a}}, limit=0}",
+	"planSummary": "IXSCAN { files_id: 1, n: 1 }"
+},
+{
+	"queryHash": "8FDD40FE",
+	"count": "2",
+	"averageDuration": "145",
+	"highDuration": "190",
+	"lowDuration": "100",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a73387ae80d09d44ed517={$exists=true}}, new=true, update={$set={lease_time.654a73387ae80d09d44ed517={$date=2023-11-07T17:27:01.504Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=8745b375-7b24-4120-bac3-e08df8bc65b8}}, txnNumber=336, $clusterTime={clusterTime={$timestamp={t=1699378021, i=31}}, signature={hash={$binary={base64=9uZMbkDHAspzhgLqq2lZ35zb+M0=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "9A9B9BC4",
+	"count": "1",
+	"averageDuration": "146",
+	"highDuration": "146",
+	"lowDuration": "146",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a89f08a00c97997022f1c={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a89f08a00c97997022f1c={$date=2023-11-07T19:03:19.044Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=413d406a-9373-477f-9dfe-87b88f70036c}}, txnNumber=45, $clusterTime={clusterTime={$timestamp={t=1699383798, i=23}}, signature={hash={$binary={base64=8XCfH9TLpf+Ubp4lvoVmaDP2igs=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "AA0FBBAC",
+	"count": "2",
+	"averageDuration": "147",
+	"highDuration": "190",
+	"lowDuration": "105",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a090fa158f774f4360449={$exists=true}}, new=true, update={$set={lease_time.654a090fa158f774f4360449={$date=2023-11-07T09:54:36.740Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=467828d4-81e4-406e-9565-8999c487687d}}, txnNumber=100, $clusterTime={clusterTime={$timestamp={t=1699350876, i=40}}, signature={hash={$binary={base64=kNVKpgOfB3JYZylbOpd8+sjkTck=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "D51BD603",
+	"count": "4",
+	"averageDuration": "149",
+	"highDuration": "168",
+	"lowDuration": "128",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a010fef7769b82aa9114d={$exists=true}}, new=true, update={$set={lease_time.654a010fef7769b82aa9114d={$date=2023-11-07T09:20:35.237Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=9cf93347-6e1d-4484-80b5-7aba5ea6259d}}, txnNumber=1744, $clusterTime={clusterTime={$timestamp={t=1699348834, i=27}}, signature={hash={$binary={base64=8QmJY8RVDXWOXzK4CtG6xFjrdBY=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "B8CA3BF2",
+	"count": "3",
+	"averageDuration": "151",
+	"highDuration": "187",
+	"lowDuration": "112",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654aee587c8f5d0444781f96={$exists=true}}, new=true, update={$set={lease_time.654aee587c8f5d0444781f96={$date=2023-11-08T02:13:35.375Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=3114bcf0-6e49-4aa0-bd42-5bce6b099c21}}, txnNumber=1466, $clusterTime={clusterTime={$timestamp={t=1699409615, i=10}}, signature={hash={$binary={base64=21t4TSEfwUpfsy0Pdz8nizCykoE=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "E6DEEEA2",
+	"count": "4",
+	"averageDuration": "154",
+	"highDuration": "220",
+	"lowDuration": "126",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a18a73aa4c1b9a281318b={$exists=true}}, new=true, update={$set={lease_time.654a18a73aa4c1b9a281318b={$date=2023-11-07T11:01:28.399Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=6dfde144-e8ab-409c-b501-0c10b068e153}}, txnNumber=150, $clusterTime={clusterTime={$timestamp={t=1699354888, i=7}}, signature={hash={$binary={base64=MMDBal3/0kRKv6hghVQU3paUEC8=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "9297EEA9",
+	"count": "3",
+	"averageDuration": "155",
+	"highDuration": "170",
+	"lowDuration": "127",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a0e3d825512511341df0e={$exists=true}}, new=true, update={$set={lease_time.654a0e3d825512511341df0e={$date=2023-11-07T10:15:54.579Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=e11e3fea-1e13-497c-b870-f7d8eafc85c8}}, txnNumber=140, $clusterTime={clusterTime={$timestamp={t=1699352154, i=24}}, signature={hash={$binary={base64=m7KVp5gzNpwarZVxXzRcYznp09c=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "644F5298",
+	"count": "1",
+	"averageDuration": "156",
+	"highDuration": "156",
+	"lowDuration": "156",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a1b728083aa4f3d66812b={$exists=true}}, new=true, update={$set={lease_time.654a1b728083aa4f3d66812b={$date=2023-11-07T11:13:41.694Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=d3317779-6bf1-489e-b9e6-622291a8beae}}, txnNumber=50, $clusterTime={clusterTime={$timestamp={t=1699355621, i=33}}, signature={hash={$binary={base64=VX88ARhC6hsTDUWhzKAmIAC9hPU=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "8A92EB17",
+	"count": "10",
+	"averageDuration": "157",
+	"highDuration": "216",
+	"lowDuration": "102",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549cf7a07203c34c89581c9={$exists=true}}, new=true, update={$set={lease_time.6549cf7a07203c34c89581c9={$date=2023-11-07T05:48:07.502Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=d413310f-05b4-4a67-8a34-a2f7fb2873c8}}, txnNumber=1497, $clusterTime={clusterTime={$timestamp={t=1699336087, i=30}}, signature={hash={$binary={base64=GBa97PHJXxZ+J9xyXAxE0HTONjc=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "5383FEC8",
+	"count": "3",
+	"averageDuration": "158",
+	"highDuration": "177",
+	"lowDuration": "143",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654aeb919fd2d15e23eb6537={$exists=true}}, new=true, update={$set={lease_time.654aeb919fd2d15e23eb6537={$date=2023-11-08T02:00:14.323Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=39bb1ed9-1fab-428f-b9d8-7f81cd1b9e88}}, txnNumber=549, $clusterTime={clusterTime={$timestamp={t=1699408814, i=12}}, signature={hash={$binary={base64=/hn9+d4cvlkKBXkVrgVJlle+QAw=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "E1E6D8A6",
+	"count": "9",
+	"averageDuration": "160",
+	"highDuration": "214",
+	"lowDuration": "100",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654afc8d0b72b381bac6c103={$exists=true}}, new=true, update={$set={lease_time.654afc8d0b72b381bac6c103={$date=2023-11-08T03:13:05.966Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=815fb9ba-96e9-4bc2-bc78-768d949dc635}}, txnNumber=39, $clusterTime={clusterTime={$timestamp={t=1699413185, i=42}}, signature={hash={$binary={base64=uwpiyS3Mj3ZCySQLsTbLdWsBrjE=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "E18D82F6",
+	"count": "13",
+	"averageDuration": "160",
+	"highDuration": "245",
+	"lowDuration": "102",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654afb166ee7391544aed1a6={$exists=true}}, new=true, update={$set={lease_time.654afb166ee7391544aed1a6={$date=2023-11-08T03:06:26.822Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=e3b2a695-addd-48f7-a3a9-64497ebdaa73}}, txnNumber=26, $clusterTime={clusterTime={$timestamp={t=1699412786, i=50}}, signature={hash={$binary={base64=HAqJ57Is0lVuJYWByh8VsV7HjZE=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "3AFCE81C",
+	"count": "4",
+	"averageDuration": "161",
+	"highDuration": "203",
+	"lowDuration": "123",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a08246fe887e923fc658c={$exists=true}}, new=true, update={$set={lease_time.654a08246fe887e923fc658c={$date=2023-11-07T09:50:20.763Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=81720ca0-2b24-4f10-bdd6-5a869f062efa}}, txnNumber=1911, $clusterTime={clusterTime={$timestamp={t=1699350620, i=17}}, signature={hash={$binary={base64=BYoWVtBFncR2rwjcqlOAvUC0G9Q=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "DC6EEAD9",
+	"count": "4",
+	"averageDuration": "162",
+	"highDuration": "216",
+	"lowDuration": "125",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a6e099209f6d116832844={$exists=true}}, new=true, update={$set={lease_time.654a6e099209f6d116832844={$date=2023-11-07T17:04:14.831Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=38333ab5-48dd-4e75-830d-46ae74cbeecb}}, txnNumber=41, $clusterTime={clusterTime={$timestamp={t=1699376654, i=53}}, signature={hash={$binary={base64=Of0KdlNlFT0/5/kYJoHtdV+wAAI=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "4B468383",
+	"count": "3",
+	"averageDuration": "163",
+	"highDuration": "227",
+	"lowDuration": "117",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a0af17ce3e3fbbc8aac07={$exists=true}}, new=true, update={$set={lease_time.654a0af17ce3e3fbbc8aac07={$date=2023-11-07T10:02:02.129Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=46bd06d6-0620-404e-8e9d-0fce1615c94f}}, txnNumber=107, $clusterTime={clusterTime={$timestamp={t=1699351322, i=5}}, signature={hash={$binary={base64=BjxBLq+1EOjPPJ82EGuSr3NxRMg=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "005A7396",
+	"count": "8",
+	"averageDuration": "170",
+	"highDuration": "272",
+	"lowDuration": "100",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a10a035dbb7f9ee0ffd70={$exists=true}}, new=true, update={$set={lease_time.654a10a035dbb7f9ee0ffd70={$date=2023-11-07T10:26:40.065Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=f67bf2f3-62ba-4807-9a7b-c382d25d6376}}, txnNumber=245, $clusterTime={clusterTime={$timestamp={t=1699352800, i=4}}, signature={hash={$binary={base64=5zUDpz1xLakJR89TUP/VF5H4BIk=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "A5D7672A",
+	"count": "5",
+	"averageDuration": "171",
+	"highDuration": "301",
+	"lowDuration": "118",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654af40a81c55e9cb9f0e5d5={$exists=true}}, new=true, update={$set={lease_time.654af40a81c55e9cb9f0e5d5={$date=2023-11-08T02:36:22.840Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=34024e78-3ea0-434d-b3cd-6e5d6d155f14}}, txnNumber=52, $clusterTime={clusterTime={$timestamp={t=1699410982, i=29}}, signature={hash={$binary={base64=lPjydqbfPCv8vJ2miy+/N862fkU=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "B1066C32",
+	"count": "3",
+	"averageDuration": "172",
+	"highDuration": "245",
+	"lowDuration": "120",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a0cdcfff726500baca557={$exists=true}}, new=true, update={$set={lease_time.654a0cdcfff726500baca557={$date=2023-11-07T10:10:07.119Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=ea68fc5e-8b37-4285-ac88-0db7b67f2f1c}}, txnNumber=45, $clusterTime={clusterTime={$timestamp={t=1699351807, i=6}}, signature={hash={$binary={base64=zuMEB36QgrQ7hZnwyFboGHGrVLo=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "1728664D",
+	"count": "6",
+	"averageDuration": "175",
+	"highDuration": "245",
+	"lowDuration": "108",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654af2964db8e712f0bbd2f1={$exists=true}}, new=true, update={$set={lease_time.654af2964db8e712f0bbd2f1={$date=2023-11-08T02:29:45.937Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=e48693c4-4638-4eb3-8718-608b25ad8ba0}}, txnNumber=251, $clusterTime={clusterTime={$timestamp={t=1699410585, i=38}}, signature={hash={$binary={base64=2rol0yA1wjj1JHTraZ0J5KqDQJ0=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "1B2382C7",
+	"count": "9",
+	"averageDuration": "176",
+	"highDuration": "258",
+	"lowDuration": "101",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654aefc9779993704f762983={$exists=true}}, new=true, update={$set={lease_time.654aefc9779993704f762983={$date=2023-11-08T02:18:45.590Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=eb1a0670-9be9-4fc3-9296-461ee76afe31}}, txnNumber=2564, $clusterTime={clusterTime={$timestamp={t=1699409925, i=6}}, signature={hash={$binary={base64=0xIxEtUo/exVp9cKhEYNsjJED7A=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "AF8D1AC0",
+	"count": "9",
+	"averageDuration": "177",
+	"highDuration": "309",
+	"lowDuration": "117",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a8cb253f5030436b8ec01={$exists=true}}, new=true, update={$set={lease_time.654a8cb253f5030436b8ec01={$date=2023-11-07T19:15:39.669Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=37d643c5-0e1a-457d-abd8-cddfb51a4608}}, txnNumber=254, $clusterTime={clusterTime={$timestamp={t=1699384539, i=49}}, signature={hash={$binary={base64=ISEPqF0ThjO068UeeksUE5aJU6c=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "A3ED2893",
+	"count": "4",
+	"averageDuration": "179",
+	"highDuration": "320",
+	"lowDuration": "119",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a7bc96c707be615c955d0={$exists=true}}, new=true, update={$set={lease_time.654a7bc96c707be615c955d0={$date=2023-11-07T18:02:55.669Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=e4a5f286-add4-41d3-8ba5-c9297e460f86}}, txnNumber=158, $clusterTime={clusterTime={$timestamp={t=1699380175, i=55}}, signature={hash={$binary={base64=YMSDhKRbRKVQFvHIYxftyEXBr8k=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "159A1810",
+	"count": "1",
+	"averageDuration": "179",
+	"highDuration": "179",
+	"lowDuration": "179",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654b00bda0c5684dd2a4ce04={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654b00bda0c5684dd2a4ce04={$date=2023-11-08T03:30:13.762Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=b0fb3dd6-1415-467f-856e-406ecc1119c0}}, txnNumber=24, $clusterTime={clusterTime={$timestamp={t=1699414213, i=28}}, signature={hash={$binary={base64=U6cRf3fZ+5Gn9RvpLY0l4ZBU+nM=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "B90240AD",
+	"count": "8",
+	"averageDuration": "182",
+	"highDuration": "367",
+	"lowDuration": "116",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a724a74e1873012e69f0d={$exists=true}}, new=true, update={$set={lease_time.654a724a74e1873012e69f0d={$date=2023-11-07T17:22:22.668Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=deb446bb-d987-441d-bc27-3bf823917c9b}}, txnNumber=210, $clusterTime={clusterTime={$timestamp={t=1699377742, i=35}}, signature={hash={$binary={base64=th19FEBhQp0gTrXALvM3KwHRaZw=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "98C7D212",
+	"count": "11",
+	"averageDuration": "182",
+	"highDuration": "243",
+	"lowDuration": "103",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a15caed561f68cef8c8d4={$exists=true}}, new=true, update={$set={lease_time.654a15caed561f68cef8c8d4={$date=2023-11-07T10:48:09.953Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=720f7b0f-bfc2-4c1e-8900-d1127e43cacd}}, txnNumber=147, $clusterTime={clusterTime={$timestamp={t=1699354089, i=39}}, signature={hash={$binary={base64=QTkWm2krUMgzNMqTmP77AQKnyqA=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "3A5668B2",
+	"count": "3",
+	"averageDuration": "185",
+	"highDuration": "221",
+	"lowDuration": "131",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a7514e45b35529ff9c73f={$exists=true}}, new=true, update={$set={lease_time.654a7514e45b35529ff9c73f={$date=2023-11-07T17:34:18.463Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=2059dfed-67cc-410d-b949-a7e74f75dd57}}, txnNumber=27, $clusterTime={clusterTime={$timestamp={t=1699378458, i=12}}, signature={hash={$binary={base64=vF70QYxSP7V+orba+JHYRxTcZ50=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "17BDF718",
+	"count": "1",
+	"averageDuration": "185",
+	"highDuration": "185",
+	"lowDuration": "185",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a9b4f9677708869eb3166={$exists=true}}, new=true, update={$set={lease_time.654a9b4f9677708869eb3166={$date=2023-11-07T20:17:56.150Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=0bee0966-64e8-4041-bd4f-245158f93507}}, txnNumber=161, $clusterTime={clusterTime={$timestamp={t=1699388276, i=8}}, signature={hash={$binary={base64=51mEBpIfQf0WQoVf4j6/rV25ntU=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "4019A4F2",
+	"count": "11",
+	"averageDuration": "186",
+	"highDuration": "326",
+	"lowDuration": "124",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a924f8091c9e58d576cc0={$exists=true}}, new=true, update={$set={lease_time.654a924f8091c9e58d576cc0={$date=2023-11-07T19:39:03.704Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=6454eb2e-3502-4923-b912-2fe7365c633e}}, txnNumber=4, $clusterTime={clusterTime={$timestamp={t=1699385943, i=35}}, signature={hash={$binary={base64=TmmiaHxbS0VQg/nHpaUCSipvGSg=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "D938910A",
+	"count": "7",
+	"averageDuration": "186",
+	"highDuration": "234",
+	"lowDuration": "154",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a8e24d30be7ea3f8c2872={$exists=true}}, new=true, update={$set={lease_time.654a8e24d30be7ea3f8c2872={$date=2023-11-07T19:22:20.915Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=c5c53e8b-6ad8-4e57-94d0-d0586daade2d}}, txnNumber=222, $clusterTime={clusterTime={$timestamp={t=1699384940, i=21}}, signature={hash={$binary={base64=RbRlwEqf2d1dEnjyyj3dTBvFeWI=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "616D7CDC",
+	"count": "1",
+	"averageDuration": "189",
+	"highDuration": "189",
+	"lowDuration": "189",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.6549d80309fdbe1c0e569a31={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549d80309fdbe1c0e569a31={$date=2023-11-07T06:24:08.357Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=81720ca0-2b24-4f10-bdd6-5a869f062efa}}, txnNumber=30, $clusterTime={clusterTime={$timestamp={t=1699338248, i=13}}, signature={hash={$binary={base64=KHQMF9ogLjWtnkUIm6HeeRxmkfQ=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "F5F35181",
+	"count": "6",
+	"averageDuration": "189",
+	"highDuration": "392",
+	"lowDuration": "104",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a1205ac9cd55f5ee54bb9={$exists=true}}, new=true, update={$set={lease_time.654a1205ac9cd55f5ee54bb9={$date=2023-11-07T10:31:40.492Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=10b8dbe7-7378-4f96-85d0-927d8d95473f}}, txnNumber=221, $clusterTime={clusterTime={$timestamp={t=1699353100, i=13}}, signature={hash={$binary={base64=N0kmdTAM+yuRQLjo08w275yP/VI=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "7E988048",
+	"count": "1",
+	"averageDuration": "190",
+	"highDuration": "190",
+	"lowDuration": "190",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a5d0ce7efd6717961fb87={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a5d0ce7efd6717961fb87={$date=2023-11-07T15:51:45.348Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=16616534-3684-4b56-8add-057b0ecc27e3}}, txnNumber=443, $clusterTime={clusterTime={$timestamp={t=1699372305, i=17}}, signature={hash={$binary={base64=NqITZdMcJ9+Rr1E8vkrstvPIQAU=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "19D97C4D",
+	"count": "4",
+	"averageDuration": "191",
+	"highDuration": "305",
+	"lowDuration": "135",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549d96d07203c34c8958343={$exists=true}}, new=true, update={$set={lease_time.6549d96d07203c34c8958343={$date=2023-11-07T06:30:54.034Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=4a776be1-f6b0-488a-97f5-4e57f113554b}}, txnNumber=477, $clusterTime={clusterTime={$timestamp={t=1699338653, i=39}}, signature={hash={$binary={base64=xv4q/26Vx8W7S5V9llecv6R6YqU=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "F7F4054D",
+	"count": "1",
+	"averageDuration": "192",
+	"highDuration": "192",
+	"lowDuration": "192",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a8f81b6dc1c66b62ca6ae={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a8f81b6dc1c66b62ca6ae={$date=2023-11-07T19:27:01.385Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=508dd170-c21a-4139-a872-b32920a81d1f}}, txnNumber=212, $clusterTime={clusterTime={$timestamp={t=1699385221, i=18}}, signature={hash={$binary={base64=fLzDAlq5SdH0kYzNX/JSLT/+t/A=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "AF2AE6CA",
+	"count": "10",
+	"averageDuration": "192",
+	"highDuration": "317",
+	"lowDuration": "105",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a859bf83817908de6669d={$exists=true}}, new=true, update={$set={lease_time.654a859bf83817908de6669d={$date=2023-11-07T18:44:47.692Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=72a4f08e-6d89-4418-bb91-ea42005be1a5}}, txnNumber=239, $clusterTime={clusterTime={$timestamp={t=1699382687, i=71}}, signature={hash={$binary={base64=3OXxQQXcxZ8TUBO5zZHvudm0Hgg=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "B2464B08",
+	"count": "1",
+	"averageDuration": "193",
+	"highDuration": "193",
+	"lowDuration": "193",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a0be48dbc6549426a1baa={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a0be48dbc6549426a1baa={$date=2023-11-07T10:05:30.319Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=f2f83f05-ae5f-4a48-92eb-9b99a4930261}}, txnNumber=137, $clusterTime={clusterTime={$timestamp={t=1699351530, i=18}}, signature={hash={$binary={base64=ibj8zt/CQ5sarpDs0CTlR7tEDxU=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "CE27E20D",
+	"count": "1",
+	"averageDuration": "193",
+	"highDuration": "193",
+	"lowDuration": "193",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549d69261d7442b751c37c3={$exists=true}}, new=true, update={$set={lease_time.6549d69261d7442b751c37c3={$date=2023-11-07T06:19:30.487Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=769f619a-9042-42a7-b1c6-530b6a3facec}}, txnNumber=124, $clusterTime={clusterTime={$timestamp={t=1699337970, i=31}}, signature={hash={$binary={base64=gBVXC2MDjpXemps5s18JYmCBB7M=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "302FCABD",
+	"count": "16",
+	"averageDuration": "194",
+	"highDuration": "418",
+	"lowDuration": "100",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654af12fda4201c10cc65b76={$exists=true}}, new=true, update={$set={lease_time.654af12fda4201c10cc65b76={$date=2023-11-08T02:23:51.059Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=e2b873bf-cf97-469c-9663-b573ad21bdca}}, txnNumber=2202, $clusterTime={clusterTime={$timestamp={t=1699410231, i=3}}, signature={hash={$binary={base64=gGlIbHaZ7ruTO357O6J5Bqb0jaA=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "4A430213",
+	"count": "1",
+	"averageDuration": "194",
+	"highDuration": "194",
+	"lowDuration": "194",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.6549dda02b32b5283d8de275={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549dda02b32b5283d8de275={$date=2023-11-07T06:48:04.609Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=2fa61ffa-27df-4f45-abe2-992104b98159}}, txnNumber=188, $clusterTime={clusterTime={$timestamp={t=1699339684, i=16}}, signature={hash={$binary={base64=YZsnutbYByiV3CLDOA13hD/ODsg=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "DA31C853",
+	"count": "12",
+	"averageDuration": "194",
+	"highDuration": "304",
+	"lowDuration": "106",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a843419a9c9158dced345={$exists=true}}, new=true, update={$set={lease_time.654a843419a9c9158dced345={$date=2023-11-07T18:39:53.306Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=7d5ef19c-6dcb-4595-9bab-c7c60b09e8c3}}, txnNumber=49, $clusterTime={clusterTime={$timestamp={t=1699382393, i=6}}, signature={hash={$binary={base64=kRAZXOS7zVPLk+BwcpcX2OtWBUM=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "EFAD16AB",
+	"count": "7",
+	"averageDuration": "194",
+	"highDuration": "272",
+	"lowDuration": "106",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a78692d80c9a63c35fa9f={$exists=true}}, new=true, update={$set={lease_time.654a78692d80c9a63c35fa9f={$date=2023-11-07T17:48:35.263Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=b049e039-9681-45d3-bcd2-cf1d8f8566fa}}, txnNumber=81, $clusterTime={clusterTime={$timestamp={t=1699379315, i=9}}, signature={hash={$binary={base64=orf23M/QFgNa/FvKqOWdevgjXn4=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "0A27B1C8",
+	"count": "1",
+	"averageDuration": "194",
+	"highDuration": "194",
+	"lowDuration": "194",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654afc8d0b72b381bac6c103={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654afc8d0b72b381bac6c103={$date=2023-11-08T03:12:21.953Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=9afc1d9d-acb2-496f-8b7f-9af293701bce}}, txnNumber=15, $clusterTime={clusterTime={$timestamp={t=1699413141, i=35}}, signature={hash={$binary={base64=M3lW3moRqKy76aVtGsFTLULcVIM=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "FB6721B6",
+	"count": "9",
+	"averageDuration": "197",
+	"highDuration": "321",
+	"lowDuration": "106",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a614ab038f2148c8af254={$exists=true}}, new=true, update={$set={lease_time.654a614ab038f2148c8af254={$date=2023-11-07T16:10:19.737Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=03387e7c-c8d8-4b7d-bf96-615e7eb0a54c}}, txnNumber=28, $clusterTime={clusterTime={$timestamp={t=1699373419, i=20}}, signature={hash={$binary={base64=zlyxOfWSZo0oKzsEdi9jDldDU3Q=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "B37EC462",
+	"count": "1",
+	"averageDuration": "198",
+	"highDuration": "198",
+	"lowDuration": "198",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a1fac261f436fb9b4b03a={$exists=true}}, new=true, update={$set={lease_time.654a1fac261f436fb9b4b03a={$date=2023-11-07T11:31:08.136Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=87fc14a2-3edc-4f2b-b3e1-45aae1077735}}, txnNumber=338, $clusterTime={clusterTime={$timestamp={t=1699356668, i=5}}, signature={hash={$binary={base64=SFS7oXl0GLpXoaXD4iwn/XMhu9Y=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "F147C0F7",
+	"count": "1",
+	"averageDuration": "198",
+	"highDuration": "198",
+	"lowDuration": "198",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a8cb253f5030436b8ec01={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a8cb253f5030436b8ec01={$date=2023-11-07T19:15:03.670Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=2df10fd1-3baa-4c48-a7cb-9a003b2aefa3}}, txnNumber=27, $clusterTime={clusterTime={$timestamp={t=1699384503, i=28}}, signature={hash={$binary={base64=D3YwnHWrh8UwvtXAMd4v+eN+9J8=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "41BD3A8C",
+	"count": "33",
+	"averageDuration": "201",
+	"highDuration": "888",
+	"lowDuration": "101",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, in_progress_count=1}, new=false, update={$inc={in_progress_count=-1}, $unset={lease_time.6549c8ea60060a43d536cedd=}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=e16c6703-9fc9-490f-9ea9-c3e88aacfb98}}, txnNumber=412, $clusterTime={clusterTime={$timestamp={t=1699334739, i=32}}, signature={hash={$binary={base64=qZKN9wMWd62pugzbEupwNqRvn4U=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "869C7846",
+	"count": "1",
+	"averageDuration": "202",
+	"highDuration": "202",
+	"lowDuration": "202",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a9805d8d37ae166584b45={$exists=true}}, new=true, update={$set={lease_time.654a9805d8d37ae166584b45={$date=2023-11-07T20:03:54.032Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=6f8f2f74-8123-4983-b946-b2374d147287}}, txnNumber=49, $clusterTime={clusterTime={$timestamp={t=1699387433, i=35}}, signature={hash={$binary={base64=lhyJWQBWly6buky2EarfG7R3Foc=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "01BDB9F2",
+	"count": "12",
+	"averageDuration": "202",
+	"highDuration": "438",
+	"lowDuration": "111",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a69cdb5556f2e2d6c336c={$exists=true}}, new=true, update={$set={lease_time.654a69cdb5556f2e2d6c336c={$date=2023-11-07T16:46:55.603Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=a7c39d3f-708d-4e6d-b7a0-febd4f580646}}, txnNumber=11, $clusterTime={clusterTime={$timestamp={t=1699375615, i=55}}, signature={hash={$binary={base64=GUMp9+m7FlSZW3DEiXdYE/VZJ+M=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "628CA4D0",
+	"count": "1",
+	"averageDuration": "202",
+	"highDuration": "202",
+	"lowDuration": "202",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a072a1c646620dde9470a={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a072a1c646620dde9470a={$date=2023-11-07T09:45:23.754Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=9e2deb94-d353-40b3-a607-8e87c4e8525c}}, txnNumber=25, $clusterTime={clusterTime={$timestamp={t=1699350323, i=23}}, signature={hash={$binary={base64=i1anjcO0VigSHh/5emC071sNsGI=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "3E342722",
+	"count": "1",
+	"averageDuration": "202",
+	"highDuration": "202",
+	"lowDuration": "202",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a0cdcfff726500baca557={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a0cdcfff726500baca557={$date=2023-11-07T10:09:37.399Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=2040edc0-53ac-4b23-b808-6952606288cd}}, txnNumber=50, $clusterTime={clusterTime={$timestamp={t=1699351777, i=16}}, signature={hash={$binary={base64=SNRMoHc5/u0U8Q0XIY7t955kl6w=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "8EF4F156",
+	"count": "15",
+	"averageDuration": "203",
+	"highDuration": "617",
+	"lowDuration": "104",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a886cbd265bf0679333d0={$exists=true}}, new=true, update={$set={lease_time.654a886cbd265bf0679333d0={$date=2023-11-07T18:56:52.074Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=47935b89-e143-4395-9574-5444fcee8354}}, txnNumber=460, $clusterTime={clusterTime={$timestamp={t=1699383412, i=3}}, signature={hash={$binary={base64=G4P4frzbc5sXSoId3eNQq3kTrIg=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "73B1E47A",
+	"count": "10",
+	"averageDuration": "203",
+	"highDuration": "377",
+	"lowDuration": "118",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a05491c646620dde946ad={$exists=true}}, new=true, update={$set={lease_time.654a05491c646620dde946ad={$date=2023-11-07T09:38:05.829Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=b35ec09a-1699-4142-b0a9-904853d1b343}}, txnNumber=123, $clusterTime={clusterTime={$timestamp={t=1699349885, i=26}}, signature={hash={$binary={base64=GrjBBLAWPtEG7Lf3UU7/4nlzU5I=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "28B44E56",
+	"count": "1",
+	"averageDuration": "205",
+	"highDuration": "205",
+	"lowDuration": "205",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a7d25c7710c98bec21222={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a7d25c7710c98bec21222={$date=2023-11-07T18:08:41.598Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=900802a2-dda4-4290-93ad-fd6b13692f4a}}, txnNumber=52, $clusterTime={clusterTime={$timestamp={t=1699380521, i=17}}, signature={hash={$binary={base64=InyastBpDybMQU6NcWybtpkfqSI=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "F02E9733",
+	"count": "1",
+	"averageDuration": "205",
+	"highDuration": "205",
+	"lowDuration": "205",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a614ab038f2148c8af254={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a614ab038f2148c8af254={$date=2023-11-07T16:09:51.327Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=cf7291a4-c114-4501-9a8b-067115e953bc}}, txnNumber=113, $clusterTime={clusterTime={$timestamp={t=1699373391, i=29}}, signature={hash={$binary={base64=dYwnr0Tfs6A59LiVOPs2anOzvvU=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "BAA13D67",
+	"count": "1",
+	"averageDuration": "205",
+	"highDuration": "205",
+	"lowDuration": "205",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a90ead6ac2ecbc27c57b6={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a90ead6ac2ecbc27c57b6={$date=2023-11-07T19:33:03.445Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=8f0edc25-0b15-45c9-ab16-f6630b42a29d}}, txnNumber=191, $clusterTime={clusterTime={$timestamp={t=1699385583, i=29}}, signature={hash={$binary={base64=vXhggzWeV4mi34dUe4H8o1t6VS8=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "C0B274ED",
+	"count": "9",
+	"averageDuration": "206",
+	"highDuration": "378",
+	"lowDuration": "103",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654aff53726d871132e03ced={$exists=true}}, new=true, update={$set={lease_time.654aff53726d871132e03ced={$date=2023-11-08T03:24:09.888Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=b5308563-f72d-48c6-b38f-77810045fd1e}}, txnNumber=14, $clusterTime={clusterTime={$timestamp={t=1699413849, i=33}}, signature={hash={$binary={base64=uWpCt6dBEh1kT49ZnzQiFzFbmYc=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "540F2CC1",
+	"count": "5",
+	"averageDuration": "206",
+	"highDuration": "291",
+	"lowDuration": "134",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a1ce4642367305553b6f9={$exists=true}}, new=true, update={$set={lease_time.654a1ce4642367305553b6f9={$date=2023-11-07T11:19:36.043Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=ea6e6741-d548-4e00-b588-9cb1ae2d5168}}, txnNumber=283, $clusterTime={clusterTime={$timestamp={t=1699355976, i=2}}, signature={hash={$binary={base64=n6vfNf+VQUG96IzukPXE+CBNYXk=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "867CB393",
+	"count": "8",
+	"averageDuration": "207",
+	"highDuration": "294",
+	"lowDuration": "114",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a6b2d61ce5645bd90f17a={$exists=true}}, new=true, update={$set={lease_time.654a6b2d61ce5645bd90f17a={$date=2023-11-07T16:52:04.316Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=db0590a8-eb6a-4bef-a804-a16bef0db1e0}}, txnNumber=50, $clusterTime={clusterTime={$timestamp={t=1699375923, i=23}}, signature={hash={$binary={base64=45mP89JMqGFLJCavX7l9+z5Fkog=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "10C67626",
+	"count": "8",
+	"averageDuration": "207",
+	"highDuration": "381",
+	"lowDuration": "102",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a93c4727feeb2197e5f4c={$exists=true}}, new=true, update={$set={lease_time.654a93c4727feeb2197e5f4c={$date=2023-11-07T19:45:13.890Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=35f905d4-0ec3-4b2a-bf64-fc3efeba1669}}, txnNumber=20, $clusterTime={clusterTime={$timestamp={t=1699386313, i=37}}, signature={hash={$binary={base64=7iX6lS8tiEAwAOef74yqtu/XB1Y=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "7A01B19D",
+	"count": "10",
+	"averageDuration": "208",
+	"highDuration": "352",
+	"lowDuration": "114",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654af6db8b0c7c7055b7e215={$exists=true}}, new=true, update={$set={lease_time.654af6db8b0c7c7055b7e215={$date=2023-11-08T02:48:00.582Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=f5c4204e-10b5-4a20-92c0-09742c041c79}}, txnNumber=68, $clusterTime={clusterTime={$timestamp={t=1699411680, i=20}}, signature={hash={$binary={base64=wzAVXldm/BPubFKlzlixUvDM6hE=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "54395F11",
+	"count": "11",
+	"averageDuration": "208",
+	"highDuration": "403",
+	"lowDuration": "111",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549d254c398efef9c6cb076={$exists=true}}, new=true, update={$set={lease_time.6549d254c398efef9c6cb076={$date=2023-11-07T06:00:16.449Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=8c58c8ee-53fe-4302-8e54-7930b1f88772}}, txnNumber=67, $clusterTime={clusterTime={$timestamp={t=1699336816, i=21}}, signature={hash={$binary={base64=NYkEKEQIvmeO7Yrvsun5JoOpx9M=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "B9ED80DD",
+	"count": "1",
+	"averageDuration": "209",
+	"highDuration": "209",
+	"lowDuration": "209",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654aeb919fd2d15e23eb6537={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654aeb919fd2d15e23eb6537={$date=2023-11-08T01:59:51.956Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=f66ab48e-839d-44ad-95b0-243dab2748cb}}, txnNumber=1557, $clusterTime={clusterTime={$timestamp={t=1699408791, i=31}}, signature={hash={$binary={base64=UwaY2k2HYKqZQQR8w/i6vdgd4M4=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "03D97F7B",
+	"count": "1",
+	"averageDuration": "209",
+	"highDuration": "209",
+	"lowDuration": "209",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a8165fd83fe52b5fd45f1={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a8165fd83fe52b5fd45f1={$date=2023-11-07T18:26:51.906Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=8a6178da-0903-48ba-924b-a24cd7032462}}, txnNumber=380, $clusterTime={clusterTime={$timestamp={t=1699381611, i=20}}, signature={hash={$binary={base64=crwdbTzUXeW3J3Gow0bFcZx9TG0=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "C3121162",
+	"count": "2",
+	"averageDuration": "210",
+	"highDuration": "276",
+	"lowDuration": "144",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a7ac78007465b396e87c0={$exists=true}}, new=true, update={$set={lease_time.654a7ac78007465b396e87c0={$date=2023-11-07T17:59:25.212Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=3faab066-de5c-49e6-aa0e-23f48c8b737f}}, txnNumber=62, $clusterTime={clusterTime={$timestamp={t=1699379965, i=6}}, signature={hash={$binary={base64=fMj65w6+QkL1Aea9Gn1AtpH4m4o=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "2756316A",
+	"count": "1",
+	"averageDuration": "210",
+	"highDuration": "210",
+	"lowDuration": "210",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654aecf7a7ca31d610bb023e={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654aecf7a7ca31d610bb023e={$date=2023-11-08T02:05:47.501Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=5e9c04bb-5998-4638-b839-b2f6315f36af}}, txnNumber=2121, $clusterTime={clusterTime={$timestamp={t=1699409147, i=33}}, signature={hash={$binary={base64=3NB0PqB6WF7izzpkq+DNO8qdNzk=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "D72668A3",
+	"count": "7",
+	"averageDuration": "211",
+	"highDuration": "573",
+	"lowDuration": "101",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549ff9d624ff92ee08d5865={$exists=true}}, new=true, update={$set={lease_time.6549ff9d624ff92ee08d5865={$date=2023-11-07T09:14:10.950Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=59d0b04e-c30f-4787-8186-bdcbd36976a5}}, txnNumber=789, $clusterTime={clusterTime={$timestamp={t=1699348450, i=41}}, signature={hash={$binary={base64=A+lu2B49qFVyPryo61ng+tE7tvk=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "1B23F67D",
+	"count": "10",
+	"averageDuration": "211",
+	"highDuration": "479",
+	"lowDuration": "110",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549fe3607202fe36b028b8f={$exists=true}}, new=true, update={$set={lease_time.6549fe3607202fe36b028b8f={$date=2023-11-07T09:07:06.436Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=b98df18b-9d2c-4f69-94c2-ee697feb216e}}, txnNumber=1393, $clusterTime={clusterTime={$timestamp={t=1699348026, i=13}}, signature={hash={$binary={base64=VOS4E8Vtg+kC7reX/M7PT2TiQqM=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "83BA46CB",
+	"count": "1",
+	"averageDuration": "211",
+	"highDuration": "211",
+	"lowDuration": "211",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a66f025a17ba8a32afd22={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a66f025a17ba8a32afd22={$date=2023-11-07T16:33:58.810Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=2af823da-58dd-4191-b86e-8c680269aeac}}, txnNumber=24, $clusterTime={clusterTime={$timestamp={t=1699374838, i=49}}, signature={hash={$binary={base64=2NFMe9++cS6VYHJDke9TNdBsb74=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "18D9D346",
+	"count": "4",
+	"averageDuration": "212",
+	"highDuration": "362",
+	"lowDuration": "113",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549d0ebde42aded4f5259f1={$exists=true}}, new=true, update={$set={lease_time.6549d0ebde42aded4f5259f1={$date=2023-11-07T05:55:28.720Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=d5a20be4-04d4-43e7-b575-4145c7570019}}, txnNumber=96, $clusterTime={clusterTime={$timestamp={t=1699336528, i=22}}, signature={hash={$binary={base64=bPeTmw5U+4GxKvUqZHTGRX+nrMA=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "BFD16755",
+	"count": "1",
+	"averageDuration": "214",
+	"highDuration": "214",
+	"lowDuration": "214",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654af12fda4201c10cc65b76={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654af12fda4201c10cc65b76={$date=2023-11-08T02:23:51.300Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=e2b873bf-cf97-469c-9663-b573ad21bdca}}, txnNumber=2204, $clusterTime={clusterTime={$timestamp={t=1699410231, i=19}}, signature={hash={$binary={base64=gGlIbHaZ7ruTO357O6J5Bqb0jaA=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "8F1D6340",
+	"count": "11",
+	"averageDuration": "214",
+	"highDuration": "355",
+	"lowDuration": "144",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a5fdeaada20c1ee807b90={$exists=true}}, new=true, update={$set={lease_time.654a5fdeaada20c1ee807b90={$date=2023-11-07T16:04:10.018Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=19e3ce9b-2ec0-4f32-9db5-0e57f71cedea}}, txnNumber=559, $clusterTime={clusterTime={$timestamp={t=1699373049, i=17}}, signature={hash={$binary={base64=4IuKxWtvYkw+VcGTUFVbAtPlpa8=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "37FA414E",
+	"count": "1",
+	"averageDuration": "215",
+	"highDuration": "215",
+	"lowDuration": "215",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654aa5303654e6aa8315a166={$exists=true}}, new=true, update={$set={lease_time.654aa5303654e6aa8315a166={$date=2023-11-07T21:00:28.251Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=93dfd0fe-d2e9-45db-bcb2-fe0f6cbc6705}}, txnNumber=512, $clusterTime={clusterTime={$timestamp={t=1699390828, i=37}}, signature={hash={$binary={base64=FPM0MvVW4kP3HabtJbvoKPenzQQ=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "A6E52C1C",
+	"count": "11",
+	"averageDuration": "215",
+	"highDuration": "293",
+	"lowDuration": "101",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a7fef65fffa1fb1cf7f64={$exists=true}}, new=true, update={$set={lease_time.654a7fef65fffa1fb1cf7f64={$date=2023-11-07T18:20:38.113Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=22c16659-6aec-413d-8fa4-0a4e8824ab9e}}, txnNumber=56, $clusterTime={clusterTime={$timestamp={t=1699381238, i=4}}, signature={hash={$binary={base64=2MMcTYk+Syx5ZJ0pIODQx/A/BAY=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "4B7BD912",
+	"count": "15",
+	"averageDuration": "215",
+	"highDuration": "455",
+	"lowDuration": "105",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=648a65bfb56c7911d13a1309-regular, lease_time.648c96419e96c5e23151ddc0={$exists=true}}, new=true, update={$set={lease_time.648c96419e96c5e23151ddc0={$date=2023-11-07T04:15:27.722Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=80ac2a78-1051-4433-8160-4227f4019f3e}}, txnNumber=256, $clusterTime={clusterTime={$timestamp={t=1699330527, i=225}}, signature={hash={$binary={base64=vzhDyd1/KuF4oiZ7csf7sIqspis=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "2F2082A0",
+	"count": "9",
+	"averageDuration": "215",
+	"highDuration": "535",
+	"lowDuration": "117",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a685c803767607db2d96a={$exists=true}}, new=true, update={$set={lease_time.654a685c803767607db2d96a={$date=2023-11-07T16:40:34.596Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=b2890174-6452-4998-b767-d6acf14c5dbe}}, txnNumber=47, $clusterTime={clusterTime={$timestamp={t=1699375234, i=22}}, signature={hash={$binary={base64=d2rNy7hlr7TfYjdIk0rsfzq0vW0=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "D5806592",
+	"count": "5",
+	"averageDuration": "216",
+	"highDuration": "262",
+	"lowDuration": "162",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a8f81b6dc1c66b62ca6ae={$exists=true}}, new=true, update={$set={lease_time.654a8f81b6dc1c66b62ca6ae={$date=2023-11-07T19:28:14.680Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=bf9208fa-7434-4676-bf41-56eab614ce75}}, txnNumber=199, $clusterTime={clusterTime={$timestamp={t=1699385294, i=31}}, signature={hash={$binary={base64=10/fbH/AtO/lvh288jImg1U9od4=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "F947A5A0",
+	"count": "15",
+	"averageDuration": "216",
+	"highDuration": "507",
+	"lowDuration": "121",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a87095e5b9ff5e3af4944={$exists=true}}, new=true, update={$set={lease_time.654a87095e5b9ff5e3af4944={$date=2023-11-07T18:50:54.693Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=61d41520-5954-4afd-b149-43c2f8fb5f7a}}, txnNumber=140, $clusterTime={clusterTime={$timestamp={t=1699383054, i=18}}, signature={hash={$binary={base64=jeGWpjuSlNNMjUn1TX31JeI98Ww=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "A4F07451",
+	"count": "3658",
+	"averageDuration": "218",
+	"highDuration": "1706",
+	"lowDuration": "100",
+	"query": "{findAndModify=metrics, query={org_snode_id={$oid=5be4a4cded5edc0017b9aa70}, metrics.metric_name=Dir}, new=true, update={$inc={metrics.$.metric_value=1}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=d3341026-0b3f-440b-9e68-c3b488e6d18c}}, txnNumber=9, $clusterTime={clusterTime={$timestamp={t=1699334418, i=27}}, signature={hash={$binary={base64=O07WGaco6bTC4pStETHl1q8gt2w=, subType=0}}, keyId=7254037584978903041}}, $db=cassets, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { org_snode_id: 1 }"
+},
+{
+	"queryHash": "18FC0075",
+	"count": "12",
+	"averageDuration": "219",
+	"highDuration": "688",
+	"lowDuration": "107",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549ca4ea1e0996da2602486={$exists=true}}, new=true, update={$set={lease_time.6549ca4ea1e0996da2602486={$date=2023-11-07T05:26:21.228Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=a8bd78dc-f037-47a6-bf12-4b2d6757ba76}}, txnNumber=22, $clusterTime={clusterTime={$timestamp={t=1699334781, i=7}}, signature={hash={$binary={base64=qG/gL1hONi9pDKU0tcn68LpCvkc=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "82823783",
+	"count": "9",
+	"averageDuration": "220",
+	"highDuration": "379",
+	"lowDuration": "107",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a7d25c7710c98bec21222={$exists=true}}, new=true, update={$set={lease_time.654a7d25c7710c98bec21222={$date=2023-11-07T18:10:17.260Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=b0ff8ed5-c607-4bfc-8b23-9828c7c73142}}, txnNumber=6, $clusterTime={clusterTime={$timestamp={t=1699380617, i=16}}, signature={hash={$binary={base64=6GrDuOYlGrhUZIhINhFqpenzRyA=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "5198E328",
+	"count": "12",
+	"averageDuration": "220",
+	"highDuration": "373",
+	"lowDuration": "105",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a03db5ed21d0cc40e94d7={$exists=true}}, new=true, update={$set={lease_time.654a03db5ed21d0cc40e94d7={$date=2023-11-07T09:31:11.559Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=69fae168-95ad-4cfa-8a68-47e273f32eb7}}, txnNumber=113, $clusterTime={clusterTime={$timestamp={t=1699349471, i=17}}, signature={hash={$binary={base64=7DvIPXYW+U/CUnWWdqGO3kH+1Wc=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "0315777A",
+	"count": "3",
+	"averageDuration": "221",
+	"highDuration": "422",
+	"lowDuration": "112",
+	"query": "{find=snodes, filter={type=Job, a_id={$in=[606b5facd60e757a7bc5980b, 616e8ff482fa36fb9b10b810, 616eb4b479671bca867c8690, 616eb8c679671bca867c8777, 6172d182505996707e1b47c3, 617394f2f02677f4b298b133, 617394f2f02677f4b298b134, 617394fcd625cf5328a9fc71, 617394fcf02677f4b298b138, 6173952ce6359dd149bbb562, 6173981bd625cf5328a9fd65, 6173981cd625cf5328a9fd66, 61739872d625cf5328a9fd78, 61739872f02677f4b298b2e6, 61739adad625cf5328a9fdf9, 61739af1d625cf5328a9fe36, 61739b10d625cf5328a9fe3c, 61739b29e6359dd149bbb7a1, 61739b34e6359dd149bbb7a2, 61739b34f02677f4b298b552, 61739c36f02677f4b298b58b, 61739c37d625cf5328a9fe6f, 61739c54505996707e1b8cef, 61739c55f02677f4b298b58e, 61739d68e6359dd149bbb93e, 61739d69f02677f4b298b5ff, 6173a8fdd625cf5328aa03b1, 6173a8fe505996707e1b90cc, 6173a986505996707e1b9154, 6173a987d625cf5328aa03cb, 6173ab1ed625cf5328aa0413, 6173ab2cf02677f4b298ba06, 6173ad2ae6359dd149bbbf71, 6173adabe6359dd149bbbfcd, 6173ae45e6359dd149bbbfed, 6173af8c505996707e1b940a, 6173b49fd625cf5328aa07bf, 6173b8d1f02677f4b298beda, 6173b8d1f02677f4b298bedb, 6173bcebf02677f4b298c083, 6173bdf8505996707e1b9900, 6173bf86e6359dd149bbc743, 6173c0e6d625cf5328aa0d8c, 6173c1c4505996707e1b9a12, 6173c1c4f02677f4b298c2db, 6173c1f3d625cf5328aa0dbb, 6173c1f4505996707e1b9a22, 6173c1f4d625cf5328aa0dbc, 6173c44f505996707e1b9b18, 6173c45bf02677f4b298c34f, 6173c93bd625cf5328aa10a0, 6173d3caf02677f4b298c8db, 6173d59df02677f4b298c99f, 6173d7f9505996707e1ba1fe, 6173d82ad625cf5328aa174e, 6173d86ce6359dd149bbd0de, 6173d9e0505996707e1ba260, 6173db4fd625cf5328aa1806, 6173fa51505996707e1bafa2, 6173fa52505996707e1bafa3, 6173fb28505996707e1bafdf, 6173fb2de6359dd149bbddfa, 6173fb4ae6359dd149bbde02, 6173fb54e6359dd149bbde08, 6173fb69505996707e1baffa, 6173fc0af02677f4b298d56a, 6173fc0b505996707e1bb014, 6173ff52505996707e1bb163, 6173ff52e6359dd149bbe02e, 6174008a505996707e1bb1a6, 6174008a505996707e1bb1a7, 617400af505996707e1bb1ab, 617400afd625cf5328aa257f, 6174011a505996707e1bb1c8, 6174011bd625cf5328aa25ac, 61740292e6359dd149bbe261, 61740292f02677f4b298d873, 617402fdf02677f4b298d890, 61740586e6359dd149bbe410, 61740586f02677f4b298d9c8, 617409c4e6359dd149bbe4eb, 617409c4e6359dd149bbe4ec, 61741fcef02677f4b298e4ad, 61741fe9d625cf5328aa305c, 61741ff2505996707e1bbf89, 61741ffb505996707e1bbf8b, 61742001e6359dd149bbea31, 617421c4f02677f4b298e51d, 617421c5d625cf5328aa31e7, 617421e6505996707e1bc040, 617421e6505996707e1bc041, 6174223e505996707e1bc05e, 6174223e505996707e1bc05f, 6174262f505996707e1bc16c, 6174262ff02677f4b298e70c, 617428a8e6359dd149bbeeac, 617428a8f02677f4b298e8aa, 617439b8d625cf5328aa3937, 617439d6505996707e1bc864, 617439edf02677f4b298edf7, 61743c1b505996707e1bc8eb, 61743c1cd625cf5328aa3a5c, 61743cb9e6359dd149bbf908, 61743cba505996707e1bc91b, 61743ff6e6359dd149bbfb19, 61743ff6f02677f4b298f080, 61744180505996707e1bca46, 61744180d625cf5328aa3d2b, 617465c1e6359dd149bc0ab7, 617465d7505996707e1bd8b6, 617465f1f02677f4b298ff6f, 61746895505996707e1bd975, 61746896d625cf5328aa478d, 61746b34505996707e1bdb25, 61746b34d625cf5328aa4851, 61746bb9505996707e1bdb39, 61746bb9f02677f4b29901af, 61747d55d625cf5328aa4f88, 61747d70d625cf5328aa4f8b, 61747d83e6359dd149bc145c, 6174807ce6359dd149bc14f1, 6174807dd625cf5328aa50d8, 617481acf02677f4b299097f, 617481ade6359dd149bc156d, 61748391d625cf5328aa52c1, 61748391f02677f4b29909ee, 61749641f02677f4b2990f5c, 61749651505996707e1bec98, 61749662d625cf5328aa5a8e, 61749669505996707e1beca1, 6174967bf02677f4b2990f69, 6174991be6359dd149bc1d4f, 6174991df02677f4b29910ba, 61749adb505996707e1beff9, 61749adbe6359dd149bc1df6, 61749cadd625cf5328aa5c19, 61749caee6359dd149bc1e67, 6174d8d3d625cf5328aa6fc2, 6174d8d6d625cf5328aa6fc3, 6174d8e9d625cf5328aa6fcd, 6174d8edf02677f4b299294c, 6174d904f02677f4b2992955, 6174ddaa505996707e1c08b2, 6174ddabe6359dd149bc36b6, 6174e409d625cf5328aa73d6, 6174e409d625cf5328aa73d7, 6174e613505996707e1c0a09, 6174e613e6359dd149bc3b6d, 61750a78f02677f4b2993bc2, 61750a96f02677f4b2993bca, 61750aa1f02677f4b2993bce, 61750aa8505996707e1c1b44, 61750ab4f02677f4b2993bd4, 61751272505996707e1c1e53, 61751273e6359dd149bc4a01, 617512a5d625cf5328aa8405, 617512a5f02677f4b2993e86, 61751390505996707e1c1e8b, 61751391d625cf5328aa8428, 61753ecc505996707e1c2cfb, 61753ee0f02677f4b2995115, 61753eeb505996707e1c2d07, 61753ef3f02677f4b2995119, 61753effd625cf5328aa9229, 61754655d625cf5328aa94c0, 61754656505996707e1c3062, 617546f7505996707e1c307c, 617546f8e6359dd149bc5d24, 61754711f02677f4b29954e3, 61754712e6359dd149bc5d2c, 61758a9bf02677f4b2996a80, 61758c77e6359dd149bc7957, 61758e06f02677f4b2996b46, 61758e7de6359dd149bc79bd, 61758eee505996707e1c4bcc, 617590a3f02677f4b2996bc7, 6175977ff02677f4b2996de1, 6175994a505996707e1c4fd0, 61759a84d625cf5328aab1e1, 61759b01e6359dd149bc7efe, 61759ba6d625cf5328aab21a, 61759d74d625cf5328aab35c, 6175a134505996707e1c5262, 6175a14a505996707e1c526f, 6175a155f02677f4b29971d0, 6175a164e6359dd149bc802e, 6175a167f02677f4b29971d3, 6175a3a5e6359dd149bc80c0, 6175a3a6e6359dd149bc80c1, 6175a808505996707e1c549d, 6175a809f02677f4b29976a9, 6175a893505996707e1c54bb, 6175a893505996707e1c54bd, 6175bb9fe6359dd149bc896a, 6175bbc5d625cf5328aabe10, 6175bbc5f02677f4b2997d05, 6175bbdd505996707e1c5cd1, 6175bbdef02677f4b2997d15, 6175bf03d625cf5328aabf70, 6175bf03f02677f4b2997ee5, 6175c1f3e6359dd149bc8c79, 6175c1f3f02677f4b2997ffc, 6175c307d625cf5328aac194, 6175c307e6359dd149bc8ca9, 6175dfa9f02677f4b29988df, 6175dfb9d625cf5328aace1b, 6175dfcdf02677f4b29988ed, 6175e2efd625cf5328aad006, 6175e2f0e6359dd149bc985d, 6175e59df02677f4b2998b05, 6175e59ee6359dd149bc99c0, 6175e7a6505996707e1c6cd8, 6175e7a6d625cf5328aad22f, 6175f677505996707e1c731b, 6175f67af02677f4b2999151, 6175f693d625cf5328aad728, 6175f6a7f02677f4b2999158, 6175f6bf505996707e1c739c, 6175f8b8505996707e1c7474, 6175f8b9f02677f4b29991e0, 6175fc2dd625cf5328aad91f, 6175fc2df02677f4b299934e, 6175fd41d625cf5328aad9e2, 6175fd41e6359dd149bca39f, 61761431d625cf5328aae18d, 61761448d625cf5328aae190, 6176144f505996707e1c7f7e, 6176145de6359dd149bcab22, 61761464e6359dd149bcab23, 6176179fe6359dd149bcacc6, 617617a0e6359dd149bcacc7, 61761aadd625cf5328aae466, 61761aadd625cf5328aae467, 61761c27d625cf5328aae4d3, 61761c28505996707e1c8194, 61779ff6d625cf5328ab6f45, 617818fff02677f4b29a5f8b, 6178190ff02677f4b29a5f8f, 61785115f02677f4b29a7398, 6178513ad625cf5328abaad8, 617892afe6359dd149bd8c7d, 617892aff02677f4b29a867d, 617892bbf02677f4b29a8682, 617892bcd625cf5328abc49c, 61789368d625cf5328abc4c8, 61789368d625cf5328abc4c9, 617895b3e6359dd149bd8e08, 617895b3f02677f4b29a8793, 617896a6d625cf5328abc663, 617896a6d625cf5328abc664, 61789779e6359dd149bd8e7a, 6178977af02677f4b29a888b, 617898c2d625cf5328abc7a3, 617898c2f02677f4b29a88bd, 617899b8d625cf5328abc813, 617899b8e6359dd149bd8f19, 61789a78505996707e1d68f5, 61789a8ae6359dd149bd8f42, 61789a9ee6359dd149bd8f8c, 61789abdf02677f4b29a89d6, 61789ad0d625cf5328abc844, 61789ae9e6359dd149bd903d, 61789ae9f02677f4b29a89df, 61789bf6505996707e1d6942, 61789bf7d625cf5328abc88c, 6178aee9d625cf5328abcf1c, 6178aee9d625cf5328abcf1d, 6178bfb4f02677f4b29a983e, 6178c199f02677f4b29a9930, 6178c52ef02677f4b29a9b5d, 6178c52f505996707e1d7904, 6178cbbd505996707e1d7a5d, 6178cbbdd625cf5328abd931, 6178cc9af02677f4b29a9f9c, 6178e0e8505996707e1d8295, 6178e2c6505996707e1d82d4, 6178e3bd505996707e1d830e, 6178e4bb505996707e1d83e3, 6178f313d625cf5328abe600, 6178f47ed625cf5328abe632, 6178f64ce6359dd149bdb090, 6178f7cdf02677f4b29ab08c, 6178f910e6359dd149bdb0ec, 6178f9ffd625cf5328abe758, 6178fc0ee6359dd149bdb241, 6178fc12d625cf5328abe829, 61790820d625cf5328abee59, 61790a0be6359dd149bdb7af, 61790ba5d625cf5328abf04b, 61790c28f02677f4b29ab694, 61790c7ff02677f4b29ab6a3, 61790e8bf02677f4b29ab72d, 61790f79e6359dd149bdb907, 617922ecf02677f4b29ac07d, 617922edf02677f4b29ac07e, 617922f0505996707e1d9882, 617922f0f02677f4b29ac080, 61792357505996707e1d9899, 61792396d625cf5328abf91a, 617923b6d625cf5328abf95b, 617923c5d625cf5328abf95e, 617923e2d625cf5328abf966, 61792470e6359dd149bdc004, 61792471e6359dd149bdc005, 6179318df02677f4b29ac534, 6179339fd625cf5328abff85, 6179339ff02677f4b29ac58e, 6179362ae6359dd149bdc8e0, 6179362ae6359dd149bdc8e1, 617936b1e6359dd149bdc921, 617936b1f02677f4b29ac67b, 61793730505996707e1d9ee9, 61793731505996707e1d9eea, 6179383bd625cf5328ac01de, 61793aaef02677f4b29ac740, 617956ad505996707e1daad8, 617956dbd625cf5328ac0cfe, 617956e1505996707e1daae4, 617956f4d625cf5328ac0d08, 617956f7505996707e1daae9, 61795bdcf02677f4b29ad296, 61795bddf02677f4b29ad297, 61795f1df02677f4b29ad356, 6179606ff02677f4b29ad391, 61796070505996707e1db020, 61796120505996707e1db03e, 61796141d625cf5328ac1088, 617961ebe6359dd149bdd9e0, 61796280d625cf5328ac111e, 61796280f02677f4b29ad467, 61796378e6359dd149bddaa5, 61796379d625cf5328ac115b, 61796b73f02677f4b29ad65e, 61796d3b505996707e1db53c, 61796e27f02677f4b29ad6f6, 61796e95e6359dd149bdded7, 61796f43d625cf5328ac148c, 61797133d625cf5328ac150f, 61797214d625cf5328ac1533, 61798173505996707e1dbb70, 6179819df02677f4b29adebb, 617981bee6359dd149bde54b, 617981c2e6359dd149bde54c, 617981d9505996707e1dbc3a, 61798494d625cf5328ac1bf5, 61798495d625cf5328ac1bf6, 61798931d625cf5328ac1def, 61798932f02677f4b29ae269, 61798b2de6359dd149bde934, 61798b2de6359dd149bde935, 6179c11cf02677f4b29af811, 6179c138f02677f4b29af816, 6179c13ed625cf5328ac30f3, 6179c14ce6359dd149bdfd6c, 6179c156e6359dd149bdfd6e, 6179c36cf02677f4b29af88f, 6179c4c2505996707e1dd05d, 6179c4c2e6359dd149bdffa1, 6179c56ed625cf5328ac31d2, 6179c673f02677f4b29af96f, 6179c691505996707e1dd0b6, 6179c70fe6359dd149be0103, 6179c8bcf02677f4b29afa12, 6179c929f02677f4b29afac8, 6179c92af02677f4b29afac9, 6179c9b7d625cf5328ac33ae, 6179ca3d505996707e1dd283, 6179ca3df02677f4b29afb1a, 6179de86f02677f4b29b00fa, 6179dea1f02677f4b29b0107, 6179deb6e6359dd149be08e8, 6179e1ed505996707e1ddc1c, 6179e1ede6359dd149be0972, 6179e4fc505996707e1ddd83, 6179e4fcf02677f4b29b03cb, 6179e76de6359dd149be0af6, 6179e76ed625cf5328ac4126]}}}",
+	"planSummary": "IXSCAN { a_id: 1 }"
+},
+{
+	"queryHash": "728DF98F",
+	"count": "4",
+	"averageDuration": "221",
+	"highDuration": "321",
+	"lowDuration": "128",
+	"query": "{findAndModify=users, query={username=ghe@snaplogic.com, $or=[{lockout_start_time={$lte={$date=2023-11-07T16:37:15.426Z}}}, {first_failed_auth={$gte={$date=2023-11-07T15:37:15.426Z}}}]}, new=true, update={$inc={failed_passwd_auths=1}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=fdea3816-69a7-4dcc-aef9-2df655d23e3f}}, txnNumber=13, $clusterTime={clusterTime={$timestamp={t=1699375035, i=15}}, signature={hash={$binary={base64=iP1qeEbtMhmyWwhT3qnEWk2dub4=, subType=0}}, keyId=7254037584978903041}}, $db=cassets, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { username: 1 }"
+},
+{
+	"queryHash": "B5CFBAD1",
+	"count": "1",
+	"averageDuration": "222",
+	"highDuration": "222",
+	"lowDuration": "222",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a73387ae80d09d44ed517={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a73387ae80d09d44ed517={$date=2023-11-07T17:26:21.724Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=a7c39d3f-708d-4e6d-b7a0-febd4f580646}}, txnNumber=215, $clusterTime={clusterTime={$timestamp={t=1699377981, i=35}}, signature={hash={$binary={base64=mHO14q+VBjgBa4vibcBURqfxN/A=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "FF8FA672",
+	"count": "1",
+	"averageDuration": "224",
+	"highDuration": "224",
+	"lowDuration": "224",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a15caed561f68cef8c8d4={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a15caed561f68cef8c8d4={$date=2023-11-07T10:47:42.890Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=f7577e9a-0e22-45a0-9280-440c4041d726}}, txnNumber=42, $clusterTime={clusterTime={$timestamp={t=1699354062, i=21}}, signature={hash={$binary={base64=JwCay/C1au15K0684zPz6rc0OO8=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "D4556189",
+	"count": "40654",
+	"averageDuration": "226",
+	"highDuration": "1999",
+	"lowDuration": "100",
+	"query": "{findAndModify=snodes, query={_id={$oid=64419adad6e9be9db494fc55}, seqno=15971}, new=false, update={$set={name=id_final.json, type=File, owner=ashostak@snaplogic.com, u_by=ashostak@snaplogic.com, c_time={$date=2023-11-07T04:15:27.606Z}, u_time={$date=2023-11-07T04:15:27.606Z}, l_time=null, p_id={$oid=643f04490c0769db587df81e}, metadata={length=84}, a_id=64419adad6e9be9db494fc53, seqno=15972, acl=[]}}, fields={_id=true}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=dad97b74-b95c-4acb-9cfc-85cb22345887}}, txnNumber=132, $clusterTime={clusterTime={$timestamp={t=1699330527, i=213}}, signature={hash={$binary={base64=vzhDyd1/KuF4oiZ7csf7sIqspis=, subType=0}}, keyId=7254037584978903041}}, $db=cassets, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { _id: 1 }"
+},
+{
+	"queryHash": "8AA5DA7A",
+	"count": "1",
+	"averageDuration": "226",
+	"highDuration": "226",
+	"lowDuration": "226",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.6549d0ebde42aded4f5259f1={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549d0ebde42aded4f5259f1={$date=2023-11-07T05:53:52.019Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=f33ff9dd-6610-44a4-8ebe-57d5873e1774}}, txnNumber=142, $clusterTime={clusterTime={$timestamp={t=1699336431, i=47}}, signature={hash={$binary={base64=1vUavoZJVlhhNS6Au2goo8aiNbk=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "F336C258",
+	"count": "4",
+	"averageDuration": "226",
+	"highDuration": "410",
+	"lowDuration": "104",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a7776ac1d326e5ade1cf8={$exists=true}}, new=true, update={$set={lease_time.654a7776ac1d326e5ade1cf8={$date=2023-11-07T17:44:58.439Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=314e832f-a5ec-4bc0-959b-502f1a0fc635}}, txnNumber=54, $clusterTime={clusterTime={$timestamp={t=1699379098, i=103}}, signature={hash={$binary={base64=s3s5q1jDOsX0bCoAASchv7D/RSw=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "3E6364C9",
+	"count": "4026",
+	"averageDuration": "227",
+	"highDuration": "1831",
+	"lowDuration": "100",
+	"query": "{findAndModify=leaders, query={_id=root, $or=[{hostname=10.52.15.56:8189}, {lease_time={$lt=1699328102}}]}, new=true, update={$set={hostname=10.52.15.56:8189, lease_time=1699328147}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=5c8e4fe9-ff8e-4f28-898d-40b68075a628}}, txnNumber=2355, $clusterTime={clusterTime={$timestamp={t=1699328147, i=64}}, signature={hash={$binary={base64=K4qHw49NCMmm3wCmMUNCPKK6Y3U=, subType=0}}, keyId=7254037584978903041}}, $db=cslsched, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { _id: 1 }"
+},
+{
+	"queryHash": "001B8269",
+	"count": "73747",
+	"averageDuration": "227",
+	"highDuration": "3206",
+	"lowDuration": "100",
+	"query": "{findAndModify=cc_leader, query={_id=653801dcd8515356cf55b636, $or=[{cc_id=653fe927334589bca63bc993}, {hb={$lt={$date=2023-11-07T04:10:44.158Z}}}]}, new=false, update={$set={_id=653801dcd8515356cf55b636, cc_id=653fe927334589bca63bc993, hb={$date=2023-11-07T04:15:27.158Z}, org_name=nodecrash, cc_state={uri=http://172.27.177.59:8090, placement={container_type=regular, location=cloud, language=java, environment=CloudLarge, subscriber_id=nodecrash, platform=unix}, api_version=35.0}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=5206cf1d-aa20-475b-80b0-a2eff5e9dad2}}, txnNumber=664, $clusterTime={clusterTime={$timestamp={t=1699330527, i=40}}, signature={hash={$binary={base64=vzhDyd1/KuF4oiZ7csf7sIqspis=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { _id: 1 }"
+},
+{
+	"queryHash": "91FBF1AF",
+	"count": "60401",
+	"averageDuration": "227",
+	"highDuration": "3441",
+	"lowDuration": "100",
+	"query": "{findAndModify=jobs, query={state=QUEUE}, new=true, update={$set={worker=na03sl-sldb-ux0d1af015647c26ab3-36, lease_time={$date=2023-11-07T03:56:07.326Z}, state=STARTED}}, sort={priority=-1, add_time=1}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=7869ab1c-0ce9-424e-adfa-c49d1eff6541}}, txnNumber=127, $clusterTime={clusterTime={$timestamp={t=1699329360, i=12}}, signature={hash={$binary={base64=R65r2N71KADxa9xC84gkfq0qZHo=, subType=0}}, keyId=7254037584978903041}}, $db=assets_index, $readPreference={mode=primary}}",
+	"planSummary": "COLLSCAN"
+},
+{
+	"queryHash": "5A33D66A",
+	"count": "697",
+	"averageDuration": "229",
+	"highDuration": "1396",
+	"lowDuration": "100",
+	"query": "{findAndModify=jobs, query={_id={$in=[]}}, update={$set={kwargs.enabled=false}}, writeConcern={j=true, w=2}, lsid={id={$uuid=33e25389-34ac-4f52-82a7-c043a81097b8}}, txnNumber=1676, $clusterTime={clusterTime={$timestamp={t=1699334460, i=4}}, signature={hash={$binary={base64=Bu4noztIl+dPcbhZvlj6VY4Qt+E=, subType=0}}, keyId=7254037584978903041}}, $db=cslsched, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { _id: 1 }"
+},
+{
+	"queryHash": "122591DE",
+	"count": "8",
+	"averageDuration": "229",
+	"highDuration": "648",
+	"lowDuration": "107",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a9a5aa2d85794d091d2b9={$exists=true}}, new=true, update={$set={lease_time.654a9a5aa2d85794d091d2b9={$date=2023-11-07T20:13:48.888Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=0a9caa74-b15c-49d3-87c2-f49efb10a8e8}}, txnNumber=197, $clusterTime={clusterTime={$timestamp={t=1699388028, i=97}}, signature={hash={$binary={base64=PQL+4GZID4j7TRQQpPxjbsPUbFk=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "60228F39",
+	"count": "11",
+	"averageDuration": "230",
+	"highDuration": "930",
+	"lowDuration": "108",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654b00bda0c5684dd2a4ce04={$exists=true}}, new=true, update={$set={lease_time.654b00bda0c5684dd2a4ce04={$date=2023-11-08T03:30:48.709Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=93ca42db-5fe2-494a-8ec1-29d9edcb56b3}}, txnNumber=108, $clusterTime={clusterTime={$timestamp={t=1699414248, i=47}}, signature={hash={$binary={base64=+FpG15AP0gi4L/QxtxTWzRN59fg=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "AD073AC1",
+	"count": "5",
+	"averageDuration": "231",
+	"highDuration": "615",
+	"lowDuration": "101",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a5e77642367305553bd7f={$exists=true}}, new=true, update={$set={lease_time.654a5e77642367305553bd7f={$date=2023-11-07T15:58:25.026Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=0d16a8c4-b6d8-4d98-bafc-a849b54958a7}}, txnNumber=1762, $clusterTime={clusterTime={$timestamp={t=1699372704, i=25}}, signature={hash={$binary={base64=feAZ4Kh+bQpGnsOeAAKoPeYm/5k=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "3F65D287",
+	"count": "15",
+	"averageDuration": "232",
+	"highDuration": "449",
+	"lowDuration": "107",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654aecf7a7ca31d610bb023e={$exists=true}}, new=true, update={$set={lease_time.654aecf7a7ca31d610bb023e={$date=2023-11-08T02:05:47.216Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=5e9c04bb-5998-4638-b839-b2f6315f36af}}, txnNumber=2119, $clusterTime={clusterTime={$timestamp={t=1699409147, i=18}}, signature={hash={$binary={base64=3NB0PqB6WF7izzpkq+DNO8qdNzk=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "785C5468",
+	"count": "1",
+	"averageDuration": "237",
+	"highDuration": "237",
+	"lowDuration": "237",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a7776ac1d326e5ade1cf8={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a7776ac1d326e5ade1cf8={$date=2023-11-07T17:44:30.006Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=77d639dd-bd8e-402c-a5f0-c6506dbf9a80}}, txnNumber=44, $clusterTime={clusterTime={$timestamp={t=1699379069, i=36}}, signature={hash={$binary={base64=iWX70+JjdEp7LA+bEQXyCh8jsqQ=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "37775D52",
+	"count": "5",
+	"averageDuration": "237",
+	"highDuration": "460",
+	"lowDuration": "117",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a952a1d68f16f95326b02={$exists=true}}, new=true, update={$set={lease_time.654a952a1d68f16f95326b02={$date=2023-11-07T19:52:28.946Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=8bee2594-8ebd-45a2-b321-97240686854b}}, txnNumber=4, $clusterTime={clusterTime={$timestamp={t=1699386748, i=19}}, signature={hash={$binary={base64=ljXnZi71Ub00LuTaSZSWZOwKFiY=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "E5706478",
+	"count": "13",
+	"averageDuration": "237",
+	"highDuration": "640",
+	"lowDuration": "107",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654af9a296949baccd89e6e0={$exists=true}}, new=true, update={$set={lease_time.654af9a296949baccd89e6e0={$date=2023-11-08T02:59:53.630Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=5611114b-575f-4ea7-a622-e5d978eac854}}, txnNumber=193, $clusterTime={clusterTime={$timestamp={t=1699412393, i=14}}, signature={hash={$binary={base64=tNL1xFetRo8ou9gvilG3oc28G2M=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "02C44E51",
+	"count": "13",
+	"averageDuration": "238",
+	"highDuration": "647",
+	"lowDuration": "100",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a66f025a17ba8a32afd22={$exists=true}}, new=true, update={$set={lease_time.654a66f025a17ba8a32afd22={$date=2023-11-07T16:33:58.545Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=c06c5674-c943-4735-aaa1-fcd8920f6a1b}}, txnNumber=46, $clusterTime={clusterTime={$timestamp={t=1699374838, i=33}}, signature={hash={$binary={base64=2NFMe9++cS6VYHJDke9TNdBsb74=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "15043E1A",
+	"count": "4",
+	"averageDuration": "239",
+	"highDuration": "461",
+	"lowDuration": "126",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a7e86d2f297df08f097cd={$exists=true}}, new=true, update={$set={lease_time.654a7e86d2f297df08f097cd={$date=2023-11-07T18:15:31.978Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=54d7a038-30dc-4c56-a9ca-aa06b46ca834}}, txnNumber=210, $clusterTime={clusterTime={$timestamp={t=1699380931, i=29}}, signature={hash={$binary={base64=vP/QjydQACZoTdfaRfK6zr88n88=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "16C22890",
+	"count": "10",
+	"averageDuration": "244",
+	"highDuration": "379",
+	"lowDuration": "123",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a64213626e305d20b3a83={$exists=true}}, new=true, update={$set={lease_time.654a64213626e305d20b3a83={$date=2023-11-07T16:22:26.177Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=5bb7b441-4d91-4737-b6d9-d61beb55e7a1}}, txnNumber=4, $clusterTime={clusterTime={$timestamp={t=1699374146, i=9}}, signature={hash={$binary={base64=VeIEAVuYDJ0gDDqjZFA8YhLuRYI=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "379E82C5",
+	"count": "2",
+	"averageDuration": "245",
+	"highDuration": "271",
+	"lowDuration": "219",
+	"query": "{findAndModify=users, query={username=ghe@snaplogic.com}, new=false, update={$set={failed_passwd_auths=1, lockout_failure_count=0, first_failed_auth={$date=2023-11-07T16:37:15.426Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=fdea3816-69a7-4dcc-aef9-2df655d23e3f}}, txnNumber=14, $clusterTime={clusterTime={$timestamp={t=1699375035, i=19}}, signature={hash={$binary={base64=iP1qeEbtMhmyWwhT3qnEWk2dub4=, subType=0}}, keyId=7254037584978903041}}, $db=cassets, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { username: 1 }"
+},
+{
+	"queryHash": "6D5A3569",
+	"count": "1",
+	"averageDuration": "245",
+	"highDuration": "245",
+	"lowDuration": "245",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a7e86d2f297df08f097cd={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a7e86d2f297df08f097cd={$date=2023-11-07T18:14:35.359Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=b4e030d8-d75b-40a7-8036-b5b1ee34032c}}, txnNumber=46, $clusterTime={clusterTime={$timestamp={t=1699380875, i=18}}, signature={hash={$binary={base64=lYkC6PWwfryNu50UrEBzcTj9WUg=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "E064E778",
+	"count": "2",
+	"averageDuration": "247",
+	"highDuration": "280",
+	"lowDuration": "215",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a962a8d9dd20cfff9b609={$exists=true}}, new=true, update={$set={lease_time.654a962a8d9dd20cfff9b609={$date=2023-11-07T19:55:53.328Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=bec0e1f9-f952-401f-94e2-1d97edc0e6ab}}, txnNumber=298, $clusterTime={clusterTime={$timestamp={t=1699386953, i=12}}, signature={hash={$binary={base64=a8SwP8OalyRyDeLmXvDNQp9GrWw=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "5CBB47C9",
+	"count": "1",
+	"averageDuration": "249",
+	"highDuration": "249",
+	"lowDuration": "249",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a658b1ccd35fecd209f17={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a658b1ccd35fecd209f17={$date=2023-11-07T16:28:02.360Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=a283c7a0-828e-4d79-bc6a-f18f0c933869}}, txnNumber=67, $clusterTime={clusterTime={$timestamp={t=1699374482, i=2}}, signature={hash={$binary={base64=aUW/EjDF7Hm93j6SAzuZBs3voi4=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "9666124B",
+	"count": "1",
+	"averageDuration": "251",
+	"highDuration": "251",
+	"lowDuration": "251",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a971509129ea87e93ab60={$exists=true}}, new=true, update={$set={lease_time.654a971509129ea87e93ab60={$date=2023-11-07T19:59:22.149Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=05252311-353c-49b7-9dbd-755b7c110007}}, txnNumber=34, $clusterTime={clusterTime={$timestamp={t=1699387162, i=13}}, signature={hash={$binary={base64=MAEh5cn/mQ4akQgE7FoomvRNQxo=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "62AB8948",
+	"count": "1",
+	"averageDuration": "251",
+	"highDuration": "251",
+	"lowDuration": "251",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a1205ac9cd55f5ee54bb9={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a1205ac9cd55f5ee54bb9={$date=2023-11-07T10:31:41.089Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=10b8dbe7-7378-4f96-85d0-927d8d95473f}}, txnNumber=223, $clusterTime={clusterTime={$timestamp={t=1699353101, i=1}}, signature={hash={$binary={base64=vHyxpdAi1aBOcX4c+VSe4m5Pg/k=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "DE23754E",
+	"count": "7",
+	"averageDuration": "252",
+	"highDuration": "448",
+	"lowDuration": "114",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654af83b5a7a16029fd774c1={$exists=true}}, new=true, update={$set={lease_time.654af83b5a7a16029fd774c1={$date=2023-11-08T02:55:18.619Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=aa532a83-035e-4535-8a56-90246e36a786}}, txnNumber=228, $clusterTime={clusterTime={$timestamp={t=1699412118, i=25}}, signature={hash={$binary={base64=vdgKf2n6RLyvJ8MEebrOD8xihOc=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "D94B4D7C",
+	"count": "2",
+	"averageDuration": "253",
+	"highDuration": "258",
+	"lowDuration": "249",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549c8ea60060a43d536cedd={$exists=true}}, new=true, update={$set={lease_time.6549c8ea60060a43d536cedd={$date=2023-11-07T05:20:29.858Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=d77eb338-2d46-4933-b2a5-87eabff104e0}}, txnNumber=197, $clusterTime={clusterTime={$timestamp={t=1699334429, i=632}}, signature={hash={$binary={base64=Suo7UfeO/sIu/fw+3IfXn051zbk=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "E6A980FA",
+	"count": "1",
+	"averageDuration": "254",
+	"highDuration": "254",
+	"lowDuration": "254",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a7514e45b35529ff9c73f={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a7514e45b35529ff9c73f={$date=2023-11-07T17:34:18.868Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=2059dfed-67cc-410d-b949-a7e74f75dd57}}, txnNumber=29, $clusterTime={clusterTime={$timestamp={t=1699378458, i=30}}, signature={hash={$binary={base64=vF70QYxSP7V+orba+JHYRxTcZ50=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "50F5E2A5",
+	"count": "5",
+	"averageDuration": "258",
+	"highDuration": "505",
+	"lowDuration": "113",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654b022a46041b4d36c9ef2a={$exists=true}}, new=true, update={$set={lease_time.654b022a46041b4d36c9ef2a={$date=2023-11-08T03:36:16.670Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=545b8781-efc3-457a-bb6e-cb1cb085c8b1}}, txnNumber=76, $clusterTime={clusterTime={$timestamp={t=1699414576, i=18}}, signature={hash={$binary={base64=DGKrVaTHT1bfck95TmjBqF2PmIs=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "0906C33A",
+	"count": "4",
+	"averageDuration": "261",
+	"highDuration": "510",
+	"lowDuration": "138",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a79d1d886cef41ed57eec={$exists=true}}, new=true, update={$set={lease_time.654a79d1d886cef41ed57eec={$date=2023-11-07T17:54:54.945Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=831085a4-5b50-4b38-99f2-4bb3d286baa3}}, txnNumber=104, $clusterTime={clusterTime={$timestamp={t=1699379694, i=31}}, signature={hash={$binary={base64=7OMvm4QrjkvwaVkHG5jxfG6lnk8=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "FCD2DEBD",
+	"count": "14",
+	"averageDuration": "266",
+	"highDuration": "772",
+	"lowDuration": "100",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a17352d192b8e27a4e904={$exists=true}}, new=true, update={$set={lease_time.654a17352d192b8e27a4e904={$date=2023-11-07T10:53:46.334Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=48c6740a-07bd-473e-80d6-8ed1cb779af0}}, txnNumber=246, $clusterTime={clusterTime={$timestamp={t=1699354426, i=14}}, signature={hash={$binary={base64=ZWvT1BeGcAS6fguAuIOq1WDyCng=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "A300CFDE",
+	"count": "70",
+	"averageDuration": "268",
+	"highDuration": "2995",
+	"lowDuration": "100",
+	"query": "{findAndModify=jobs, query={_id={$in=[{$oid=6549299ee8aabcf4c7264bd5}]}}, update={$set={kwargs.enabled=false}}, writeConcern={j=true, w=2}, lsid={id={$uuid=0cb185f7-cdfc-4733-b7d1-17801384b6cd}}, txnNumber=88, $clusterTime={clusterTime={$timestamp={t=1699335298, i=28}}, signature={hash={$binary={base64=cKFJfS5PDJqc8J99REXHcNfQz3s=, subType=0}}, keyId=7254037584978903041}}, $db=cslsched, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { _id: 1 }"
+},
+{
+	"queryHash": "25700812",
+	"count": "4",
+	"averageDuration": "270",
+	"highDuration": "429",
+	"lowDuration": "150",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a74251132b9f59e1f5f1c={$exists=true}}, new=true, update={$set={lease_time.654a74251132b9f59e1f5f1c={$date=2023-11-07T17:30:55.903Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=2e0842ca-b0df-4533-a684-0c0ec39abce7}}, txnNumber=850, $clusterTime={clusterTime={$timestamp={t=1699378255, i=36}}, signature={hash={$binary={base64=xdMxzRs6XFJg2bVVUQaj3VPmibA=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "3F6E9D2B",
+	"count": "4",
+	"averageDuration": "270",
+	"highDuration": "420",
+	"lowDuration": "166",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a09fb7ce3e3fbbc8aabcd={$exists=true}}, new=true, update={$set={lease_time.654a09fb7ce3e3fbbc8aabcd={$date=2023-11-07T09:57:22.212Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=31ff6b1e-7d83-4808-ae25-410c8992c48a}}, txnNumber=19, $clusterTime={clusterTime={$timestamp={t=1699351042, i=12}}, signature={hash={$binary={base64=KDV+047D5InGT+zLpluoNTVnEvY=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "2751C5A0",
+	"count": "14",
+	"averageDuration": "272",
+	"highDuration": "681",
+	"lowDuration": "109",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654af571e08c81ec742a8368={$exists=true}}, new=true, update={$set={lease_time.654af571e08c81ec742a8368={$date=2023-11-08T02:42:00.839Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=6ccf5098-87b3-46ad-923a-51b6da1c9864}}, txnNumber=2188, $clusterTime={clusterTime={$timestamp={t=1699411320, i=26}}, signature={hash={$binary={base64=4t2bo/4F6ucKEWaNpMZhlohuNaU=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "529AB43B",
+	"count": "11",
+	"averageDuration": "276",
+	"highDuration": "618",
+	"lowDuration": "121",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a62b16c7df2a89297e31c={$exists=true}}, new=true, update={$set={lease_time.654a62b16c7df2a89297e31c={$date=2023-11-07T16:15:51.061Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=7607479b-f52c-4bc2-aa58-75827adfdea9}}, txnNumber=32, $clusterTime={clusterTime={$timestamp={t=1699373751, i=4}}, signature={hash={$binary={base64=PUIytYiSOjjSVocWhdPhDLe+u+8=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "DD7B11AE",
+	"count": "7",
+	"averageDuration": "279",
+	"highDuration": "774",
+	"lowDuration": "118",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a8165fd83fe52b5fd45f1={$exists=true}}, new=true, update={$set={lease_time.654a8165fd83fe52b5fd45f1={$date=2023-11-07T18:28:16.081Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=cf9d2e32-b091-4a83-b32b-a3dff2dd7710}}, txnNumber=21, $clusterTime={clusterTime={$timestamp={t=1699381696, i=2}}, signature={hash={$binary={base64=pdtkLukVVLco/03BXlTuSdO9CJ0=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "425CC909",
+	"count": "10",
+	"averageDuration": "281",
+	"highDuration": "727",
+	"lowDuration": "103",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a5d0ce7efd6717961fb87={$exists=true}}, new=true, update={$set={lease_time.654a5d0ce7efd6717961fb87={$date=2023-11-07T15:52:25.562Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=96d5975c-0ec3-460b-8795-05fa1e554d0a}}, txnNumber=25, $clusterTime={clusterTime={$timestamp={t=1699372345, i=13}}, signature={hash={$binary={base64=CM+1Ubv8J3Z0ZkMTZfWaqfhJmrk=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "AED3FF64",
+	"count": "1",
+	"averageDuration": "283",
+	"highDuration": "283",
+	"lowDuration": "283",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a027f13edb95ae33a9150={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a027f13edb95ae33a9150={$date=2023-11-07T09:25:24.618Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=961cdfc1-94cb-4013-8cd5-7ac26f75a054}}, txnNumber=521, $clusterTime={clusterTime={$timestamp={t=1699349124, i=31}}, signature={hash={$binary={base64=e2FZjotmI0On76HJLtSufX01DXI=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "BBF1AEC9",
+	"count": "16",
+	"averageDuration": "289",
+	"highDuration": "990",
+	"lowDuration": "100",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a027f13edb95ae33a9150={$exists=true}}, new=true, update={$set={lease_time.654a027f13edb95ae33a9150={$date=2023-11-07T09:25:23.827Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=961cdfc1-94cb-4013-8cd5-7ac26f75a054}}, txnNumber=519, $clusterTime={clusterTime={$timestamp={t=1699349123, i=24}}, signature={hash={$binary={base64=e2Le1UFV5yUkMU2MksMAYUqMkOw=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "0FBED8E0",
+	"count": "11",
+	"averageDuration": "291",
+	"highDuration": "938",
+	"lowDuration": "106",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a8b48678f68e8d44b99eb={$exists=true}}, new=true, update={$set={lease_time.654a8b48678f68e8d44b99eb={$date=2023-11-07T19:09:56.380Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=338a5847-fe67-4f50-83d7-369134144b87}}, txnNumber=26, $clusterTime={clusterTime={$timestamp={t=1699384196, i=14}}, signature={hash={$binary={base64=4lA/3DNa3UKrwcCk/6S6Dh/kjYw=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "F172F056",
+	"count": "8",
+	"averageDuration": "296",
+	"highDuration": "810",
+	"lowDuration": "122",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549dad707202fe36b0287b0={$exists=true}}, new=true, update={$set={lease_time.6549dad707202fe36b0287b0={$date=2023-11-07T06:37:12.518Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=1958362a-f67f-4282-84ad-4d79d1ec6960}}, txnNumber=254, $clusterTime={clusterTime={$timestamp={t=1699339032, i=11}}, signature={hash={$binary={base64=Z1Sg9NRYTXskwlQjCls67mNFZ1s=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "9D02746C",
+	"count": "1",
+	"averageDuration": "311",
+	"highDuration": "311",
+	"lowDuration": "311",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a7fef65fffa1fb1cf7f64={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a7fef65fffa1fb1cf7f64={$date=2023-11-07T18:20:38.952Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=22c16659-6aec-413d-8fa4-0a4e8824ab9e}}, txnNumber=58, $clusterTime={clusterTime={$timestamp={t=1699381238, i=13}}, signature={hash={$binary={base64=2MMcTYk+Syx5ZJ0pIODQx/A/BAY=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "DFA3E2CB",
+	"count": "12",
+	"averageDuration": "311",
+	"highDuration": "693",
+	"lowDuration": "104",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654afdea4addaf1e334f786e={$exists=true}}, new=true, update={$set={lease_time.654afdea4addaf1e334f786e={$date=2023-11-08T03:18:55.213Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=1de1f412-c963-4cac-99a5-11237a0dc446}}, txnNumber=44, $clusterTime={clusterTime={$timestamp={t=1699413535, i=6}}, signature={hash={$binary={base64=hUnXCqpiBU2o6G5navNtPI4cAxU=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "91FAAF56",
+	"count": "5",
+	"averageDuration": "328",
+	"highDuration": "507",
+	"lowDuration": "131",
+	"query": "{aggregate=sindex, pipeline=[{$match={org_id={$oid=5be4a4cded5edc0017b9aa70}, $or=[{project_id={$in=[{$oid=654a1a6f7214da2d288fe070}]}}, {_id={$in=[{$oid=654a1a6f7214da2d288fe070}]}}], asset_type={$in=[Pipeline]}, $text={$search=A$#%$ Pipeline}}}, {$group={_id=1, n={$sum=1}}}], cursor={}, lsid={id={$uuid=19983ee2-cfde-45df-88dd-6bee919e69b8}}, $clusterTime={clusterTime={$timestamp={t=1699357020, i=14}}, signature={hash={$binary={base64=XbbladPURgsEQQ0rw+sN4McIyXM=, subType=0}}, keyId=7254037584978903041}}, $db=assets_index, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { org_id: 1, _fts: "text", _ftsx: 1 }"
+},
+{
+	"queryHash": "B2CD8F20",
+	"count": "1",
+	"averageDuration": "331",
+	"highDuration": "331",
+	"lowDuration": "331",
+	"query": "{aggregate=sindex, pipeline=[{$match={org_id={$oid=5be4a4cded5edc0017b9aa70}, $or=[{project_id={$in=[{$oid=6501a33b9335cb25c5d3ed53}, {$oid=654a1a6f7214da2d288fe070}]}}, {_id={$in=[{$oid=6501a33b9335cb25c5d3ed51}]}}], asset_type={$in=[Pipeline]}, $text={$search=A$#%$ Pipeline}}}, {$group={_id=1, n={$sum=1}}}], cursor={}, lsid={id={$uuid=b4309c92-7b9e-43df-9625-cd8b3e0b443d}}, $clusterTime={clusterTime={$timestamp={t=1699357004, i=2}}, signature={hash={$binary={base64=vVd6XpG4xuWIMBAktaeR8K4NMx0=, subType=0}}, keyId=7254037584978903041}}, $db=assets_index, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { org_id: 1, _fts: "text", _ftsx: 1 }"
+},
+{
+	"queryHash": "F6C4ED9F",
+	"count": "1",
+	"averageDuration": "335",
+	"highDuration": "335",
+	"lowDuration": "335",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a08246fe887e923fc658c={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a08246fe887e923fc658c={$date=2023-11-07T09:49:31.028Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=454de189-8853-4f14-97ea-73e365fd50d5}}, txnNumber=59, $clusterTime={clusterTime={$timestamp={t=1699350571, i=1}}, signature={hash={$binary={base64=fm8BrFswpMFM+xVfnTzpV1z6dEs=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "6419D127",
+	"count": "11",
+	"averageDuration": "351",
+	"highDuration": "1621",
+	"lowDuration": "112",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a658b1ccd35fecd209f17={$exists=true}}, new=true, update={$set={lease_time.654a658b1ccd35fecd209f17={$date=2023-11-07T16:28:01.470Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=a283c7a0-828e-4d79-bc6a-f18f0c933869}}, txnNumber=65, $clusterTime={clusterTime={$timestamp={t=1699374481, i=20}}, signature={hash={$binary={base64=e1BQ0RUTK14jnnR/Iw43lacahb8=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "408A92CA",
+	"count": "1",
+	"averageDuration": "358",
+	"highDuration": "358",
+	"lowDuration": "358",
+	"query": "{aggregate=sindex, pipeline=[{$match={org_id={$oid=5be4a4cded5edc0017b9aa70}, $or=[{project_id={$in=[{$oid=6196f384bb5ef4724cbadbf5}, {$oid=616f4c10beee22ad55b54a16}, {$oid=5e17ced1ebdc0e0018c7e984}, {$oid=5e3079988a2d8a001a599511}, {$oid=64edcf89092c4aa4c7b15686}, {$oid=64edcfc6b0c762ac2c043551}, {$oid=64ee01a056ba5f0ac8046146}, {$oid=64ee01a8efa7d89f15f104a0}, {$oid=64ee01d7f3491bcc95d36100}, {$oid=64ee0237efa7d89f15f104b2}, {$oid=64ee023c092c4aa4c7b15983}, {$oid=64ee023d01b01763be1b1281}, {$oid=64ee023c3e4ba1de6e4f33e8}, {$oid=64ee0288d9b9329977827e9d}, {$oid=64ee02adda7352833db943c4}, {$oid=64ee114d513be3baa234deda}, {$oid=64ee14371b3ac6c7108ae7ab}, {$oid=64ee19df086011987c702bde}, {$oid=64ee209f4b93c826beeb7108}, {$oid=64ee25c053aa168d7228734a}, {$oid=64ee2ba7d349817a36b62b0c}, {$oid=64ee2c452550d435da0d1d77}, {$oid=64ee2e9495a275747c09bfe1}, {$oid=64ee2f1c24d365db077593df}, {$oid=64ee30f720b4689abd3b2cec}, {$oid=64ee33ae605ba6129aec0707}, {$oid=64ee354420b4689abd3b2d63}, {$oid=64ee4018b581500479bb42c2}, {$oid=64ee423e4dd3941247073389}, {$oid=64ee4315ca12bf32ef7d37e4}, {$oid=64ee55b6db01f0804d5fbe39}, {$oid=64ee57728e37bb2d3f64e4d2}, {$oid=64ee5ee23c20f02a42bf6a18}, {$oid=64ee5f211bfa44eb1b854c9d}, {$oid=64ee610f7ac2b6fd88c29800}, {$oid=64ee64d1621d36450b21ec74}, {$oid=64ee6ae9ee6e9cd6201f1c49}, {$oid=64ee6b97d3f9bbd39fb0d9e6}, {$oid=64ee6d00353d780f893a85ff}, {$oid=64ee7025353d780f893a8663}, {$oid=64ee71f843c2fb211cdb0da2}, {$oid=64ee761641be528dc07f6981}, {$oid=64ee7cf65543fb2e429d4dc4}, {$oid=64ee7ee36f90e0c3a8255afa}, {$oid=64ee99e46a8e7cb9239a4a08}, {$oid=64eec5a673ec5b0a8c5f0fc5}, {$oid=64eee624bb6051e9f9eec967}, {$oid=64eef615da327b1aa838a309}, {$oid=64ef081ae1b431c06470185d}, {$oid=64f051f61e959cfba48f730b}, {$oid=64f31cf008b57866c638c161}, {$oid=6501a33b9335cb25c5d3ed53}, {$oid=654a1a6f7214da2d288fe070}, {$oid=6514a90032853e36cdfd776a}, {$oid=6533165f02b8c742d0f500b6}, {$oid=653317121e2b95ab49f752d2}, {$oid=6533177b0bffa58085b6467d}, {$oid=653318a4b0cb04d4c957f4d2}, {$oid=653342a4b2f0b31773aa9b28}, {$oid=65334802ea067004edebdb83}, {$oid=653348b687fd577948aeaf28}, {$oid=65334edeb2f0b31773aa9cce}, {$oid=65335ccd198ee1b3655978ba}, {$oid=65335d4c77727c64c8cb005e}, {$oid=6533ac6366143d0cdf18f882}, {$oid=6533e66b65f59550a5e9d6de}, {$oid=6533fb74fc5ebcf5ae69139f}, {$oid=65340840a951f5639267adef}, {$oid=65341279a423dceb1ebab69a}, {$oid=6534242b0ad17adde3e7e0ad}, {$oid=653424a4a3f986ab864b7d16}, {$oid=65345b61febe39fa55f85e0b}, {$oid=6534adbd7a7d062bb450ef22}, {$oid=6534fcabb7b0c97eabbb0d90}, {$oid=6535a3e89517b4a451331ac9}, {$oid=65369da287e6e0cc5cccc5bf}, {$oid=65369dba9d4b6fa725d90828}, {$oid=65369e3311231ea2b2e4c6f8}, {$oid=65369fa0d66138373d9747f1}, {$oid=6536a2641058527800fc4453}, {$oid=6536a4e1079be567bc2b6643}, {$oid=6536a606c2a3df4f550c8414}, {$oid=6536a78f10763012796ec5ba}, {$oid=6536a8271edfa4601ea12bfe}, {$oid=6536ac35bbf90fd4dccf5655}, {$oid=6536acad1e859a965c4aad33}, {$oid=6536aebeb37ac1907df108c9}, {$oid=6537b01a56e90387e505cb1d}, {$oid=6537b22243ed7686ba9aed03}, {$oid=6537b7b1794cb1377838092a}, {$oid=6537b8463eee66cd5c0e19c3}, {$oid=6537ba42dafe3269b522f380}, {$oid=6537ba880933ade62304670f}, {$oid=6537bb21cbd7734560fd77ee}, {$oid=6537bb4e606de6b019529203}, {$oid=6537bb8c57d3e95379645e34}, {$oid=6537bd19faa16f6547531e86}, {$oid=6537bd76bd1962d0462a81bc}, {$oid=65384541ce2a76de2f63cc1a}, {$oid=6538b065873ebcbc16388983}, {$oid=6538b06c7f53119b8d54ec5d}, {$oid=653fedf70040ff075e4d563d}, {$oid=654394937201d41223e05589}, {$oid=654925ca24b5d40a5ecf2c32}, {$oid=654925e6dd7e11f9757678d5}, {$oid=654925ff4033b840a287c5a9}, {$oid=65492605e5d8d0e3b70f7134}, {$oid=654928c9f09efa170622f9d1}, {$oid=654928eabae72c14dd5bd993}, {$oid=654929020f751f7bfb1415ae}, {$oid=65492975f5d4d634326a5092}, {$oid=65492a50db12705941fd51f4}, {$oid=65492ad1b8f4f2e3e2339b09}, {$oid=65492d650e87b4d1c5ef88c6}, {$oid=65492d6eefc99eccdfc74b75}, {$oid=65492ed08461cd8c008aace3}, {$oid=65498dcc09625df6d5c8a4df}, {$oid=6549c997cce41efed05c22f1}, {$oid=6549c9e0b962ff8a2380ae7a}, {$oid=6549ca336399175c47ba3660}, {$oid=6549cb85fdd28d1c233d8230}, {$oid=6549cc975eacee62b2a9ed3f}, {$oid=6549ce0aa8948a279ed830d1}, {$oid=6549d0103b9d4c4238dd2acb}, {$oid=6549d109ff95ed11f4604b76}, {$oid=6549d31be0bf2de704a888a8}, {$oid=6549d35488899f2d8aefbd2d}, {$oid=6549d4ded594a8f9b96d1f1b}, {$oid=6549d5e161d7442b751c37a8}, {$oid=6549d87605dae5117ea3d5af}, {$oid=6549d9d943a1550edfb210ea}, {$oid=6549fe0f8ab2e6d29970ab3b}, {$oid=6549fe2eaf9c76c5f9a388f2}, {$oid=6549fe6fff95ed11f4605044}, {$oid=6549fe6f8ab2e6d29970ab4e}, {$oid=6549fe7c07203c34c89586bf}, {$oid=6549fe895193baa4bb3688d1}, {$oid=6549fe8d96a53c150d136089}, {$oid=6549fecf710bcd6835484871}, {$oid=6549fefae0bf2de704a88d26}, {$oid=6549fefb5193baa4bb3688dc}, {$oid=6549ff058cda7b50aad98b1d}, {$oid=6549ff09b355ace10a83c942}, {$oid=6549ff23500e29c3b3728335}, {$oid=6549ff6b12c7c35e53ac45c4}, {$oid=6549ffdb710bcd6835484898}, {$oid=654a009ad2bf3fe513224c10}, {$oid=654a014ed2bf3fe513224c27}, {$oid=654a01839ae3094c27c02a29}, {$oid=654a019f489cdbf924d4cf92}, {$oid=654a0289f284641539aa4352}, {$oid=654a034802c1c722b3c83959}, {$oid=654a043bc38ff55d1b3de1b1}, {$oid=654a0453fc4bde3777d1ee08}, {$oid=654a04e4424fe2e6ff4fc37e}, {$oid=654a05b783d1a212ac09513e}, {$oid=654a05bed419a6093ae2762f}, {$oid=654a05cb5f2edb195e4106b2}, {$oid=654a05fa266082ad18bcc3bd}, {$oid=654a060593400f63f1760ced}, {$oid=654a06299c878881b929c712}, {$oid=654a06f67214da2d288fddfe}, {$oid=654a08cf58d283de7da3090f}, {$oid=654a09229c878881b929c77b}, {$oid=654a09366413b561c972ece5}, {$oid=654a095e5c049f1688492a86}, {$oid=654a099b7214da2d288fde4a}, {$oid=654a09eb30d0bd12cdcf32f7}, {$oid=654a09f5693471642f6fe547}, {$oid=654a0ad4843b3cc105d706e9}, {$oid=654a0b9a58d283de7da30976}, {$oid=654a0bbcdbdc8f0c19f44584}, {$oid=654a0c430d32aa6e48e038c7}, {$oid=654a0c7c1ac8c42954a45659}, {$oid=654a0ca988e35270d0b0acf3}, {$oid=654a0d06f1431dc231a71759}, {$oid=654a0d3e0b72ecca92841c5a}, {$oid=654a0e9e0b72ecca92841c74}, {$oid=654a0ed00aa39cf5e7587f30}, {$oid=654a0ed4f1431dc231a7177d}, {$oid=654a0f32e89efc8d80391793}, {$oid=654a0fc28083aa4f3d667fd4}, {$oid=654a0fc7c162b3d96de3eedd}, {$oid=654a10d57cf99e2c127684f7}, {$oid=654a1290c4a4dde59abc4ba0}, {$oid=654a17d90aa39cf5e758804e}, {$oid=654a188f10c41c9bca7c9b40}, {$oid=654a18bd10c41c9bca7c9b4a}, {$oid=654a1c808083aa4f3d668144}, {$oid=654a1f91b0dd511328e4ecf5}, {$oid=654a209610c41c9bca7c9c48}, {$oid=5be4a4cded5edc0017b9aa73}]}}, {_id={$in=[{$oid=5be4a4cded5edc0017b9aa70}, {$oid=5be4a4cded5edc0017b9aa73}, {$oid=64edcf89092c4aa4c7b15684}, {$oid=64edcfc5b0c762ac2c04354f}, {$oid=64ee01a056ba5f0ac8046144}, {$oid=64ee01a8efa7d89f15f1049e}, {$oid=64ee01d7f3491bcc95d360fe}, {$oid=64ee0237efa7d89f15f104b0}, {$oid=64ee023c3e4ba1de6e4f33e6}, {$oid=64ee0288d9b9329977827e9b}, {$oid=64ee02acda7352833db943c2}, {$oid=64ee114d513be3baa234ded8}, {$oid=64ee14371b3ac6c7108ae7a9}, {$oid=64ee19de086011987c702bdc}, {$oid=64ee209e4b93c826beeb7106}, {$oid=64ee25c053aa168d72287348}, {$oid=64ee2ba7d349817a36b62b0a}, {$oid=64ee2c432550d435da0d1d75}, {$oid=64ee2e9495a275747c09bfdf}, {$oid=64ee2f1b24d365db077593dd}, {$oid=64ee30f620b4689abd3b2cea}, {$oid=64ee33ad605ba6129aec0705}, {$oid=64ee354320b4689abd3b2d61}, {$oid=64ee4018b581500479bb42c0}, {$oid=64ee423e4dd3941247073387}, {$oid=64ee4315ca12bf32ef7d37e2}, {$oid=64ee55b5db01f0804d5fbe37}, {$oid=64ee57728e37bb2d3f64e4d0}, {$oid=64ee5ee23c20f02a42bf6a16}, {$oid=64ee5f201bfa44eb1b854c9b}, {$oid=64ee610f7ac2b6fd88c297fe}, {$oid=64ee64d1621d36450b21ec72}, {$oid=64ee6ae8ee6e9cd6201f1c47}, {$oid=64ee6b96d3f9bbd39fb0d9e4}, {$oid=64ee6cff353d780f893a85fd}, {$oid=64ee7024353d780f893a8661}, {$oid=64ee71f743c2fb211cdb0da0}, {$oid=64ee761541be528dc07f697f}, {$oid=64ee7cf55543fb2e429d4dc2}, {$oid=64ee7ee36f90e0c3a8255af8}, {$oid=64ee99e46a8e7cb9239a4a06}, {$oid=64eec5a473ec5b0a8c5f0fc3}, {$oid=64eee624bb6051e9f9eec965}, {$oid=64eef612da327b1aa838a307}, {$oid=64ef0819e1b431c06470185b}, {$oid=64f051f51e959cfba48f7308}, {$oid=64f31cf008b57866c638c15f}, {$oid=64f4ee1d64aab70f0194666c}, {$oid=6501a33b9335cb25c5d3ed51}, {$oid=6514a90032853e36cdfd7768}, {$oid=6533165e02b8c742d0f500b4}, {$oid=653317121e2b95ab49f752d0}, {$oid=6533177a0bffa58085b6467b}, {$oid=653318a3b0cb04d4c957f4d0}, {$oid=653342a3b2f0b31773aa9b26}, {$oid=65334801ea067004edebdb81}, {$oid=653348b487fd577948aeaf25}, {$oid=65334eddb2f0b31773aa9ccc}, {$oid=65335ccc198ee1b3655978b8}, {$oid=65335d4c77727c64c8cb005c}, {$oid=6533ac6366143d0cdf18f880}, {$oid=6533e66a65f59550a5e9d6dc}, {$oid=6533fb74fc5ebcf5ae69139d}, {$oid=6534083fa951f5639267aded}, {$oid=65341278a423dceb1ebab698}, {$oid=6534242b0ad17adde3e7e0ab}, {$oid=653424a4a3f986ab864b7d14}, {$oid=65345b61febe39fa55f85e09}, {$oid=6534adbc7a7d062bb450ef20}, {$oid=6534fcabb7b0c97eabbb0d8e}, {$oid=6535a3e89517b4a451331ac7}, {$oid=65369da287e6e0cc5cccc5bd}, {$oid=65369db99d4b6fa725d90826}, {$oid=65369e3211231ea2b2e4c6f6}, {$oid=65369fa0d66138373d9747ef}, {$oid=6536a2631058527800fc4451}, {$oid=6536a4e1079be567bc2b6641}, {$oid=6536a606c2a3df4f550c8412}, {$oid=6536a78f10763012796ec5b8}, {$oid=6536a8241edfa4601ea12bfc}, {$oid=6536ac35bbf90fd4dccf5653}, {$oid=6536acac1e859a965c4aad31}, {$oid=6536aebeb37ac1907df108c7}, {$oid=6537b01a56e90387e505cb1b}, {$oid=6537b22243ed7686ba9aed01}, {$oid=6537b7b1794cb13778380928}, {$oid=6537b8463eee66cd5c0e19c1}, {$oid=6537ba42dafe3269b522f37e}]}}]}}]}",
+	"planSummary": "IXSCAN { org_id: 1, _fts: "text", _ftsx: 1 }"
+},
+{
+	"queryHash": "A4A688EB",
+	"count": "7",
+	"averageDuration": "387",
+	"highDuration": "640",
+	"lowDuration": "113",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a89f08a00c97997022f1c={$exists=true}}, new=true, update={$set={lease_time.654a89f08a00c97997022f1c={$date=2023-11-07T19:04:18.683Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=6993fd27-2e3a-4681-8b9b-ac9dbb432c78}}, txnNumber=157, $clusterTime={clusterTime={$timestamp={t=1699383858, i=15}}, signature={hash={$binary={base64=cQ1BgZgOd3JEJfj8uS/mvhSA+fw=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "7ECECDCF",
+	"count": "3",
+	"averageDuration": "403",
+	"highDuration": "956",
+	"lowDuration": "104",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a072a1c646620dde9470a={$exists=true}}, new=true, update={$set={lease_time.654a072a1c646620dde9470a={$date=2023-11-07T09:45:22.413Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=9e2deb94-d353-40b3-a607-8e87c4e8525c}}, txnNumber=23, $clusterTime={clusterTime={$timestamp={t=1699350322, i=23}}, signature={hash={$binary={base64=+vwV1Y3PjmmaSppODPxvGAVugZc=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "BA2E5259",
+	"count": "17",
+	"averageDuration": "415",
+	"highDuration": "2899",
+	"lowDuration": "107",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a90ead6ac2ecbc27c57b6={$exists=true}}, new=true, update={$set={lease_time.654a90ead6ac2ecbc27c57b6={$date=2023-11-07T19:33:27.116Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=5c58763a-99ab-48cb-b458-1992dc56e18b}}, txnNumber=408, $clusterTime={clusterTime={$timestamp={t=1699385607, i=2}}, signature={hash={$binary={base64=70O8E5u+SMlZZ4L3HOKxH1A8YLw=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "E63F9AAD",
+	"count": "3684",
+	"averageDuration": "418",
+	"highDuration": "1011",
+	"lowDuration": "100",
+	"query": "{find=jobs, filter={kwargs.runtime_path_id=Automation1/rt/cloud/DevCloudplex, trigger.always_on=true}, sort={_id=1}, projection={_id=1, kwargs=1}, lsid={id={$uuid=b3f23976-4a1b-4c54-b56a-46aefaf570a5}}, $clusterTime={clusterTime={$timestamp={t=1699327286, i=5}}, signature={hash={$binary={base64=oYOskHNMxiYi5/50HrazHSsqZoM=, subType=0}}, keyId=7254037584978903041}}, $db=cslsched, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { kwargs.runtime_path_id: 1 }"
+},
+{
+	"queryHash": "E33978FC",
+	"count": "6",
+	"averageDuration": "420",
+	"highDuration": "734",
+	"lowDuration": "109",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549d52312c7c35e53ac41e5={$exists=true}}, new=true, update={$set={lease_time.6549d52312c7c35e53ac41e5={$date=2023-11-07T06:11:53.788Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=eff446b7-6b6d-4a74-887d-be87134f6daf}}, txnNumber=15, $clusterTime={clusterTime={$timestamp={t=1699337513, i=35}}, signature={hash={$binary={base64=gZAuKErV9uMUzhduMf0KLT3yAnw=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "DC745A24",
+	"count": "2",
+	"averageDuration": "428",
+	"highDuration": "726",
+	"lowDuration": "131",
+	"query": "{find=sindex, filter={org_id={$oid=5be4a4cded5edc0017b9aa70}, $or=[{project_id={$in=[{$oid=6501a33b9335cb25c5d3ed53}, {$oid=654a1a6f7214da2d288fe070}]}}, {_id={$in=[{$oid=6501a33b9335cb25c5d3ed51}]}}], asset_type={$in=[Pipeline]}, $text={$search=A$#%$ Pipeline}}, sort={score={$meta=textScore}}, projection={_id=1, score={$meta=textScore}}, limit=100, lsid={id={$uuid=b4309c92-7b9e-43df-9625-cd8b3e0b443d}}, $clusterTime={clusterTime={$timestamp={t=1699357008, i=42}}, signature={hash={$binary={base64=B4MrWD2+Fb0jypjuKzqcxxKzCKs=, subType=0}}, keyId=7254037584978903041}}, $db=assets_index, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { org_id: 1, _fts: "text", _ftsx: 1 }"
+},
+{
+	"queryHash": "FC629C57",
+	"count": "7",
+	"averageDuration": "436",
+	"highDuration": "659",
+	"lowDuration": "108",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549ccaaf2ea0552599236b0={$exists=true}}, new=true, update={$set={lease_time.6549ccaaf2ea0552599236b0={$date=2023-11-07T05:35:42.690Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=aa44c2dd-f8a6-4238-ad2d-6e8f267f2357}}, txnNumber=2110, $clusterTime={clusterTime={$timestamp={t=1699335342, i=19}}, signature={hash={$binary={base64=DHYe064VE83+BYw+UAgEYR/Ya+8=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "72FA60A5",
+	"count": "1",
+	"averageDuration": "437",
+	"highDuration": "437",
+	"lowDuration": "437",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a87095e5b9ff5e3af4944={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a87095e5b9ff5e3af4944={$date=2023-11-07T18:50:55.477Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=61d41520-5954-4afd-b149-43c2f8fb5f7a}}, txnNumber=142, $clusterTime={clusterTime={$timestamp={t=1699383055, i=4}}, signature={hash={$binary={base64=tL5TEXTBSavOfYV9s70GubhO198=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "14F067F6",
+	"count": "1",
+	"averageDuration": "447",
+	"highDuration": "447",
+	"lowDuration": "447",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.654a8b48678f68e8d44b99eb={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a8b48678f68e8d44b99eb={$date=2023-11-07T19:09:03.790Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=721a9405-24f7-4347-9add-0944c8cada72}}, txnNumber=413, $clusterTime={clusterTime={$timestamp={t=1699384143, i=26}}, signature={hash={$binary={base64=uXK1jPJpg05dK5Qnh095a1c5t3Y=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "D4B34FF8",
+	"count": "14",
+	"averageDuration": "453",
+	"highDuration": "1159",
+	"lowDuration": "175",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549ce12df4e5a701fa19d45={$exists=true}}, new=true, update={$set={lease_time.6549ce12df4e5a701fa19d45={$date=2023-11-07T05:41:44.360Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=e62487de-01e3-4be3-9ecb-2c8395e1fc10}}, txnNumber=45, $clusterTime={clusterTime={$timestamp={t=1699335704, i=5}}, signature={hash={$binary={base64=ZeMsjNzgx7X8eyQNlAvJ/3bwqK4=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "97D2C63C",
+	"count": "8",
+	"averageDuration": "473",
+	"highDuration": "942",
+	"lowDuration": "103",
+	"query": "{find=sindex, filter={org_id={$oid=5be4a4cded5edc0017b9aa70}, $or=[{project_id={$in=[{$oid=654a1a6f7214da2d288fe070}]}}, {_id={$in=[{$oid=654a1a6f7214da2d288fe070}]}}], asset_type={$in=[Pipeline]}, $text={$search=A$#%$ Pipeline}}, sort={score={$meta=textScore}}, projection={_id=1, score={$meta=textScore}}, limit=100, lsid={id={$uuid=19983ee2-cfde-45df-88dd-6bee919e69b8}}, $clusterTime={clusterTime={$timestamp={t=1699357023, i=6}}, signature={hash={$binary={base64=fyk0UpQ4FIVwU46VRSPx+RF7QhQ=, subType=0}}, keyId=7254037584978903041}}, $db=assets_index, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { org_id: 1, _fts: "text", _ftsx: 1 }"
+},
+{
+	"queryHash": "2FC4F651",
+	"count": "3",
+	"averageDuration": "476",
+	"highDuration": "819",
+	"lowDuration": "212",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654b031b46c7d0d94deb08da={$exists=true}}, new=true, update={$set={lease_time.654b031b46c7d0d94deb08da={$date=2023-11-08T03:40:42.092Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=de30cf12-c2ae-4b4f-8a4b-65ad3a1f69ee}}, txnNumber=137, $clusterTime={clusterTime={$timestamp={t=1699414842, i=3}}, signature={hash={$binary={base64=53zWBfSTMH2/I0aCoFgXGc9+s3I=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "FE012A66",
+	"count": "3",
+	"averageDuration": "478",
+	"highDuration": "634",
+	"lowDuration": "179",
+	"query": "{findAndModify=cc_upgrade, query={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.654a76133820a8beb65a2319={$exists=true}}, new=true, update={$set={lease_time.654a76133820a8beb65a2319={$date=2023-11-07T17:39:46.332Z}}}, upsert=false, writeConcern={j=true, w=2}, lsid={id={$uuid=422755d7-f084-47d8-a63e-9dbf9d106e3f}}, txnNumber=349, $clusterTime={clusterTime={$timestamp={t=1699378786, i=12}}, signature={hash={$binary={base64=eZe2Aadn4EPpPRp+RPKMe0Nqrwc=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "85E9B1AC",
+	"count": "164",
+	"averageDuration": "618",
+	"highDuration": "1066",
+	"lowDuration": "491",
+	"query": "{q={owner=autoregplatform+prjuser1699293184988`@gmail.com, $or=[{p_id={$in=[{$oid=64ef081ae1b431c06470185d}, {$oid=64ef0824aeed220fc4ec48fd}, {$oid=64ef082648814dc17a8e0390}, {$oid=625f11bc580c3273ddd1d030}, {$oid=625f11cb922affb090581f7b}, {$oid=6537631ab488061146431993}, {$oid=6536a606c2a3df4f550c8414}, {$oid=6536a60bc7a1732232998fd2}, {$oid=65369fa0d66138373d9747f1}, {$oid=65369fa4d0186c4da3997519}, {$oid=64ee5f211bfa44eb1b854c9d}, {$oid=64ee5f27be9f5450c2a31d40}, {$oid=6537bd76bd1962d0462a81bc}, {$oid=6537bd8bcbd7734560fd7862}, {$oid=6537c488a50b3cdaad6ad73a}, {$oid=6537c555da0f9295afbbb758}, {$oid=6537c61fbd1962d0462a8311}, {$oid=6537c6bcd66399dd56cc7450}, {$oid=6537c74eef0063f1b34944ae}, {$oid=6537c7e19257b602dafaaeda}, {$oid=6537c86bfd34d53c778ea287}, {$oid=6537c92c86a0ee47da761bfe}, {$oid=6537ca3b86ad4bd349661c6a}, {$oid=6536a2641058527800fc4453}, {$oid=6536a267784485e57a099a4d}, {$oid=6536a28b9d4b6fa725d908f0}, {$oid=64ee0014c24cad4a3984389d}, {$oid=64f4b6d8b4eb867b746853d1}, {$oid=6531d9ac82ddeb49dd5dec19}, {$oid=6531d9dc4f797ea1e53a6277}, {$oid=6538033679be9fbd9dc9f87e}, {$oid=653ae30cbc7da51a6a261419}, {$oid=64ee30f720b4689abd3b2cec}, {$oid=64ee30ffafa514dc53da56fe}, {$oid=64ee31027ff95746aea440c1}, {$oid=6196f384bb5ef4724cbadbf5}, {$oid=616f4c10beee22ad55b54a16}, {$oid=5e17ced1ebdc0e0018c7e984}, {$oid=5e3079988a2d8a001a599511}, {$oid=6537bb4e606de6b019529203}, {$oid=6537bb53bd1962d0462a8136}, {$oid=6537bd19faa16f6547531e86}, {$oid=6537bd1ccbd7734560fd7857}, {$oid=65492fcb853dd8d36fdedde4}, {$oid=65492fdc58426ad709fa610b}, {$oid=6537ba42dafe3269b522f380}, {$oid=6537ba488dad820b5ff91774}, {$oid=6537ba4b3a293ebd72244f96}, {$oid=6537ba5109e1840a7b4c1c4a}, {$oid=6549cd98ac314769841b5825}, {$oid=6549cdac7f4af06ac24e01ba}, {$oid=6537bb21cbd7734560fd77ee}, {$oid=6537bb26d14220ff817cec6e}, {$oid=6537bb6586a0ee47da761a39}, {$oid=6549c9772be83864a5b871fc}, {$oid=6549c982fdd28d1c233d81be}, {$oid=64ee7ee36f90e0c3a8255afa}, {$oid=64ee7ef0042a79bc9995d7f9}, {$oid=6536aa2ef4f61c3f9b5d7dc8}, {$oid=654394937201d41223e05589}, {$oid=6543949d12b782f6668ee532}, {$oid=6549321d435ae901bd25fff8}, {$oid=65493227559548b4ac5ad9ae}, {$oid=6549316358426ad709fa6140}, {$oid=65493171fe6fb06934435ffa}, {$oid=64ee0288d9b9329977827e9d}, {$oid=64ee028f4c47c2097ab671e9}, {$oid=6549ca2c3eb4f1c9285cb28f}, {$oid=6549ca6778a7696b1aa11883}, {$oid=6549ca6d3b9d4c4238dd2a0a}, {$oid=60f88fff84a0de6b624d3b32}, {$oid=60f893545474343fc083cc1d}, {$oid=60f89ae90459b31f9f913f6a}, {$oid=6123e2fdf49db559f5784b1b}, {$oid=61247b0e85e4a35df3fffafd}, {$oid=61247c90a8f290ba529e2375}, {$oid=6139a6942d4af2a6c4e6dc91}, {$oid=613a86842b95fa6ee8389309}, {$oid=6149ff62f25b000f34918693}, {$oid=614af44680dfd4d5774bc805}, {$oid=6155d609a285a5496c8e23e7}, {$oid=6155d760d17bf2eecc19f21f}, {$oid=6155d785d05ddc7b9c5d0081}, {$oid=6155e37b431b703dbda077db}, {$oid=615728ef1ae025ccf97b6505}, {$oid=61d2e46ab8f8a03b303df04f}, {$oid=61d4823b5a267f0fb13c5f7a}, {$oid=61d4b78f388ad7bdca23db51}, {$oid=61e6b0b91eb52b91be8ba5d7}, {$oid=61ee918132005a6c9dc71f86}, {$oid=61ee941a4fcecf04b1b1b3a9}, {$oid=61ee977b0819c41b1e18957b}, {$oid=61efb080f53167bd9c25a4b0}, {$oid=61f0d1ec778a6b4be192670b}, {$oid=61f0d266f18e9e7d941a6359}, {$oid=61f0d3c33564c286f54e3228}, {$oid=61f15e6b13adad49a9dbbf50}, {$oid=61f1a58acc68db4f3b525da0}, {$oid=61f276dcaee1e25717ff12cd}, {$oid=61f8bf1cac3face56e177aa1}, {$oid=61fb0ca34f8f8572f13a521a}, {$oid=61fb637ea7ec6f0c72d3b241}, {$oid=62180074ccab9be34d222cdd}, {$oid=621802ac9947fd905b0ca366}, {$oid=622640f245539376fede608b}, {$oid=62264d3d1052e650e7d0653f}, {$oid=6226ce6b449128f262390288}, {$oid=624e8c4fa3a42c482493fad0}, {$oid=624e8dbaa6bc1ac7676aaa19}, {$oid=624e91815e7aebe70c16401c}, {$oid=62502ed04e45a19d9968690f}, {$oid=629e0ef34eed0c98e72f68f7}, {$oid=62d56c2cc8faff9ebe37b0cd}, {$oid=62dae4a62affc5f3f4b51dd1}, {$oid=62dae56b2affc5f3f4b51ddd}, {$oid=62dae5f05455c7cf21f93b26}, {$oid=62dae7a414030049e7c93cbb}, {$oid=62e1a4fcd2fa7e644f6b30a3}, {$oid=62e7b23b9e679df662118b70}, {$oid=62e7b4befd58e3a49bc84864}, {$oid=62f2bfd777726868ab753468}, {$oid=62f3a4fce60108b7aa6ff45e}, {$oid=62fbdea19477c6f32f98f061}, {$oid=62fbe4fa9e49f9b3a9c27bdc}, {$oid=632c6eff4c0aedf482177e75}, {$oid=63765595c073c26e291964d9}, {$oid=63a0af1d38062d6ab93a44b5}, {$oid=63a0afe2f5128eb539670e77}, {$oid=63a0b91588bd0c305261673d}, {$oid=63b408348c54a939e6535cb0}, {$oid=63b45cbb201d814bdf4d7cbd}, {$oid=63bb7a60f66306e288ea5403}, {$oid=63be00294322db518d9e0f37}, {$oid=63c838c743594a960d8beb50}, {$oid=63c83a0edc9e0e670b711236}, {$oid=63c84053a03f8f624b254edf}, {$oid=63c879fd3f0a8ffb33ba4bbf}, {$oid=63cad143991c078aafb37409}, {$oid=63cb046a188216033b64446e}, {$oid=63cecae9ddbfb86d3368dfce}, {$oid=63cecf04473726addee3d014}, {$oid=63cf42ef0b999132dc954788}, {$oid=63db97a0efbbd8bc9309cddf}, {$oid=63dc31aa8e7534e7aee81481}, {$oid=63dc327439acacb8e3734a6f}, {$oid=63dc3351c2ee53031849a009}, {$oid=6414a5e2b8b6ce9a775c47f8}, {$oid=6420f1e95f89f59abd11a8f3}, {$oid=64217081d4799b423d05f4a0}, {$oid=642fcb1034375a96d2b80b71}, {$oid=6435d3511670ed0c6508169e}, {$oid=6446ed1fa7c6353a3913c119}, {$oid=644716f395d5e8030ce2503d}, {$oid=645c7a69fefaaa08f040abdf}, {$oid=64c2d0bdaee5938cea2894eb}, {$oid=64c2d17267667f229b4a882d}, {$oid=64c2d2220bca4348725e053e}, {$oid=64c2d4c129aadc3220f3ed1d}, {$oid=64cd1d9fb76848897032bc9b}, {$oid=64cdb69f25cfb4e123465f21}, {$oid=64cdca4fbc4f688ab22a5b60}, {$oid=64cdca77b130434e4b79ca62}, {$oid=64dd03e2b11d9dfa0b31ebb4}, {$oid=650ab0650c17baeb20811be1}, {$oid=650b21325f7f99b7418b0e69}, {$oid=6524536bea887de239805fb8}, {$oid=6530a1b15acee9a0429452ca}, {$oid=653b316400c128a3cfe8638e}, {$oid=65455380b153f019abc36f99}, {$oid=65455ea2340de57f394fcd75}, {$oid=61d2c78feea4c7779cfac2a2}, {$oid=61d2fb5963050baa34e20d1f}, {$oid=61dd6fc844a6e7567ebb850c}, {$oid=61e533caefe62a2d84bec614}, {$oid=61f09ac72cf0f9e63dffcd79}, {$oid=61f09dca17be9488ad3b46ed}, {$oid=61f2783f5eabd8ad22802c51}, {$oid=61f76ef23353e09ffd1fce5f}, {$oid=61f89e32d5f2b981012c70d2}, {$oid=61f8d081c32d24f49ab79463}, {$oid=62180a7f4fed12dbaa900d39}, {$oid=6226d538b9504addc2f12bfa}, {$oid=62428c3a72718fe46ed6ac07}, {$oid=62505431dd6a37bbedbf2607}, {$oid=629e1200ede5ec69841d2fa2}, {$oid=629e4badcbca10797ba5de20}, {$oid=63bde4dda491d78a41c85e68}, {$oid=63c949aac62698df9bb499ba}, {$oid=63d975832b30f8ed693468de}, {$oid=63dc2d1b1c6e7ea095e6e73d}, {$oid=64346f9fe8de38c236f43e09}, {$oid=64432901c22c35b88c115186}, {$oid=6449ac1a1bbc586afdc294e4}, {$oid=6449ae7f66e1e9e8b47b2d01}, {$oid=6449b2f70fa2458a2a2b7fb0}, {$oid=6449b41bf491814eff684eed}, {$oid=644fd7639f3b813db677ffe9}, {$oid=6455316a5a94f614e5ef13ae}, {$oid=645532e51ba777c631b6796c}, {$oid=6455340a5a94f614e5ef13d5}, {$oid=645945a5d9e2d6b2baa8bb66}, {$oid=645a9c5dff9da3d2e54a8554}, {$oid=645ab9c1002da4f2e41699e4}, {$oid=645abe8a13a810a09467000b}, {$oid=64c2d508294c42dfc1f0a99c}, {$oid=64d18cf162099948cfb35df5}, {$oid=64d2bdfa088699ccd6c28e6d}, {$oid=652598145d9acb900253ba5f}, {$oid=653978c94cb07a4b4b7a8a09}, {$oid=5e446f0c1ccac00018a90171}, {$oid=5e446f166f39b900140cf6a1}, {$oid=5e6f9b003c3e2e1766521c51}, {$oid=5e7e372bf4e2b100160747cf}, {$oid=5ea1d069fd29660015e09a7d}, {$oid=5eb43f0224dbf001d33865b3}, {$oid=5eb442539ee71a0016d7b644}, {$oid=5eb4473024dbf001d3386a85}, {$oid=5eb44a423b95fe0017af34ff}, {$oid=5eb44a4f24dbf001d3386bb9}, {$oid=5eb44ca43b95fe0014f6fbd5}, {$oid=5eb44d8224dbf001d3386c40}, {$oid=5eb44f1c24dbf001d3386c67}, {$oid=5eb4519773cb8d0016025a1e}, {$oid=5eb4525b24dbf00017667273}, {$oid=5f87a43ffc342b86ae64e3d5}, {$oid=5f88b61286b1a66bffbbe68b}, {$oid=5f8dd487c8a9aec56b644640}, {$oid=5f8dd4ace3ba6d7403792e37}, {$oid=6022bfa9158eeafeedb3da83}, {$oid=60675a0e7ed55ca2f9f57765}, {$oid=606ddca5d9e696b2a5e900bc}, {$oid=607545d569dc587144c8ebe8}, {$oid=60767cf0a7d34fdb66c26936}, {$oid=60e6134435a5735f5b408530}, {$oid=6124080a2b8b4ed1553f4df8}, {$oid=61f0d4c36144dd0d20f370f0}, {$oid=63aa9a76efb912d40daa840a}, {$oid=64ee013e7d949a03fdbf4138}, {$oid=653315acc5973e36c0d84440}, {$oid=5f21ed13245e4a887dd0e363}, {$oid=5f21ed3a3020c8351ce19ba3}, {$oid=5f21f0d4245e4a887dd0e38c}, {$oid=64ee2e9495a275747c09bfe1}, {$oid=6549399fe37586f0632f878d}, {$oid=64ee33ae605ba6129aec0707}, {$oid=64ee33b6096fa1900a183ed0}, {$oid=64ee33b7af7f8c70dfb3409e}, {$oid=654929cb717b81c44bb091f3}, {$oid=654929ed4edb696659d58c63}, {$oid=64ee114d513be3baa234deda}, {$oid=64ee115e513be3baa234dede}, {$oid=64ee11626ebd44eef34da9a8}, {$oid=65492a50db12705941fd51f4}, {$oid=65492a66717b81c44bb0920b}, {$oid=65492d650e87b4d1c5ef88c6}, {$oid=65492d6eefc99eccdfc74b75}, {$oid=6549c97a53f54ec6380db09a}, {$oid=6549c98878a7696b1aa1185b}, {$oid=6549c98d471daf1ba6afb2de}, {$oid=623a67ed0d5a45e25c21bed7}, {$oid=623a681cab5301f7a32dbded}, {$oid=628812713fadba51e63d67ee}, {$oid=628e7ebf2ca1e33e88236da2}, {$oid=6356ce5e0f0ab4545d25f2ea}, {$oid=63581a177557f752562bf45f}, {$oid=63c84ab4d784210cbde9d182}, {$oid=644c3ba84aad0a2aa87b6971}, {$oid=645182e59878ca9cc924b554}, {$oid=6463d9f06074857b829b9035}, {$oid=646508f9d7e39678cd3d234d}, {$oid=6467d6ae8ac7ca446cf57538}, {$oid=646beca2354638e9a0c6e796}, {$oid=64c4501a14881de630842e69}, {$oid=64cbf1e97972abc894bf3d8b}, {$oid=64dd0764984994ced53b26b6}, {$oid=65299c7cd3c1d136f2197c8e}, {$oid=652b263656dac116c9c5a2e7}, {$oid=652b62e56049ab18ce370475}, {$oid=653017dd11987581978dd9fd}, {$oid=654136e5e39b7ba7f55d9614}, {$oid=6533c3b37ad1d0677952be3e}, {$oid=6533c3b754a53848446864a8}]}}]}}",
+	"planSummary": "IXSCAN { p_id: 1, type: 1 }, IXSCAN { _id: 1, seqno: 1 }"
+},
+{
+	"queryHash": "B5DC1BDA",
+	"count": "1",
+	"averageDuration": "676",
+	"highDuration": "676",
+	"lowDuration": "676",
+	"query": "{findAndModify=cc_upgrade, query={$or=[{lease_id=65301f4c21bcc901f2c78562-regular}, {lease_id={$exists=false}}], in_progress_count={$lt=1}, lease_time.6549ff9d624ff92ee08d5865={$exists=false}}, new=true, update={$inc={in_progress_count=1}, $set={lease_id=65301f4c21bcc901f2c78562-regular, lease_time.6549ff9d624ff92ee08d5865={$date=2023-11-07T09:13:07.990Z}}}, upsert=true, writeConcern={j=true, w=2}, lsid={id={$uuid=c35ba9ac-b95a-48b4-8a00-6993da2237f2}}, txnNumber=97, $clusterTime={clusterTime={$timestamp={t=1699348387, i=20}}, signature={hash={$binary={base64=0TYdro8CLN4SivSdHOWL9+IZGR4=, subType=0}}, keyId=7254037584978903041}}, $db=csldb, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { lease_id: 1 }"
+},
+{
+	"queryHash": "4F3B180C",
+	"count": "1",
+	"averageDuration": "723",
+	"highDuration": "723",
+	"lowDuration": "723",
+	"query": "{find=sindex, filter={org_id={$oid=5be4a4cded5edc0017b9aa70}, $or=[{project_id={$in=[{$oid=6196f384bb5ef4724cbadbf5}, {$oid=616f4c10beee22ad55b54a16}, {$oid=5e17ced1ebdc0e0018c7e984}, {$oid=5e3079988a2d8a001a599511}, {$oid=64edcf89092c4aa4c7b15686}, {$oid=64edcfc6b0c762ac2c043551}, {$oid=64ee01a056ba5f0ac8046146}, {$oid=64ee01a8efa7d89f15f104a0}, {$oid=64ee01d7f3491bcc95d36100}, {$oid=64ee0237efa7d89f15f104b2}, {$oid=64ee023c092c4aa4c7b15983}, {$oid=64ee023d01b01763be1b1281}, {$oid=64ee023c3e4ba1de6e4f33e8}, {$oid=64ee0288d9b9329977827e9d}, {$oid=64ee02adda7352833db943c4}, {$oid=64ee114d513be3baa234deda}, {$oid=64ee14371b3ac6c7108ae7ab}, {$oid=64ee19df086011987c702bde}, {$oid=64ee209f4b93c826beeb7108}, {$oid=64ee25c053aa168d7228734a}, {$oid=64ee2ba7d349817a36b62b0c}, {$oid=64ee2c452550d435da0d1d77}, {$oid=64ee2e9495a275747c09bfe1}, {$oid=64ee2f1c24d365db077593df}, {$oid=64ee30f720b4689abd3b2cec}, {$oid=64ee33ae605ba6129aec0707}, {$oid=64ee354420b4689abd3b2d63}, {$oid=64ee4018b581500479bb42c2}, {$oid=64ee423e4dd3941247073389}, {$oid=64ee4315ca12bf32ef7d37e4}, {$oid=64ee55b6db01f0804d5fbe39}, {$oid=64ee57728e37bb2d3f64e4d2}, {$oid=64ee5ee23c20f02a42bf6a18}, {$oid=64ee5f211bfa44eb1b854c9d}, {$oid=64ee610f7ac2b6fd88c29800}, {$oid=64ee64d1621d36450b21ec74}, {$oid=64ee6ae9ee6e9cd6201f1c49}, {$oid=64ee6b97d3f9bbd39fb0d9e6}, {$oid=64ee6d00353d780f893a85ff}, {$oid=64ee7025353d780f893a8663}, {$oid=64ee71f843c2fb211cdb0da2}, {$oid=64ee761641be528dc07f6981}, {$oid=64ee7cf65543fb2e429d4dc4}, {$oid=64ee7ee36f90e0c3a8255afa}, {$oid=64ee99e46a8e7cb9239a4a08}, {$oid=64eec5a673ec5b0a8c5f0fc5}, {$oid=64eee624bb6051e9f9eec967}, {$oid=64eef615da327b1aa838a309}, {$oid=64ef081ae1b431c06470185d}, {$oid=64f051f61e959cfba48f730b}, {$oid=64f31cf008b57866c638c161}, {$oid=6501a33b9335cb25c5d3ed53}, {$oid=654a1a6f7214da2d288fe070}, {$oid=6514a90032853e36cdfd776a}, {$oid=6533165f02b8c742d0f500b6}, {$oid=653317121e2b95ab49f752d2}, {$oid=6533177b0bffa58085b6467d}, {$oid=653318a4b0cb04d4c957f4d2}, {$oid=653342a4b2f0b31773aa9b28}, {$oid=65334802ea067004edebdb83}, {$oid=653348b687fd577948aeaf28}, {$oid=65334edeb2f0b31773aa9cce}, {$oid=65335ccd198ee1b3655978ba}, {$oid=65335d4c77727c64c8cb005e}, {$oid=6533ac6366143d0cdf18f882}, {$oid=6533e66b65f59550a5e9d6de}, {$oid=6533fb74fc5ebcf5ae69139f}, {$oid=65340840a951f5639267adef}, {$oid=65341279a423dceb1ebab69a}, {$oid=6534242b0ad17adde3e7e0ad}, {$oid=653424a4a3f986ab864b7d16}, {$oid=65345b61febe39fa55f85e0b}, {$oid=6534adbd7a7d062bb450ef22}, {$oid=6534fcabb7b0c97eabbb0d90}, {$oid=6535a3e89517b4a451331ac9}, {$oid=65369da287e6e0cc5cccc5bf}, {$oid=65369dba9d4b6fa725d90828}, {$oid=65369e3311231ea2b2e4c6f8}, {$oid=65369fa0d66138373d9747f1}, {$oid=6536a2641058527800fc4453}, {$oid=6536a4e1079be567bc2b6643}, {$oid=6536a606c2a3df4f550c8414}, {$oid=6536a78f10763012796ec5ba}, {$oid=6536a8271edfa4601ea12bfe}, {$oid=6536ac35bbf90fd4dccf5655}, {$oid=6536acad1e859a965c4aad33}, {$oid=6536aebeb37ac1907df108c9}, {$oid=6537b01a56e90387e505cb1d}, {$oid=6537b22243ed7686ba9aed03}, {$oid=6537b7b1794cb1377838092a}, {$oid=6537b8463eee66cd5c0e19c3}, {$oid=6537ba42dafe3269b522f380}, {$oid=6537ba880933ade62304670f}, {$oid=6537bb21cbd7734560fd77ee}, {$oid=6537bb4e606de6b019529203}, {$oid=6537bb8c57d3e95379645e34}, {$oid=6537bd19faa16f6547531e86}, {$oid=6537bd76bd1962d0462a81bc}, {$oid=65384541ce2a76de2f63cc1a}, {$oid=6538b065873ebcbc16388983}, {$oid=6538b06c7f53119b8d54ec5d}, {$oid=653fedf70040ff075e4d563d}, {$oid=654394937201d41223e05589}, {$oid=654925ca24b5d40a5ecf2c32}, {$oid=654925e6dd7e11f9757678d5}, {$oid=654925ff4033b840a287c5a9}, {$oid=65492605e5d8d0e3b70f7134}, {$oid=654928c9f09efa170622f9d1}, {$oid=654928eabae72c14dd5bd993}, {$oid=654929020f751f7bfb1415ae}, {$oid=65492975f5d4d634326a5092}, {$oid=65492a50db12705941fd51f4}, {$oid=65492ad1b8f4f2e3e2339b09}, {$oid=65492d650e87b4d1c5ef88c6}, {$oid=65492d6eefc99eccdfc74b75}, {$oid=65492ed08461cd8c008aace3}, {$oid=65498dcc09625df6d5c8a4df}, {$oid=6549c997cce41efed05c22f1}, {$oid=6549c9e0b962ff8a2380ae7a}, {$oid=6549ca336399175c47ba3660}, {$oid=6549cb85fdd28d1c233d8230}, {$oid=6549cc975eacee62b2a9ed3f}, {$oid=6549ce0aa8948a279ed830d1}, {$oid=6549d0103b9d4c4238dd2acb}, {$oid=6549d109ff95ed11f4604b76}, {$oid=6549d31be0bf2de704a888a8}, {$oid=6549d35488899f2d8aefbd2d}, {$oid=6549d4ded594a8f9b96d1f1b}, {$oid=6549d5e161d7442b751c37a8}, {$oid=6549d87605dae5117ea3d5af}, {$oid=6549d9d943a1550edfb210ea}, {$oid=6549fe0f8ab2e6d29970ab3b}, {$oid=6549fe2eaf9c76c5f9a388f2}, {$oid=6549fe6fff95ed11f4605044}, {$oid=6549fe6f8ab2e6d29970ab4e}, {$oid=6549fe7c07203c34c89586bf}, {$oid=6549fe895193baa4bb3688d1}, {$oid=6549fe8d96a53c150d136089}, {$oid=6549fecf710bcd6835484871}, {$oid=6549fefae0bf2de704a88d26}, {$oid=6549fefb5193baa4bb3688dc}, {$oid=6549ff058cda7b50aad98b1d}, {$oid=6549ff09b355ace10a83c942}, {$oid=6549ff23500e29c3b3728335}, {$oid=6549ff6b12c7c35e53ac45c4}, {$oid=6549ffdb710bcd6835484898}, {$oid=654a009ad2bf3fe513224c10}, {$oid=654a014ed2bf3fe513224c27}, {$oid=654a01839ae3094c27c02a29}, {$oid=654a019f489cdbf924d4cf92}, {$oid=654a0289f284641539aa4352}, {$oid=654a034802c1c722b3c83959}, {$oid=654a043bc38ff55d1b3de1b1}, {$oid=654a0453fc4bde3777d1ee08}, {$oid=654a04e4424fe2e6ff4fc37e}, {$oid=654a05b783d1a212ac09513e}, {$oid=654a05bed419a6093ae2762f}, {$oid=654a05cb5f2edb195e4106b2}, {$oid=654a05fa266082ad18bcc3bd}, {$oid=654a060593400f63f1760ced}, {$oid=654a06299c878881b929c712}, {$oid=654a06f67214da2d288fddfe}, {$oid=654a08cf58d283de7da3090f}, {$oid=654a09229c878881b929c77b}, {$oid=654a09366413b561c972ece5}, {$oid=654a095e5c049f1688492a86}, {$oid=654a099b7214da2d288fde4a}, {$oid=654a09eb30d0bd12cdcf32f7}, {$oid=654a09f5693471642f6fe547}, {$oid=654a0ad4843b3cc105d706e9}, {$oid=654a0b9a58d283de7da30976}, {$oid=654a0bbcdbdc8f0c19f44584}, {$oid=654a0c430d32aa6e48e038c7}, {$oid=654a0c7c1ac8c42954a45659}, {$oid=654a0ca988e35270d0b0acf3}, {$oid=654a0d06f1431dc231a71759}, {$oid=654a0d3e0b72ecca92841c5a}, {$oid=654a0e9e0b72ecca92841c74}, {$oid=654a0ed00aa39cf5e7587f30}, {$oid=654a0ed4f1431dc231a7177d}, {$oid=654a0f32e89efc8d80391793}, {$oid=654a0fc28083aa4f3d667fd4}, {$oid=654a0fc7c162b3d96de3eedd}, {$oid=654a10d57cf99e2c127684f7}, {$oid=654a1290c4a4dde59abc4ba0}, {$oid=654a17d90aa39cf5e758804e}, {$oid=654a188f10c41c9bca7c9b40}, {$oid=654a18bd10c41c9bca7c9b4a}, {$oid=654a1c808083aa4f3d668144}, {$oid=654a1f91b0dd511328e4ecf5}, {$oid=654a209610c41c9bca7c9c48}, {$oid=5be4a4cded5edc0017b9aa73}]}}, {_id={$in=[{$oid=5be4a4cded5edc0017b9aa70}, {$oid=5be4a4cded5edc0017b9aa73}, {$oid=64edcf89092c4aa4c7b15684}, {$oid=64edcfc5b0c762ac2c04354f}, {$oid=64ee01a056ba5f0ac8046144}, {$oid=64ee01a8efa7d89f15f1049e}, {$oid=64ee01d7f3491bcc95d360fe}, {$oid=64ee0237efa7d89f15f104b0}, {$oid=64ee023c3e4ba1de6e4f33e6}, {$oid=64ee0288d9b9329977827e9b}, {$oid=64ee02acda7352833db943c2}, {$oid=64ee114d513be3baa234ded8}, {$oid=64ee14371b3ac6c7108ae7a9}, {$oid=64ee19de086011987c702bdc}, {$oid=64ee209e4b93c826beeb7106}, {$oid=64ee25c053aa168d72287348}, {$oid=64ee2ba7d349817a36b62b0a}, {$oid=64ee2c432550d435da0d1d75}, {$oid=64ee2e9495a275747c09bfdf}, {$oid=64ee2f1b24d365db077593dd}, {$oid=64ee30f620b4689abd3b2cea}, {$oid=64ee33ad605ba6129aec0705}, {$oid=64ee354320b4689abd3b2d61}, {$oid=64ee4018b581500479bb42c0}, {$oid=64ee423e4dd3941247073387}, {$oid=64ee4315ca12bf32ef7d37e2}, {$oid=64ee55b5db01f0804d5fbe37}, {$oid=64ee57728e37bb2d3f64e4d0}, {$oid=64ee5ee23c20f02a42bf6a16}, {$oid=64ee5f201bfa44eb1b854c9b}, {$oid=64ee610f7ac2b6fd88c297fe}, {$oid=64ee64d1621d36450b21ec72}, {$oid=64ee6ae8ee6e9cd6201f1c47}, {$oid=64ee6b96d3f9bbd39fb0d9e4}, {$oid=64ee6cff353d780f893a85fd}, {$oid=64ee7024353d780f893a8661}, {$oid=64ee71f743c2fb211cdb0da0}, {$oid=64ee761541be528dc07f697f}, {$oid=64ee7cf55543fb2e429d4dc2}, {$oid=64ee7ee36f90e0c3a8255af8}, {$oid=64ee99e46a8e7cb9239a4a06}, {$oid=64eec5a473ec5b0a8c5f0fc3}, {$oid=64eee624bb6051e9f9eec965}, {$oid=64eef612da327b1aa838a307}, {$oid=64ef0819e1b431c06470185b}, {$oid=64f051f51e959cfba48f7308}, {$oid=64f31cf008b57866c638c15f}, {$oid=64f4ee1d64aab70f0194666c}, {$oid=6501a33b9335cb25c5d3ed51}, {$oid=6514a90032853e36cdfd7768}, {$oid=6533165e02b8c742d0f500b4}, {$oid=653317121e2b95ab49f752d0}, {$oid=6533177a0bffa58085b6467b}, {$oid=653318a3b0cb04d4c957f4d0}, {$oid=653342a3b2f0b31773aa9b26}, {$oid=65334801ea067004edebdb81}, {$oid=653348b487fd577948aeaf25}, {$oid=65334eddb2f0b31773aa9ccc}, {$oid=65335ccc198ee1b3655978b8}, {$oid=65335d4c77727c64c8cb005c}, {$oid=6533ac6366143d0cdf18f880}, {$oid=6533e66a65f59550a5e9d6dc}, {$oid=6533fb74fc5ebcf5ae69139d}, {$oid=6534083fa951f5639267aded}, {$oid=65341278a423dceb1ebab698}, {$oid=6534242b0ad17adde3e7e0ab}, {$oid=653424a4a3f986ab864b7d14}, {$oid=65345b61febe39fa55f85e09}, {$oid=6534adbc7a7d062bb450ef20}, {$oid=6534fcabb7b0c97eabbb0d8e}, {$oid=6535a3e89517b4a451331ac7}, {$oid=65369da287e6e0cc5cccc5bd}, {$oid=65369db99d4b6fa725d90826}, {$oid=65369e3211231ea2b2e4c6f6}, {$oid=65369fa0d66138373d9747ef}, {$oid=6536a2631058527800fc4451}, {$oid=6536a4e1079be567bc2b6641}, {$oid=6536a606c2a3df4f550c8412}, {$oid=6536a78f10763012796ec5b8}, {$oid=6536a8241edfa4601ea12bfc}, {$oid=6536ac35bbf90fd4dccf5653}, {$oid=6536acac1e859a965c4aad31}, {$oid=6536aebeb37ac1907df108c7}, {$oid=6537b01a56e90387e505cb1b}, {$oid=6537b22243ed7686ba9aed01}, {$oid=6537b7b1794cb13778380928}, {$oid=6537b8463eee66cd5c0e19c1}, {$oid=6537ba42dafe3269b522f37e}, {$oid=6537ba860933ade62304670d}]}}]}}",
+	"planSummary": "IXSCAN { org_id: 1, _fts: "text", _ftsx: 1 }"
+},
+{
+	"queryHash": "C822626A",
+	"count": "25940",
+	"averageDuration": "2093",
+	"highDuration": "4902",
+	"lowDuration": "100",
+	"query": "{find=jobs, filter={kwargs.runtime_path_id=Automation1/rt/sidekick/groundfeedmaster}, sort={_id=1}, projection={trigger=1, kwargs=1, runs=1, last_run_time=1}, skip=246000, limit=1000, lsid={id={$uuid=85e04f7d-5ae3-4f79-8ee9-8a878068e0fe}}, $clusterTime={clusterTime={$timestamp={t=1699327269, i=32}}, signature={hash={$binary={base64=xJsn2Y6kh9XGEXNK4QkWniBUykg=, subType=0}}, keyId=7254037584978903041}}, $db=cslsched, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { _id: 1 }"
+},
+{
+	"queryHash": "798E3BE4",
+	"count": "1",
+	"averageDuration": "8255",
+	"highDuration": "8255",
+	"lowDuration": "8255",
+	"query": "{aggregate=sindex, pipeline=[{$match={org_id={$oid=5be4a4cded5edc0017b9aa70}, asset_type=Pipeline, test_pipeline=true}}, {$group={_id=$project_id, pipeline_snids={$push=$_id}}}, {$project={project_snode_id=$_id, pipeline_snids=$pipeline_snids, _id=0}}], cursor={}, lsid={id={$uuid=365510f4-32b7-4819-ba5e-70ddb010defb}}, $clusterTime={clusterTime={$timestamp={t=1699337663, i=11}}, signature={hash={$binary={base64=frxS/CfaGlY1EZgCuE6rVoOycdE=, subType=0}}, keyId=7254037584978903041}}, $db=assets_index, $readPreference={mode=primary}}",
+	"planSummary": "IXSCAN { org_id: 1, terms.type: 1, terms.value: 1 }"
+}

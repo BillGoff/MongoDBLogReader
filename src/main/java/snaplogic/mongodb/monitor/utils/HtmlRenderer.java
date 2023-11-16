@@ -153,7 +153,7 @@ public class HtmlRenderer {
 					"\", \"averageDuration\": \"" + qm.calculateAverage() + 
 					"\", \"highDuration\": \"" + qm.getHighDuration() + 
 					"\", \"lowDuration\": \"" + qm.getLowDuration() + 
-					"\", \"query\": \"" + cmd + 
+					"\", \"query\": \"" + StringUtils.escapeDoubleQuote(cmd) + 
 					"\", \"planSummary\": \"" + StringUtils.escapeDoubleQuote(planSummary) + "\"}");
 			
 			counter++;

@@ -6,8 +6,15 @@
 	<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
 
 	<script>
-		function msToTime(duration) 
-		{
+		function msToTime(duration) {
+			negative = false;
+			
+			if (duration < 0)
+			{
+				duration = Math.abs(duration);
+				negative = true;
+			}
+				
 			var milliseconds = Math.floor((duration % 1000) / 1),
 				seconds = Math.floor((duration / 1000) % 60),
 				minutes = Math.floor((duration / (1000 * 60)) % 60),
@@ -17,7 +24,14 @@
 			minutes = (minutes < 10) ? "0" + minutes : minutes;
 			seconds = (seconds < 10) ? "0" + seconds : seconds;
 			
-			return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
+			if (negative == true )
+			{
+				return "-" + hours + ":" + minutes + ":" + seconds + "." + milliseconds;
+			}
+			else
+			{
+				return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
+			}
 		}
 		
 		$(document).ready(function(){

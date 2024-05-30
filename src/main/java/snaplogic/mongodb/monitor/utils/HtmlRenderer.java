@@ -237,6 +237,8 @@ public class HtmlRenderer {
 					"\", \"newCount\": \""+ qm2.getSum() + 
 					"\", \"orgAverageDuration\": \"" + qm1.calculateAverage() + 
 					"\", \"newAverageDuration\": \"" + qm2.calculateAverage() + 
+					"\", \"diffAverageDuration\": \"" +
+						DiffUtils.calculateDiff(qm1.calculateAverage(), qm2.calculateAverage()) +
 					"\", \"orgHighDuration\": \"" + qm1.getHighDuration() + 
 					"\", \"newHighDuration\": \"" + qm2.getHighDuration() + 
 					"\", \"orgLowDuration\": \"" + qm1.getLowDuration() + 

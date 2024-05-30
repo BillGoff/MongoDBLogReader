@@ -54,4 +54,9 @@ public class DiffUtils {
 		}
 		return queryDiff;
 	}
+	
+	public static Integer calculateDiff(Integer first, Integer second)
+	{
+		return (second - first);
+	}
 }

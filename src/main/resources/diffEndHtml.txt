@@ -15,6 +15,12 @@
 							return msToTime(data);
 						}
 					},
+					{	data: "diffAverageDuration",
+						render: function (data, type, row)
+						{
+							return msToTime(data);
+						}
+					},
 					{ 	data: "orgHighDuration",
 						render: function (data, type, row)
 						{
@@ -64,13 +70,14 @@
 	<a class="toggle-vis" data-column="2">New Count</a> -
 	<a class="toggle-vis" data-column="3">Org Average Duration</a> -
 	<a class="toggle-vis" data-column="4">New Average Duration</a> -
-	<a class="toggle-vis" data-column="5">Org High Duration</a> -
-	<a class="toggle-vis" data-column="6">New High Duration</a> -
-	<a class="toggle-vis" data-column="7">Org Low Duration</a> -
-	<a class="toggle-vis" data-column="8">New Low Duration</a> -	
-	<a class="toggle-vis" data-column="9">Query</a> -
-	<a class="toggle-vis" data-column="10">Org Plan Summary</a> -
-	<a class="toggle-vis" data-column="11">New Plan Summary</a>
+	<a class="toggle-vis" data-column="5">Diff Average Duration</a> -
+	<a class="toggle-vis" data-column="6">Org High Duration</a> -
+	<a class="toggle-vis" data-column="7">New High Duration</a> -
+	<a class="toggle-vis" data-column="8">Org Low Duration</a> -
+	<a class="toggle-vis" data-column="9">New Low Duration</a> -	
+	<a class="toggle-vis" data-column="10">Query</a> -
+	<a class="toggle-vis" data-column="11">Org Plan Summary</a> -
+	<a class="toggle-vis" data-column="12">New Plan Summary</a>
 
 	<table id="mongodbLogTable">
 		<thead>
@@ -80,6 +87,7 @@
 				<th>new Count</th>
 				<th>Org Average Duration</th>
 				<th>New Average Duration</th>
+				<th>Diff Average Duration</th>
 				<th>Org High Duration</th>
 				<th>New High Duration</th>
 				<th>Org Low Duration</th>

@@ -1,0 +1,13 @@
+table.dataTable thead tr { 
+	background-color: lightblue; 
+	color: black;
+}
+
+table.dataTable tbody tr td {
+	border: 1px solid #c0c0c0;
+}
+	
+table.dataTable tfoot tr { 
+	background-color: lightblue; 
+	color: black;
+}

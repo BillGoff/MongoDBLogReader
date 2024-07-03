@@ -25,6 +25,13 @@ import snaplogic.mongodb.monitor.exceptions.MongoDbLogReaderException;
  */
 public class HtmlRenderer {
 
+	private static final String initialHtmlFile = "initialHtml.txt";
+	private static final String multiSelectJsFile = "js/jquery.multi-select.min.js";
+	private static final String multiSelectCssFile = "css/example-styles.css";
+	
+	private static final String msToTimeJsFile = "js/msToTime.js";
+	private static final String myDataTableCssFile = "css/myDatatable.css";
+	
 	private static final String beginHtmlFile = "beginHtml.txt";
 	private static final String diffEndHtmlFile = "diffEndHtml.txt";
 	private static final String endHtmlFile = "endHtml.txt";
@@ -99,7 +106,7 @@ public class HtmlRenderer {
 		} else
 			return inputStream;
 	}
-	
+
 	/**
 	 * This method is used to produce the HTML.
 	 * 
@@ -111,9 +118,85 @@ public class HtmlRenderer {
 	 */
 	public String renderDataTableHtml(Map<String, QueryMetadata> sortedMap) throws MongoDbLogReaderException 
 	{
-		InputStream is = getFileFromResourceAsStream(beginHtmlFile);
+		InputStream is = getFileFromResourceAsStream(initialHtmlFile);
 		StringBuilder sb = new StringBuilder(getContents(is));
+		
+		//Load custom javascript for multi-select.
+		is = getFileFromResourceAsStream(multiSelectJsFile);
+		sb.append("<script>\n" + getContents(is) + "</script>\n");
+		
+		// Load custom CSS for multi-select
+		is = getFileFromResourceAsStream(multiSelectCssFile);
+		sb.append("<style type=\"text/css\">\n" + getContents(is) + "</style>\n");
+		
+		//Load My milliseconds to time javascript funciton.
+		is = getFileFromResourceAsStream(msToTimeJsFile);
+		sb.append("<script>\n" + getContents(is) + "</script>\n");
+		
+		is = getFileFromResourceAsStream(myDataTableCssFile);
+		sb.append("<style type=\"text/css\">\n" + getContents(is) + "</style>\n");
+		
+		//Build JQuery Datatable.
+		sb.append("<script>\n");
+		sb.append("		$(document).ready(function(){ \n");
+		sb.append("			oTable = $(\"#mongodbLogTable\").DataTable({\n" +
+				"				fixedHeader: true,\n");
+		sb.append("				" + buildAaData(sortedMap) + "\n");
 
+		is = getFileFromResourceAsStream(endHtmlFile);
+		sb.append(getContents(is));
+
+		return sb.toString();
+
+	}
+
+	/**
+	 * This method is used to produce the HTML for a Diff Query Report.
+	 * 
+	 * @param queryDiff Map containing the diff data we want to display.
+	 * @return String the HTML with embedded JQuery DataTable for the data we want
+	 *         to display.
+	 * @throws MongoDbLogReaderException in the event we are unable to produce the
+	 *                                   HTML for the query diff map passed in.
+	 */	
+	public String renderDiffDataTableHtml(Map<String, QueryDiff> queryDiff) throws MongoDbLogReaderException 
+	{
+		InputStream is = getFileFromResourceAsStream(initialHtmlFile);
+		StringBuilder sb = new StringBuilder(getContents(is));
+		
+		//Load custom javascript for multi-select.
+		is = getFileFromResourceAsStream(multiSelectJsFile);
+		sb.append("<script>\n" + getContents(is) + "</script>\n");
+		
+		// Load custom CSS for multi-select
+		is = getFileFromResourceAsStream(multiSelectCssFile);
+		sb.append("<style type=\"text/css\">\n" + getContents(is) + "</style>\n");
+		
+		//Load My milliseconds to time javascript funciton.
+		is = getFileFromResourceAsStream(msToTimeJsFile);
+		sb.append("<script>\n" + getContents(is) + "</script>\n");
+		
+		is = getFileFromResourceAsStream(myDataTableCssFile);
+		sb.append("<style type=\"text/css\">\n" + getContents(is) + "</style>\n");
+		
+		//Build JQuery Datatable.
+		sb.append("<script>\n");
+		sb.append("		$(document).ready(function(){ \n");
+		sb.append("			oTable = $(\"#mongodbLogTable\").DataTable({\n" +
+				"				fixedHeader: true,\n");
+		sb.append("				" + buildDiffAaData(queryDiff) + "\n");
+				
+		is = getFileFromResourceAsStream(diffEndHtmlFile);
+		sb.append(getContents(is));
+
+		return sb.toString();
+
+	}
+	
+	private String buildAaData(Map<String, QueryMetadata> sortedMap) throws MongoDbLogReaderException 
+	{
+		StringBuilder sb = new StringBuilder();
+		
 		QueryMetadata qm = null;
 		Set<String> keys = sortedMap.keySet();
 		int counter = 0;
@@ -159,28 +242,13 @@ public class HtmlRenderer {
 			counter++;
 		}
 		sb.append("], ");
-
-		is = getFileFromResourceAsStream(endHtmlFile);
-		sb.append(getContents(is));
-
-		return sb.toString();
-
+		
+		return (sb.toString());
 	}
-
-	/**
-	 * This method is used to produce the HTML for a Diff Query Report.
-	 * 
-	 * @param queryDiff Map containing the diff data we want to display.
-	 * @return String the HTML with embedded JQuery DataTable for the data we want
-	 *         to display.
-	 * @throws MongoDbLogReaderException in the event we are unable to produce the
-	 *                                   HTML for the query diff map passed in.
-	 */	
-	public String renderDiffDataTableHtml(Map<String, QueryDiff> queryDiff) throws MongoDbLogReaderException 
+	
+	private String buildDiffAaData(Map<String, QueryDiff> queryDiff) throws MongoDbLogReaderException
 	{
-		InputStream is = getFileFromResourceAsStream(beginHtmlFile);
-		StringBuilder sb = new StringBuilder(getContents(is));
-
+		StringBuilder sb = new StringBuilder();
 		QueryDiff qd = null;
 		QueryMetadata qm1 = null;
 		QueryMetadata qm2 = null;
@@ -241,6 +309,8 @@ public class HtmlRenderer {
 						DiffUtils.calculateDiff(qm1.calculateAverage(), qm2.calculateAverage()) +
 					"\", \"orgHighDuration\": \"" + qm1.getHighDuration() + 
 					"\", \"newHighDuration\": \"" + qm2.getHighDuration() + 
+					"\", \"diffHighDuration\": \"" +
+						DiffUtils.calculateDiff(qm1.getHighDuration(), qm2.getHighDuration()) + 
 					"\", \"orgLowDuration\": \"" + qm1.getLowDuration() + 
 					"\", \"newLowDuration\": \"" + qm2.getLowDuration() + 
 					"\", \"query\": \"" + cmd + 
@@ -251,10 +321,7 @@ public class HtmlRenderer {
 		}
 		sb.append("], ");
 
-		is = getFileFromResourceAsStream(diffEndHtmlFile);
-		sb.append(getContents(is));
-
-		return sb.toString();
-
+		return (sb.toString());
 	}
+
 }

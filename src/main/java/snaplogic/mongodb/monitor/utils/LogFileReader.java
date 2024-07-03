@@ -62,7 +62,7 @@ public class LogFileReader {
 			} else
 				throw new MongoDbLogReaderException("No file name priveded.");
 		} else
-			throw new MongoDbLogReaderException("You must provide a file for " + "us to read the sbom from!");
+			throw new MongoDbLogReaderException("You must provide a file for us to read the second file from!");
 
 		return uniqueQueries;
 	}

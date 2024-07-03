@@ -313,6 +313,8 @@ public class HtmlRenderer {
 						DiffUtils.calculateDiff(qm1.getHighDuration(), qm2.getHighDuration()) + 
 					"\", \"orgLowDuration\": \"" + qm1.getLowDuration() + 
 					"\", \"newLowDuration\": \"" + qm2.getLowDuration() + 
+					"\", \"diffLowDuration\": \"" +
+						DiffUtils.calculateDiff(qm1.getLowDuration(), qm2.getLowDuration()) + 
 					"\", \"query\": \"" + cmd + 
 					"\", \"orgPlanSummary\": \"" + planSummary + 
 					"\", \"newPlanSummary\": \"" + newPlanSummary + "\"}");

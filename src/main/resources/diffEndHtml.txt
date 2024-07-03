@@ -51,6 +51,12 @@
 							return msToTime(data);
 						}
 					},
+					{ 	data: "diffLowDuration",
+						render: function (data, type, row)
+						{
+							return msToTime(data);
+						}
+					},
 					{	data: "query" },
 					{	data: "orgPlanSummary" },
 					{	data: "newPlanSummary" }
@@ -83,9 +89,10 @@
 				<option value="8" selected>Diff High Duration</option>
 				<option value="9" selected>Org Low Duration</option>
 				<option value="10" selected>New Low Duration</option>
-				<option value="11" selected>Query</option>
-				<option value="12" selected>Org Plan Summary</option>
-				<option value="13" selected>New Plan Summary</option>
+				<option value="11" selected>Diff Low Duration</option>
+				<option value="12" selected>Query</option>
+				<option value="13" selected>Org Plan Summary</option>
+				<option value="14" selected>New Plan Summary</option>
 			</select>
 		</div>
 	
@@ -104,6 +111,7 @@
 						<th>Diff High Duration</th>
 						<th>Org Low Duration</th>
 						<th>New Low Duration</th>
+						<th>Diff Low Duration</th>
 						<th>Query</th>
 						<th>Org Plan Summary</th>
 						<th>New Plan Summary</th>
@@ -122,6 +130,7 @@
 						<th>Diff High Duration</th>
 						<th>Org Low Duration</th>
 						<th>New Low Duration</th>
+						<th>Diff Low Duration</th>
 						<th>Query</th>
 						<th>Org Plan Summary</th>
 						<th>New Plan Summary</th>

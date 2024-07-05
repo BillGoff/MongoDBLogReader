@@ -2,11 +2,7 @@ package snaplogic.mongodb.monitor;
 
 import java.io.PrintWriter;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
-
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -17,8 +13,9 @@ import org.apache.commons.cli.Options;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import snaplogic.mongodb.monitor.dto.QueryMetadata;
+import snaplogic.mongodb.monitor.dto.LogEntryDate;
 import snaplogic.mongodb.monitor.dto.QueryDiff;
+import snaplogic.mongodb.monitor.dto.QueryMetadata;
 import snaplogic.mongodb.monitor.utils.DateUtils;
 import snaplogic.mongodb.monitor.utils.DiffUtils;
 import snaplogic.mongodb.monitor.utils.HtmlRenderer;
@@ -80,7 +77,6 @@ public class MongoDbLogReaderApplication {
 
 				Map<String, QueryDiff> queryDiff = DiffUtils.diffQueryResults(uniqueQueriesFile1, uniqueQueriesFile2);
 				
-				//TODO, build html diff from queryDiff.
 				HtmlRenderer htmlRenderer = new HtmlRenderer();
 				String html = htmlRenderer.renderDiffDataTableHtml(queryDiff);
 				String outputFileName = HtmlRenderer.getOutputFileOption(cli);
@@ -95,8 +91,11 @@ public class MongoDbLogReaderApplication {
 				Map<String, QueryMetadata> sortedMap = SortUtils.sortByDurationAverage(uniqueQueries, false);
 
 				HtmlRenderer htmlRenderer = new HtmlRenderer();
-					
-				String html = htmlRenderer.renderDataTableHtml(sortedMap);
+				
+				Date sd = LogFileReader.getStartDate();
+				Date ed = LogFileReader.getEndDate();
+				
+				String html = htmlRenderer.renderDataTableHtml(sortedMap, sd, ed);
 				
 				String outputFileName = HtmlRenderer.getOutputFileOption(cli);
 

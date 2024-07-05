@@ -1,6 +1,7 @@
 package snaplogic.mongodb.monitor.utils;
 
 import java.text.SimpleDateFormat;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -22,7 +23,7 @@ public class DateUtils {
 	}
 	
 	private static final String dateFormatPattern = "yyyy MM dd HH:mm:ss.SSS";
-	
+		
 	
 	/**
 	 * (U) This method is used to compute the difference between dates. It produces a nice readable formatted
@@ -141,6 +142,20 @@ public class DateUtils {
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormatPattern);
 		
 		return (simpleDateFormat.format(myDate));
+	}
+	
+	/**
+	 * This method is used to convert a String to a java.util.Date.
+	 * @param dateString String to convert to the date.
+	 * @return Date 
+	 */
+	public static Date toDate(String dateString) 
+	{
+		
+		OffsetDateTime offsetDateTime = OffsetDateTime.parse(dateString);
+	    Date date = new Date(offsetDateTime.toInstant().toEpochMilli());
+		
+		return date;
 	}
 	
 	/**

@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,9 +12,12 @@ import org.apache.commons.cli.CommandLine;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import snaplogic.mongodb.monitor.dto.LogEntry;
+import snaplogic.mongodb.monitor.dto.LogEntryDate;
 import snaplogic.mongodb.monitor.dto.QueryMetadata;
 import snaplogic.mongodb.monitor.exceptions.MongoDbLogReaderException;
 
@@ -26,8 +30,101 @@ import snaplogic.mongodb.monitor.exceptions.MongoDbLogReaderException;
  * @since 7 August 2023
  */
 public class LogFileReader {
-
 	private static final Logger logger = LogManager.getLogger("MongoDBLogReader");
+
+	private static Date endLogDate = null;	
+	private static Date startLogDate = null;
+
+	/**
+	 * (U) This method is used to get newest date of the logs that where processed.
+	 * @return Date the newest date from the log file.
+	 */
+	public static Date getEndDate()
+	{	
+		return endLogDate;
+	}
+	
+	/**
+	 * (U) This private static method is used to get a handle to the file supplied via the Command Line Interface 
+	 * options.
+	 * @param cli Command Line Interface 
+	 * @param option String value of the option that identifies the file we are attempting to read from.
+	 * @return File a handle to the file we are attempting to read from.
+	 * @throws MongoDbLogReaderException if we are unable to read from the file.
+	 */
+	private static File getFile(CommandLine cli, String option) throws MongoDbLogReaderException {
+		File file = null;
+		
+		if (cli.hasOption(option)) 
+		{
+			String fileName = cli.getOptionValue(option);
+
+			if (logger.isDebugEnabled())
+				logger.debug("Attempting to read log file (" + fileName + ")");
+
+			if ((fileName != null) && (fileName.trim().length() > 0)) 
+			{
+				file = new File(fileName);
+				if (!file.exists()) 
+					throw new MongoDbLogReaderException("File(" + fileName + ") does NOT exist!");
+				if (!file.canRead())							
+					throw new MongoDbLogReaderException("Unable to read MongoDB log file.  Check your permissions " +
+							"for file(" + fileName + ").");
+			}
+			else
+				throw new MongoDbLogReaderException("No file name priveded.");
+		} else
+			throw new MongoDbLogReaderException("You must provide a file for us to read from!");
+		return file;
+	}
+	
+	/**
+	 * (U) This method is used to get the start date entry for the log file that was processed.
+	 * @return Date the start date of the log file.
+	 */
+	public static Date getStartDate()
+	{
+		return startLogDate;
+	}
+	
+	/**
+	 * (U) This method is used to get the Log Entry Date from the Log Entry.
+	 * @param line String the log entry.
+	 * @return LogEntryDate pulled from the log Entry.
+	 * @throws JsonMappingException
+	 * @throws JsonProcessingException
+	 */
+	public static LogEntryDate parseLogDateFromString(String line) 
+			throws JsonMappingException, JsonProcessingException
+	{
+		ObjectMapper mapper = new ObjectMapper();
+			
+		LogEntry logEntry = null;
+
+		logEntry = mapper.readValue(line, LogEntry.class);
+
+		return logEntry.getLogEntryDate();
+	}
+
+	/**
+	 * This method is used to calculate out the start and end dates of the log entries.
+	 * @param logEntry
+	 */
+	private static void parseLogDates(LogEntry logEntry)
+	{
+		Date logEntryDate = DateUtils.toDate(logEntry.getLogEntryDate().getDateString());
+		
+		if(startLogDate == null)
+			startLogDate = logEntryDate;
+		else if(startLogDate.after(logEntryDate))
+			startLogDate = logEntryDate;
+		
+		if(endLogDate == null)
+			endLogDate = logEntryDate;
+		else if(endLogDate.before(logEntryDate))
+			endLogDate = logEntryDate;
+		
+	}
 
 	/**
 	 * This public method is used to call the code that will produce the Map of the
@@ -43,30 +140,15 @@ public class LogFileReader {
 	public static Map<String, QueryMetadata> parseLogFile(CommandLine cli, String option)
 			throws MongoDbLogReaderException {
 		Map<String, QueryMetadata> uniqueQueries = null;
-		if (cli.hasOption(option)) {
-			String fileName = cli.getOptionValue(option);
+		
+		File file = getFile(cli, option);
+				
+		uniqueQueries = parseLogFile(file);
 
-			if (logger.isDebugEnabled())
-				logger.debug("Attempting to read log file (" + fileName + ")");
-
-			if ((fileName != null) && (fileName.trim().length() > 0)) {
-				File file = new File(fileName);
-				if ((file.exists()) && (file.canRead())) {
-					uniqueQueries = parseLogFile(file);
-
-				} else if (file.exists())
-					throw new MongoDbLogReaderException("Unable to read "
-							+ "MongoDB log file.  Check your permissions for " + "file(" + fileName + ").");
-				else
-					throw new MongoDbLogReaderException("File(" + fileName + ") does NOT exist!");
-			} else
-				throw new MongoDbLogReaderException("No file name priveded.");
-		} else
-			throw new MongoDbLogReaderException("You must provide a file for us to read the second file from!");
-
+		
 		return uniqueQueries;
 	}
-
+	
 	/**
 	 * Private method used to actually parse the file into the map.
 	 * 
@@ -76,7 +158,8 @@ public class LogFileReader {
 	 * @throws MongoDbLogReaderException if we are unable to parse the file into the
 	 *                                   map.
 	 */
-	private static Map<String, QueryMetadata> parseLogFile(File logFile) throws MongoDbLogReaderException {
+	private static Map<String, QueryMetadata> parseLogFile(File logFile) throws MongoDbLogReaderException 
+	{
 		Map<String, QueryMetadata> uniqueQueries = new HashMap<String, QueryMetadata>();
 
 		try {
@@ -85,13 +168,19 @@ public class LogFileReader {
 			String queryHash = null;
 			ObjectMapper mapper = new ObjectMapper();
 
-			try (BufferedReader br = new BufferedReader(new FileReader(logFile))) {
+			try (BufferedReader br = new BufferedReader(new FileReader(logFile))) 
+			{
 				String line;
-				while ((line = br.readLine()) != null) {
+				while ((line = br.readLine()) != null) 
+				{
 					logEntry = mapper.readValue(line, LogEntry.class);
+					parseLogDates(logEntry);
+					
 					queryHash = logEntry.getQueryHash();
-					if (queryHash != null) {
-						if (uniqueQueries.containsKey(queryHash)) {
+					if (queryHash != null) 
+					{
+						if (uniqueQueries.containsKey(queryHash)) 
+						{
 							qm = uniqueQueries.get(queryHash);
 							qm.addOne(logEntry);
 							uniqueQueries.replace(queryHash, qm);
@@ -107,7 +196,5 @@ public class LogFileReader {
 			throw new MongoDbLogReaderException("Unable to parse log file!");
 		}
 		return uniqueQueries;
-
-	}
-
+	}	
 }

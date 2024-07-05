@@ -9,36 +9,30 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class LogEntry {
 
-//	private Date t;
+	private String cmd;
+	
 //	private String s;
 //	private String c;
 //	private int id;
 //	private String ctx;
 	
-	private String cmd;
-    private Integer docsExamined = Integer.valueOf(0);
-    
-    private Integer duration = Integer.valueOf(0);
+	private Integer docsExamined = Integer.valueOf(0);
 
-	public Integer getDuration() {
-		return duration;
-	}
-
-	public void setDuration(Integer duration) {
-		this.duration = duration;
-	}
+	private Integer duration = Integer.valueOf(0);
 
 	private Integer keysExamined = Integer.valueOf(0);
-
-	@JsonProperty("msg")
+	
+    @JsonProperty("t")
+	private LogEntryDate logEntryDate;
+    
+    @JsonProperty("msg")
 	private String msg;
+
 	private Integer nreturned = Integer.valueOf(0);
 
-	//	private boolean cursorExhausted;
-//	private int numYields;
-	
 	private String planCacheKey;
-//	private int reslen;
+
+	//	private int reslen;
 //	private int duration;
 //	
 //	private Attr attr;
@@ -47,40 +41,49 @@ public class LogEntry {
 	private String planSummary;
 
 	private String queryHash;
-
 	private String replanReason;
 
+	//	private boolean cursorExhausted;
+//	private int numYields;
+	
 	public String getCmd() {
 		return cmd;
 	}
-
-	public Integer getDocsExamined() {
+public Integer getDocsExamined() {
 		return docsExamined;
+	}
+
+	public Integer getDuration() {
+		return duration;
 	}
 
 	public int getKeysExamined() {
 		return keysExamined;
 	}
 
+	public LogEntryDate getLogEntryDate() {
+		return logEntryDate;
+	}
+
 	public String getMsg() {
 		return msg;
 	}
+
 	public Integer getNreturned() {
 		return nreturned;
 	}
-    
+
 	public String getPlanCacheKey() {
 		return planCacheKey;
 	}
-
 	public String getPlanSummary() {
 		return planSummary;
 	}
-
+    
 	public String getQueryHash() {
 		return queryHash;
 	}
-	
+
 	public String getReplanReason() {
 		return replanReason;
 	}
@@ -88,13 +91,21 @@ public class LogEntry {
 	public void setCmd(String cmd) {
 		this.cmd = cmd;
 	}
-
+	
 	public void setDocsExamined(Integer docsExamined) {
 		this.docsExamined = docsExamined;
 	}
 
+	public void setDuration(Integer duration) {
+		this.duration = duration;
+	}
+
 	public void setKeysExamined(int keysExamined) {
 		this.keysExamined = keysExamined;
+	}
+
+	public void setLogEntryDate(LogEntryDate logEntryDate) {
+		this.logEntryDate = logEntryDate;
 	}
 
 	public void setMsg(String msg) {

@@ -5,7 +5,7 @@
 	
 	<groupId>snaplogic.mongodb</groupId>
 	<artifactId>MongoDBLogReader</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>MongoDBLogReader</name>
 	<description>MongoDB Log Reader</description>
 	

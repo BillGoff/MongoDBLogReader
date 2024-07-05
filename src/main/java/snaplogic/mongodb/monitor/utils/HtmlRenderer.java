@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
@@ -34,8 +35,9 @@ public class HtmlRenderer {
 	
 	private static final String beginHtmlFile = "beginHtml.txt";
 	private static final String diffEndHtmlFile = "diffEndHtml.txt";
+	
+	private static final String endHeadHtmlFile = "endHeadHtml.txt";
 	private static final String endHtmlFile = "endHtml.txt";
-
 	/**
 	 * This method is used to get the contents of the input stream passed in.
 	 * 
@@ -116,7 +118,7 @@ public class HtmlRenderer {
 	 * @throws MongoDbLogReaderException in the event we are unable to produce the
 	 *                                   HTML for the sorted map passed in.
 	 */
-	public String renderDataTableHtml(Map<String, QueryMetadata> sortedMap) throws MongoDbLogReaderException 
+	public String renderDataTableHtml(Map<String, QueryMetadata> sortedMap, Date startDate, Date endDate) throws MongoDbLogReaderException 
 	{
 		InputStream is = getFileFromResourceAsStream(initialHtmlFile);
 		StringBuilder sb = new StringBuilder(getContents(is));
@@ -143,9 +145,15 @@ public class HtmlRenderer {
 				"				fixedHeader: true,\n");
 		sb.append("				" + buildAaData(sortedMap) + "\n");
 
+		is = getFileFromResourceAsStream(endHeadHtmlFile);
+		sb.append(getContents(is));
+		
+		sb.append("	<body>\n");
+		sb.append("	<div align=\"center\">" + DateUtils.toString(startDate) + " - " + DateUtils.toString(endDate));
+		sb.append("	</div>\n");
 		is = getFileFromResourceAsStream(endHtmlFile);
 		sb.append(getContents(is));
-
+		
 		return sb.toString();
 
 	}

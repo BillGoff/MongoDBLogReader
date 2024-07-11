@@ -4,8 +4,10 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.cli.CommandLine;
@@ -147,6 +149,44 @@ public class LogFileReader {
 
 		
 		return uniqueQueries;
+	}
+	
+	/**
+	 * (U) This method is used to do a deep dive parse into all the log entries within the log file.
+	 * @param cli    CommandLine option that tells us are parsing a file.
+	 * @param option String value that tells us the name of the file we are parsing.	
+	 * @return List of all the LogEntries (queries/inserts/updates) pulled from the log file.
+	 * @throws MongoDbLogReaderException if we run into an issue parsing the log file.
+	 */
+	public static List<LogEntry> deepDiveParseLogFile(CommandLine cli, String option)
+			throws MongoDbLogReaderException {
+		
+		List<LogEntry> logEntries = new ArrayList<LogEntry>();
+		
+		File logFile = getFile(cli, option);
+		
+		try {
+			LogEntry logEntry = null;
+			ObjectMapper mapper = new ObjectMapper();
+
+			try (BufferedReader br = new BufferedReader(new FileReader(logFile))) 
+			{
+				String line;
+				while ((line = br.readLine()) != null) 
+				{
+					logEntry = mapper.readValue(line, LogEntry.class);
+					parseLogDates(logEntry);
+					if (logEntry.getQueryHash() != null) 
+					{
+						logEntries.add(logEntry);
+					}
+				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw new MongoDbLogReaderException("Unable to parse log file!");
+		}
+		return logEntries;
 	}
 	
 	/**

@@ -2,6 +2,7 @@ package snaplogic.mongodb.monitor;
 
 import java.io.PrintWriter;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.cli.CommandLine;
@@ -13,7 +14,7 @@ import org.apache.commons.cli.Options;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import snaplogic.mongodb.monitor.dto.LogEntryDate;
+import snaplogic.mongodb.monitor.dto.LogEntry;
 import snaplogic.mongodb.monitor.dto.QueryDiff;
 import snaplogic.mongodb.monitor.dto.QueryMetadata;
 import snaplogic.mongodb.monitor.utils.DateUtils;
@@ -43,6 +44,7 @@ public class MongoDbLogReaderApplication {
 		cliOptions.addOption(new Option("f", "file", true, "Log file to read"));
 		cliOptions.addOption(new Option("g", "file2", true, "Log file to diff with the first log."));
 		cliOptions.addOption(new Option("o", "output", true, "\"html\" output file"));
+		cliOptions.addOption(new Option("v", "verbose", false, "Option that tell us we want to do a deep dive into the logs!"));
 		return cliOptions;
 	}
 
@@ -86,6 +88,22 @@ public class MongoDbLogReaderApplication {
 				out.close();
 				
 			} 
+			else if(cli.hasOption("verbose"))
+			{
+				List<LogEntry> logEntries = LogFileReader.deepDiveParseLogFile(cli, "file");
+				
+				Date sd = LogFileReader.getStartDate();
+				Date ed = LogFileReader.getEndDate();
+
+				HtmlRenderer htmlRenderer = new HtmlRenderer();
+
+				String html = htmlRenderer.renderDataTableHtml(logEntries, sd, ed);
+				String outputFileName = HtmlRenderer.getOutputFileOption(cli);
+
+				PrintWriter out = new PrintWriter(outputFileName);
+				out.append(html);
+				out.close();				
+			}
 			else {
 				Map<String, QueryMetadata> uniqueQueries = LogFileReader.parseLogFile(cli, "file");
 				Map<String, QueryMetadata> sortedMap = SortUtils.sortByDurationAverage(uniqueQueries, false);

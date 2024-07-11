@@ -1,13 +1,15 @@
-	
+
 		<div style="padding:25px">
 			<table id="mongodbLogTable" class="table table-striped table-bordered" style="width:100%">
 				<thead>
 					<tr>
 						<th>QueryHash</th>
-						<th>Count</th>
-						<th>Average Duration</th>
-						<th>High Duration</th>
-						<th>Low Duration</th>
+						<th>Plan Cache Key</th>
+						<th>Log Entry Date</th>
+						<th>Docs Examined</th>
+						<th>Keys Examined</th>
+						<th>nReturned</th>
+						<th>Duration</th>
 						<th>Query</th>
 						<th>Plan Summary</th>
 					</tr>
@@ -15,10 +17,12 @@
 				<tfoot>
 					<tr>
 						<th>QueryHash</th>
-						<th>Count</th>
-						<th>Average Duration</th>
-						<th>High Duration</th>
-						<th>Low Duration</th>
+						<th>Plan Cache Key</th>
+						<th>Log Entry Date</th>
+						<th>Docs Examined</th>
+						<th>Keys Examined</th>
+						<th>nReturned</th>
+						<th>Duration</th>
 						<th>Query</th>
 						<th>Plan Summary</th>
 					</tr>
@@ -27,5 +31,4 @@
 		</div>
 	</body>
 </html>
-	
 	

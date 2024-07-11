@@ -1,19 +1,26 @@
 				columns: [
 					{	data: "queryHash" },
-					{	data: "count" },
-					{	data: "averageDuration",
+					{	data: "planCacheKey" },
+					{	data: "logEntryDate" },
+					{	data: "docsExamined" ,
 						render: function (data, type, row)
 						{
-							return msToTime(data);
+							return numberWithCommas(data);
 						}
 					},
-					{ 	data: "highDuration",
+					{	data: "keysExamined" ,
 						render: function (data, type, row)
 						{
-							return msToTime(data);
+							return numberWithCommas(data);
 						}
 					},
-					{	data: "lowDuration",
+					{	data: "nReturned"  ,
+						render: function (data, type, row)
+						{
+							return numberWithCommas(data);
+						}
+					},
+					{	data: "duration" ,
 						render: function (data, type, row)
 						{
 							return msToTime(data);

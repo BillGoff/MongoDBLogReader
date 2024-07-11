@@ -5,6 +5,9 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import snaplogic.mongodb.monitor.utils.DateUtils;
+import snaplogic.mongodb.monitor.utils.StringUtils;
+
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class LogEntry {
@@ -140,6 +143,29 @@ public Integer getDocsExamined() {
 	public String toString()
 	{
 		return (toString(""));
+	}
+	
+	public String toJson()
+	{
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("\"queryHash\": \"" + getQueryHash()    + "\", ");
+		sb.append("\"planCacheKey\": \"" + getPlanCacheKey() + "\", ");
+		sb.append("\"logEntryDate\": \"" + DateUtils.dateAsPrettyString(
+				DateUtils.toDate(logEntryDate.getDateString())) + "\", ");
+		sb.append("\"docsExamined\": \"" + getDocsExamined() + "\", ");
+		sb.append("\"keysExamined\": \"" + getKeysExamined() + "\", ");
+		sb.append("\"nReturned\": \""    + getNreturned()    + "\", ");
+		sb.append("\"duration\": \""     + getDuration()     + "\", ");
+		
+//		sb.append("\"query\": \""        + "" + "\", ");
+//		sb.append("\"planSummary\": \""  + "" + "\"");
+		
+		sb.append("\"query\": \""        + StringUtils.escapeDoubleQuote(getCmd()) + "\", ");
+		sb.append("\"planSummary\": \""  + StringUtils.escapeDoubleQuote(getPlanSummary()) + "\"");
+		
+		
+		return sb.toString();
 	}
 	
 	/**

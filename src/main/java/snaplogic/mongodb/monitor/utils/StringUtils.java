@@ -9,7 +9,10 @@ public class StringUtils {
 	
 	public static String escapeDoubleQuote(String myString)
 	{
-		return myString.replaceAll("\"", "\\\\\"");
+		if(myString != null)
+			return myString.replaceAll("\"", "\\\\\"");
+		else
+			return "";
 	}
 
 }

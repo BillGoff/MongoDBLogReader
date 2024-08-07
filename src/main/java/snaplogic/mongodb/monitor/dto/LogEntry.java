@@ -2,11 +2,14 @@ package snaplogic.mongodb.monitor.dto;
 
 import java.util.Map;
 
+import org.apache.commons.lang3.StringEscapeUtils;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import snaplogic.mongodb.monitor.utils.DateUtils;
 import snaplogic.mongodb.monitor.utils.StringUtils;
+
 
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -145,6 +148,7 @@ public Integer getDocsExamined() {
 		return (toString(""));
 	}
 	
+	@SuppressWarnings("deprecation")
 	public String toJson()
 	{
 		StringBuilder sb = new StringBuilder();
@@ -160,8 +164,8 @@ public Integer getDocsExamined() {
 		
 //		sb.append("\"query\": \""        + "" + "\", ");
 //		sb.append("\"planSummary\": \""  + "" + "\"");
-		
-		sb.append("\"query\": \""        + StringUtils.escapeDoubleQuote(getCmd()) + "\", ");
+			
+		sb.append("\"query\": \""        + StringUtils.escapeSpecialChars(StringUtils.escapeDoubleQuote(getCmd())) + "\", ");
 		sb.append("\"planSummary\": \""  + StringUtils.escapeDoubleQuote(getPlanSummary()) + "\"");
 		
 		

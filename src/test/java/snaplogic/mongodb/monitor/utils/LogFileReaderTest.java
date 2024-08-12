@@ -35,4 +35,19 @@ class LogFileReaderTest
 			e.printStackTrace();
 		}
 	}
+	
+	@Test
+	void parseErrMsgTest()
+	{
+		String logEntryString = "{\"t\":{\"$date\":\"2024-08-04T17:10:16.794+00:00\"},\"s\":\"I\",  \"c\":\"COMMAND\",  \"id\":51803,   \"ctx\":\"conn1076271\",\"msg\":\"Slow query\",\"attr\":{\"type\":\"command\",\"ns\":\"slserver.pm.pipeline_rt\",\"command\":{\"find\":\"pm.pipeline_rt\",\"filter\":{\"org_snode_id\":\"5ea6a405f5055325eda880a6\",\"create_time\":{\"$gte\":{\"$date\":\"2024-08-02T23:00:00.000Z\"},\"$lte\":{\"$date\":\"2024-08-03T22:59:59.000Z\"}},\"$or\":[{\"state\":\"Completed\"},{\"state\":\"Stopped\"},{\"state\":\"Failed\"}],\"parent_ruuid\":null},\"sort\":{\"create_time\":-1},\"projection\":{\"flow_map\":1,\"state_log\":1,\"duration_ms\":1,\"kickoff_timestamp\":1,\"instance_id\":1,\"label\":1,\"user_id\":1,\"snaplex_label\":1,\"state\":1,\"create_time\":1,\"duration\":1,\"documents_count\":1,\"error_documents_count\":1,\"parent_ruuid\":1,\"nested_pipeline\":1,\"has_lints\":1,\"child_has_lints\":1,\"class_id\":1,\"class_fqid\":1,\"pipe_invoker\":1,\"invoker_name\":1,\"invoker_path_id\":1,\"invoker_snode_id\":1,\"mode\":1,\"has_errors\":1,\"has_warnings\":1,\"snap_map\":1,\"parent_pipeline_ruuid\":1,\"_id\":false},\"skip\":8500,\"limit\":100,\"lsid\":{\"id\":{\"$uuid\":\"7d238ac5-1bac-4de5-9089-421e8c9bd76e\"}},\"$clusterTime\":{\"clusterTime\":{\"$timestamp\":{\"t\":1722773587,\"i\":248}},\"signature\":{\"hash\":{\"$binary\":{\"base64\":\"LpSO/vSAZBYrqryvQdB8gButyWk=\",\"subType\":\"0\"}},\"keyId\":7349671869412278894}},\"$db\":\"slserver\",\"$readPreference\":{\"mode\":\"secondaryPreferred\",\"maxStalenessSeconds\":300}},\"numYields\":1499365,\"queryHash\":\"AC051A63\",\"planCacheKey\":\"F58FA6F4\",\"ok\":0,\"errMsg\":\"error while multiplanner was selecting best plan :: caused by :: operation was interrupted because a client disconnected\",\"errName\":\"ClientDisconnect\",\"errCode\":279,\"reslen\":337,\"locks\":{\"FeatureCompatibilityVersion\":{\"acquireCount\":{\"r\":1499366}},\"Global\":{\"acquireCount\":{\"r\":1499366}},\"Mutex\":{\"acquireCount\":{\"r\":1}}},\"readConcern\":{\"level\":\"local\",\"provenance\":\"implicitDefault\"},\"remote\":\"172.29.39.228:35266\",\"protocol\":\"op_msg\",\"durationMillis\":17829467}}";
+		String expectedErrMsg = "error while multiplanner was selecting best plan :: caused by :: operation was interrupted because a client disconnected";
+		
+		try {
+			LogEntry le = LogFileReader.parseLogEntry(logEntryString);
+			assertTrue(expectedErrMsg.equals(le.getErrMsg()));
+		}
+		catch (JsonProcessingException e) {
+			e.printStackTrace();
+		} 
+	}
 }

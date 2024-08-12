@@ -12,6 +12,7 @@
 						<th>Duration</th>
 						<th>Query</th>
 						<th>Plan Summary</th>
+						<th>error Message</th>
 					</tr>
 				</thead>
 				<tfoot>
@@ -25,6 +26,7 @@
 						<th>Duration</th>
 						<th>Query</th>
 						<th>Plan Summary</th>
+						<th>error Message</th>
 					</tr>
 				</tfoot>
 			</table>

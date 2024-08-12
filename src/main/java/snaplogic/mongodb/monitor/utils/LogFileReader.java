@@ -206,14 +206,15 @@ public class LogFileReader {
 			LogEntry logEntry = null;
 			QueryMetadata qm = null;
 			String queryHash = null;
-			ObjectMapper mapper = new ObjectMapper();
 
 			try (BufferedReader br = new BufferedReader(new FileReader(logFile))) 
 			{
 				String line;
 				while ((line = br.readLine()) != null) 
 				{
-					logEntry = mapper.readValue(line, LogEntry.class);
+//					logEntry = mapper.readValue(line, LogEntry.class);
+					logEntry = parseLogEntry(line);
+					
 					parseLogDates(logEntry);
 					
 					queryHash = logEntry.getQueryHash();
@@ -237,4 +238,12 @@ public class LogFileReader {
 		}
 		return uniqueQueries;
 	}	
+	
+	public static LogEntry parseLogEntry(String line) throws JsonMappingException, JsonProcessingException
+	{
+		ObjectMapper mapper = new ObjectMapper();
+
+		LogEntry logEntry = mapper.readValue(line, LogEntry.class);
+		return logEntry;
+	}
 }

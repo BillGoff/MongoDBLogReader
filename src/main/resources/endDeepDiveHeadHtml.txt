@@ -27,7 +27,8 @@
 						}
 					},
 					{	data: "query" },
-					{	data: "planSummary" }
+					{	data: "planSummary" },
+					{	data: "errMsg" }
 				]
 			});
 		});

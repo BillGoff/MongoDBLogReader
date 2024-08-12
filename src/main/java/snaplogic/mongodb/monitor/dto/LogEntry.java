@@ -2,8 +2,6 @@ package snaplogic.mongodb.monitor.dto;
 
 import java.util.Map;
 
-import org.apache.commons.lang3.StringEscapeUtils;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -11,23 +9,19 @@ import snaplogic.mongodb.monitor.utils.DateUtils;
 import snaplogic.mongodb.monitor.utils.StringUtils;
 
 
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class LogEntry {
 
 	private String cmd;
 	
-//	private String s;
-//	private String c;
-//	private int id;
-//	private String ctx;
-	
 	private Integer docsExamined = Integer.valueOf(0);
 
 	private Integer duration = Integer.valueOf(0);
 
-	private Integer keysExamined = Integer.valueOf(0);
+	private String errMsg;
 	
+    private Integer keysExamined = Integer.valueOf(0);
+    
     @JsonProperty("t")
 	private LogEntryDate logEntryDate;
     
@@ -38,29 +32,29 @@ public class LogEntry {
 
 	private String planCacheKey;
 
-	//	private int reslen;
-//	private int duration;
-//	
-//	private Attr attr;
-//	
-//	private Storage storage;
 	private String planSummary;
 
 	private String queryHash;
+
 	private String replanReason;
 
-	//	private boolean cursorExhausted;
-//	private int numYields;
-	
 	public String getCmd() {
 		return cmd;
 	}
-public Integer getDocsExamined() {
+	public Integer getDocsExamined() {
 		return docsExamined;
 	}
 
+	
 	public Integer getDuration() {
 		return duration;
+	}
+	
+	public String getErrMsg() {
+		if(errMsg != null)
+			return errMsg;
+		else 
+			return "";
 	}
 
 	public int getKeysExamined() {
@@ -82,14 +76,14 @@ public Integer getDocsExamined() {
 	public String getPlanCacheKey() {
 		return planCacheKey;
 	}
+
 	public String getPlanSummary() {
 		return planSummary;
 	}
-    
 	public String getQueryHash() {
 		return queryHash;
 	}
-
+    
 	public String getReplanReason() {
 		return replanReason;
 	}
@@ -97,13 +91,17 @@ public Integer getDocsExamined() {
 	public void setCmd(String cmd) {
 		this.cmd = cmd;
 	}
-	
+
 	public void setDocsExamined(Integer docsExamined) {
 		this.docsExamined = docsExamined;
 	}
-
+	
 	public void setDuration(Integer duration) {
 		this.duration = duration;
+	}
+
+	public void setErrMsg(String errMsg) {
+		this.errMsg = errMsg;
 	}
 
 	public void setKeysExamined(int keysExamined) {
@@ -137,18 +135,6 @@ public Integer getDocsExamined() {
 		this.replanReason = replanReason;
 	}
 	
-	/**
-	 * (U) Method used to printout the values of this Class.
-	 *
-	 * @return String nice readable string value of this class.
-	 */
-	@Override
-	public String toString()
-	{
-		return (toString(""));
-	}
-	
-	@SuppressWarnings("deprecation")
 	public String toJson()
 	{
 		StringBuilder sb = new StringBuilder();
@@ -161,15 +147,26 @@ public Integer getDocsExamined() {
 		sb.append("\"keysExamined\": \"" + getKeysExamined() + "\", ");
 		sb.append("\"nReturned\": \""    + getNreturned()    + "\", ");
 		sb.append("\"duration\": \""     + getDuration()     + "\", ");
-		
-//		sb.append("\"query\": \""        + "" + "\", ");
-//		sb.append("\"planSummary\": \""  + "" + "\"");
 			
 		sb.append("\"query\": \""        + StringUtils.escapeSpecialChars(StringUtils.escapeDoubleQuote(getCmd())) + "\", ");
-		sb.append("\"planSummary\": \""  + StringUtils.escapeDoubleQuote(getPlanSummary()) + "\"");
+		sb.append("\"planSummary\": \""  + StringUtils.escapeDoubleQuote(getPlanSummary()) + "\", ");
+
+		sb.append("\"errMsg\": \""       + getErrMsg() + "\", ");
+
 		
 		
 		return sb.toString();
+	}
+	
+	/**
+	 * (U) Method used to printout the values of this Class.
+	 *
+	 * @return String nice readable string value of this class.
+	 */
+	@Override
+	public String toString()
+	{
+		return (toString(""));
 	}
 	
 	/**
@@ -182,12 +179,13 @@ public Integer getDocsExamined() {
 	{
 		StringBuilder sb = new StringBuilder();
 
-		sb.append(tabs + "keysExamined: " + getKeysExamined() + "\n");
-		sb.append(tabs + "docsExamined: " + getDocsExamined() + "\n");
-		sb.append(tabs + "queryHash: "    + getQueryHash() + "\n");
-		sb.append(tabs + "planCacheKey: " + getPlanCacheKey() + "\n");
+		sb.append(tabs + "keysExamined: "   + getKeysExamined() + "\n");
+		sb.append(tabs + "docsExamined: "   + getDocsExamined() + "\n");
+		sb.append(tabs + "queryHash: "      + getQueryHash() + "\n");
+		sb.append(tabs + "planCacheKey: "   + getPlanCacheKey() + "\n");
 		sb.append(tabs + "plannedSummary: " + getPlanSummary() + "\n");
-		sb.append(tabs + "msg: " + getMsg() + "\n");
+		sb.append(tabs + "msg: "            + getMsg() + "\n");
+		sb.append(tabs + "errMsg: "         + getErrMsg() + "\n");
 		
 		return (sb.toString());
 	}
@@ -208,6 +206,10 @@ public Integer getDocsExamined() {
 			temp = attr.get("durationMillis");
 			if ((temp != null) && (temp instanceof Integer))
 				this.setDuration((Integer) temp);
+			
+			temp = attr.get("errMsg");
+			if ((temp != null) && (temp instanceof String))
+				this.setErrMsg((String) temp);
 			
 			temp = attr.get("keysExamined");
 			if ((temp != null) && (temp instanceof Integer))

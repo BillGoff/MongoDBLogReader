@@ -32,11 +32,49 @@ import snaplogic.mongodb.monitor.exceptions.MongoDbLogReaderException;
  * @since 7 August 2023
  */
 public class LogFileReader {
-	private static final Logger logger = LogManager.getLogger("MongoDBLogReader");
+	private static final Logger logger = LogManager.getLogger("MongoDBLogReader");	
 
-	private static Date endLogDate = null;	
+	private static Date endLogDate = null;
 	private static Date startLogDate = null;
 
+	/**
+	 * (U) This method is used to do a deep dive parse into all the log entries within the log file.
+	 * @param cli    CommandLine option that tells us are parsing a file.
+	 * @param option String value that tells us the name of the file we are parsing.	
+	 * @return List of all the LogEntries (queries/inserts/updates) pulled from the log file.
+	 * @throws MongoDbLogReaderException if we run into an issue parsing the log file.
+	 */
+	public static List<LogEntry> deepDiveParseLogFile(CommandLine cli, String option)
+			throws MongoDbLogReaderException {
+		
+		List<LogEntry> logEntries = new ArrayList<LogEntry>();
+		
+		File logFile = getFile(cli, option);
+		
+		try {
+			LogEntry logEntry = null;
+			ObjectMapper mapper = new ObjectMapper();
+
+			try (BufferedReader br = new BufferedReader(new FileReader(logFile))) 
+			{
+				String line;
+				while ((line = br.readLine()) != null) 
+				{
+					logEntry = mapper.readValue(line, LogEntry.class);
+					parseLogDates(logEntry);
+					if (logEntry.getQueryHash() != null) 
+					{
+						logEntries.add(logEntry);
+					}
+				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw new MongoDbLogReaderException("Unable to parse log file!");
+		}
+		return logEntries;
+	}
+	
 	/**
 	 * (U) This method is used to get newest date of the logs that where processed.
 	 * @return Date the newest date from the log file.
@@ -88,7 +126,7 @@ public class LogFileReader {
 	{
 		return startLogDate;
 	}
-	
+
 	/**
 	 * (U) This method is used to get the Log Entry Date from the Log Entry.
 	 * @param line String the log entry.
@@ -127,7 +165,22 @@ public class LogFileReader {
 			endLogDate = logEntryDate;
 		
 	}
+	
+	/**
+	 * (U) This method is used to parse a line into a LogEntry.  For debug and testing purposes this is broken out.
+	 * @param line String to parse into a log entry object.
+	 * @return LogEntry parsed from the json String passed in.
+	 * @throws JsonMappingException in the event we are unable to parse the String into the Object.
+	 * @throws JsonProcessingException in the event we are unable to parse the String into the Object.
+	 */
+	public static LogEntry parseLogEntry(String line) throws JsonMappingException, JsonProcessingException
+	{
+		ObjectMapper mapper = new ObjectMapper();
 
+		LogEntry logEntry = mapper.readValue(line, LogEntry.class);
+		return logEntry;
+	}
+	
 	/**
 	 * This public method is used to call the code that will produce the Map of the
 	 * query hash to its query metadata.
@@ -149,45 +202,7 @@ public class LogFileReader {
 
 		
 		return uniqueQueries;
-	}
-	
-	/**
-	 * (U) This method is used to do a deep dive parse into all the log entries within the log file.
-	 * @param cli    CommandLine option that tells us are parsing a file.
-	 * @param option String value that tells us the name of the file we are parsing.	
-	 * @return List of all the LogEntries (queries/inserts/updates) pulled from the log file.
-	 * @throws MongoDbLogReaderException if we run into an issue parsing the log file.
-	 */
-	public static List<LogEntry> deepDiveParseLogFile(CommandLine cli, String option)
-			throws MongoDbLogReaderException {
-		
-		List<LogEntry> logEntries = new ArrayList<LogEntry>();
-		
-		File logFile = getFile(cli, option);
-		
-		try {
-			LogEntry logEntry = null;
-			ObjectMapper mapper = new ObjectMapper();
-
-			try (BufferedReader br = new BufferedReader(new FileReader(logFile))) 
-			{
-				String line;
-				while ((line = br.readLine()) != null) 
-				{
-					logEntry = mapper.readValue(line, LogEntry.class);
-					parseLogDates(logEntry);
-					if (logEntry.getQueryHash() != null) 
-					{
-						logEntries.add(logEntry);
-					}
-				}
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-			throw new MongoDbLogReaderException("Unable to parse log file!");
-		}
-		return logEntries;
-	}
+	}	
 	
 	/**
 	 * Private method used to actually parse the file into the map.
@@ -212,7 +227,6 @@ public class LogFileReader {
 				String line;
 				while ((line = br.readLine()) != null) 
 				{
-//					logEntry = mapper.readValue(line, LogEntry.class);
 					logEntry = parseLogEntry(line);
 					
 					parseLogDates(logEntry);
@@ -237,13 +251,5 @@ public class LogFileReader {
 			throw new MongoDbLogReaderException("Unable to parse log file!");
 		}
 		return uniqueQueries;
-	}	
-	
-	public static LogEntry parseLogEntry(String line) throws JsonMappingException, JsonProcessingException
-	{
-		ObjectMapper mapper = new ObjectMapper();
-
-		LogEntry logEntry = mapper.readValue(line, LogEntry.class);
-		return logEntry;
 	}
 }

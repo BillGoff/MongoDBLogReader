@@ -45,10 +45,15 @@ public class DiffUtils {
 				//if (!(queryPlanHash1.equalsIgnoreCase(queryPlanHash2)))
 				queryPlanSummary1 = qm1.getExampleEntry().getPlanSummary();
 				queryPlanSummary2 = qm2.getExampleEntry().getPlanSummary();
-				if(! (queryPlanSummary1.equalsIgnoreCase(queryPlanSummary2)))
+				
+				if ((queryPlanSummary1 != null) && (queryPlanSummary2 != null) && 
+						(queryPlanSummary1.length() > 0) && (queryPlanSummary2.length() > 0))
 				{
-					qd = new QueryDiff(qm1, qm2);
-					queryDiff.put(key, qd);
+					if(! (queryPlanSummary1.equalsIgnoreCase(queryPlanSummary2)))
+					{
+						qd = new QueryDiff(qm1, qm2);
+						queryDiff.put(key, qd);
+					}
 				}
 			}
 		}

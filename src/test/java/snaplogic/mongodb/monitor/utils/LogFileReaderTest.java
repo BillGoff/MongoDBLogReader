@@ -5,7 +5,6 @@ import static org.junit.Assert.assertTrue;
 import org.junit.jupiter.api.Test;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import snaplogic.mongodb.monitor.dto.LogEntry;
 import snaplogic.mongodb.monitor.dto.LogEntryDate;
@@ -31,7 +30,7 @@ class LogFileReaderTest
 			LogEntryDate logEntryDate = LogFileReader.parseLogDateFromString(logEntryString);
 			assertTrue(expectedString.equals(logEntryDate.getDateString()));						
 		} 
-		catch (JsonProcessingException e) {
+		catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -46,7 +45,7 @@ class LogFileReaderTest
 			LogEntry le = LogFileReader.parseLogEntry(logEntryString);
 			assertTrue(expectedErrMsg.equals(le.getErrMsg()));
 		}
-		catch (JsonProcessingException e) {
+		catch (Exception e) {
 			e.printStackTrace();
 		} 
 	}

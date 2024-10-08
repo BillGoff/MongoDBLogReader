@@ -60,11 +60,21 @@ public class LogFileReader {
 				String line;
 				while ((line = br.readLine()) != null) 
 				{
-					logEntry = mapper.readValue(line, LogEntry.class);
-					parseLogDates(logEntry);
-					if (logEntry.getQueryHash() != null) 
+					try {
+						
+						if ((line != null) && (line.length() > 0))
+						{
+							logEntry = mapper.readValue(line, LogEntry.class);
+							parseLogDates(logEntry);
+							if (logEntry.getQueryHash() != null) 
+							{
+								logEntries.add(logEntry);
+							}
+						}
+					}
+					catch(Exception e)
 					{
-						logEntries.add(logEntry);
+						logger.error("Failed to parse line: " + line, e);
 					}
 				}
 			}
@@ -173,11 +183,20 @@ public class LogFileReader {
 	 * @throws JsonMappingException in the event we are unable to parse the String into the Object.
 	 * @throws JsonProcessingException in the event we are unable to parse the String into the Object.
 	 */
-	public static LogEntry parseLogEntry(String line) throws JsonMappingException, JsonProcessingException
+	public static LogEntry parseLogEntry(String line) //throws JsonMappingException, JsonProcessingException
 	{
 		ObjectMapper mapper = new ObjectMapper();
 
-		LogEntry logEntry = mapper.readValue(line, LogEntry.class);
+		LogEntry logEntry = null;
+		try {
+			if((line != null) && (line.length() > 0))
+				logEntry = mapper.readValue(line, LogEntry.class);
+		}
+		catch(Exception e)
+		{
+			logger.error("Unable to parse log file at : " + line, e);
+		}
+		
 		return logEntry;
 	}
 	
@@ -228,20 +247,22 @@ public class LogFileReader {
 				while ((line = br.readLine()) != null) 
 				{
 					logEntry = parseLogEntry(line);
-					
-					parseLogDates(logEntry);
-					
-					queryHash = logEntry.getQueryHash();
-					if (queryHash != null) 
-					{
-						if (uniqueQueries.containsKey(queryHash)) 
+					if(logEntry != null)
+					{	
+						parseLogDates(logEntry);
+						
+						queryHash = logEntry.getQueryHash();
+						if (queryHash != null) 
 						{
-							qm = uniqueQueries.get(queryHash);
-							qm.addOne(logEntry);
-							uniqueQueries.replace(queryHash, qm);
-						} else {
-							qm = new QueryMetadata(logEntry);
-							uniqueQueries.put(queryHash, qm);
+							if (uniqueQueries.containsKey(queryHash)) 
+							{
+								qm = uniqueQueries.get(queryHash);
+								qm.addOne(logEntry);
+								uniqueQueries.replace(queryHash, qm);
+							} else {
+								qm = new QueryMetadata(logEntry);
+								uniqueQueries.put(queryHash, qm);
+							}
 						}
 					}
 				}

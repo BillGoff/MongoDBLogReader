@@ -17,7 +17,7 @@ usage: help
  -f,--file <arg>     Log file to read
  -h,--help           will print out the command line options.
  -o,--output <arg>   (Optional) flag to set the output file name, without the "html"
- -v, --verbose       (Optional) flag that will produce a verbose output (Not a summary)
+ -v,--verbose        (Optional) flag that will produce a verbose output (Not a summary)
 ```
 
 ## Run Application against a MongoDB Logfile.
